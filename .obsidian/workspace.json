@@ -1,0 +1,162 @@
+{
+  "main": {
+    "id": "2bb0b2da5cad3451",
+    "type": "split",
+    "children": [
+      {
+        "id": "275e5c17142b92bc",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e185aa02911226a4",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "prueba/Tareas.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "4c392e39917fab2b",
+    "type": "split",
+    "children": [
+      {
+        "id": "036bf9097d592a02",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e887c353e10a5fc3",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "9dba2463e1a6445a",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "3e864ec295ff8e26",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "437ed6666acc0f4f",
+    "type": "split",
+    "children": [
+      {
+        "id": "2f33357326ef8f5c",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "1af70c58bd6b1fef",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "prueba/Tareas.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "dec57e7ec83152fc",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "prueba/Tareas.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "1e8f9f4f5e7ffe6c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "eff8f655357ba8f9",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "prueba/Tareas.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Abrir selector rápido": false,
+      "graph:Abrir vista gráfica": false,
+      "canvas:Crear nuevo lienzo": false,
+      "daily-notes:Abrir la nota de hoy": false,
+      "templates:Insertar plantilla": false,
+      "command-palette:Abrir paleta de comandos": false,
+      "obsidian42-brat:BRAT": false
+    }
+  },
+  "active": "e185aa02911226a4",
+  "lastOpenFiles": [
+    "Tareas.md",
+    "prueba/Tareas.md",
+    "2024-03-06.md",
+    "apuntes_hacking",
+    "Gestores de contenido/Drupal",
+    "Gestores de contenido/Magento",
+    "Gestores de contenido/Jooomla",
+    "Gestores de contenido/Wordpress",
+    "Gestores de contenido"
+  ]
+}
