@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Tareas.md",
+                "file": "Gestores de contenido/Tareas.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fe6be0f5e0e326c9",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Gestores de contenido/Drupal.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Tareas.md",
+                "file": "Gestores de contenido/Drupal.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Tareas.md",
+                "file": "Gestores de contenido/Drupal.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Tareas.md"
+                "file": "Gestores de contenido/Drupal.md"
               }
             }
           }
@@ -147,10 +160,13 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "e185aa02911226a4",
+  "active": "fe6be0f5e0e326c9",
   "lastOpenFiles": [
+    "Gestores de contenido/Tareas.md",
+    "Gestores de contenido/Drupal.md",
+    "Sin título",
+    "Gestores de contenido",
     "prueba/Tareas.md",
-    "Tareas.md",
     "2024-03-06.md",
     "apuntes_hacking",
     "Gestores de contenido/Drupal",
