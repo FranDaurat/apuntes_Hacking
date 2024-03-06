@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "prueba/Tareas.md",
+                "file": "Tareas.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "prueba/Tareas.md",
+                "file": "Tareas.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "prueba/Tareas.md",
+                "file": "Tareas.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "prueba/Tareas.md"
+                "file": "Tareas.md"
               }
             }
           }
@@ -149,8 +149,8 @@
   },
   "active": "e185aa02911226a4",
   "lastOpenFiles": [
-    "Tareas.md",
     "prueba/Tareas.md",
+    "Tareas.md",
     "2024-03-06.md",
     "apuntes_hacking",
     "Gestores de contenido/Drupal",
