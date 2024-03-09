@@ -20,3 +20,4 @@ Ataque por diccionario:
 wpscan --url http://localhost:31337 -U fran -P /usr/share/wordlists/rockyou.txt
 ``` 
 
+hola merlo
