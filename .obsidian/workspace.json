@@ -37,8 +37,20 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OWASP TOP 10/SQLi.md",
+                "file": "Tipos de Payloads.md",
                 "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "8c4500e6fb7098d0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OWASP TOP 10/XML External Entity Injection (XXE).md",
+                "mode": "source",
                 "source": false
               }
             }
@@ -56,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -122,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OWASP TOP 10/SQLi.md",
+                "file": "OWASP TOP 10/XML External Entity Injection (XXE).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -139,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OWASP TOP 10/SQLi.md",
+                "file": "OWASP TOP 10/XML External Entity Injection (XXE).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -162,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OWASP TOP 10/SQLi.md"
+                "file": "OWASP TOP 10/XML External Entity Injection (XXE).md"
               }
             }
           }
@@ -184,11 +196,12 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "81ced03aa5108238",
+  "active": "8c4500e6fb7098d0",
   "lastOpenFiles": [
-    "OWASP TOP 10",
     "Tipos de Payloads.md",
+    "OWASP TOP 10/XML External Entity Injection (XXE).md",
     "OWASP TOP 10/SQLi.md",
+    "OWASP TOP 10",
     "Gestores de contenido/Drupal.md",
     "Gestores de contenido/Joomla.md",
     "Gestores de contenido/Wordpress.md",
