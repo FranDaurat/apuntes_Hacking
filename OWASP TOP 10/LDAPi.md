@@ -1,0 +1,2 @@
+-- -
+- ldapsearch -x -H ldap://localhost -b dc=example,dc=org -D "cn=admin,dc=example,dc=org" -w admin 'cn=admin' ---> Para saber cuales son los argumentos que tenemos que poner podemos usar scripts de nmap (sudo nmap --script ldap\* -p389 localhost).
