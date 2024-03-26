@@ -85,7 +85,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OWASP TOP 10/LDAPi.md",
+                "file": "OWASP TOP 10/Deserialization Attack.md",
                 "mode": "source",
                 "source": false
               }
@@ -158,7 +158,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OWASP TOP 10/LDAPi.md",
+                "file": "OWASP TOP 10/Deserialization Attack.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -175,7 +175,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OWASP TOP 10/LDAPi.md",
+                "file": "OWASP TOP 10/Deserialization Attack.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -198,7 +198,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OWASP TOP 10/LDAPi.md"
+                "file": "OWASP TOP 10/Deserialization Attack.md"
               }
             }
           }
@@ -222,13 +222,14 @@
   },
   "active": "4f3509f6c1be114d",
   "lastOpenFiles": [
-    "Gestores de contenido/Wordpress.md",
-    "OWASP TOP 10/LDAPi.md",
-    "OWASP TOP 10/XML External Entity Injection (XXE).md",
-    "OWASP TOP 10/SSTI (Server Side Template Injection).md",
-    "OWASP TOP 10/Local FIle Inclusion (LFI).md",
-    "Tipos de Payloads.md",
     "OWASP TOP 10/SQLi.md",
+    "OWASP TOP 10/Local FIle Inclusion (LFI).md",
+    "OWASP TOP 10/SSTI (Server Side Template Injection).md",
+    "OWASP TOP 10/XML External Entity Injection (XXE).md",
+    "OWASP TOP 10/LDAPi.md",
+    "OWASP TOP 10/Deserialization Attack.md",
+    "Gestores de contenido/Wordpress.md",
+    "Tipos de Payloads.md",
     "OWASP TOP 10",
     "Gestores de contenido/Drupal.md",
     "Gestores de contenido/Joomla.md",
