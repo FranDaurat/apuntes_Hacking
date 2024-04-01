@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OWASP TOP 10/Prototype Pollution.md",
+                "file": "OWASP TOP 10/File Upload Bypass.md",
                 "mode": "source",
                 "source": false
               }
@@ -146,7 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OWASP TOP 10/Prototype Pollution.md",
+                "file": "OWASP TOP 10/File Upload Bypass.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +163,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OWASP TOP 10/Prototype Pollution.md",
+                "file": "OWASP TOP 10/File Upload Bypass.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +186,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OWASP TOP 10/Prototype Pollution.md"
+                "file": "OWASP TOP 10/File Upload Bypass.md"
               }
             }
           }
@@ -210,12 +210,12 @@
   },
   "active": "200f511204d2091e",
   "lastOpenFiles": [
+    "OWASP TOP 10/Deserialization Attack.md",
     "OWASP TOP 10/File Upload Bypass.md",
     "OWASP TOP 10/Prototype Pollution.md",
     "OWASP TOP 10/SSTI (Server Side Template Injection).md",
     "OWASP TOP 10/Local FIle Inclusion (LFI).md",
     "OWASP TOP 10/LDAPi.md",
-    "OWASP TOP 10/Deserialization Attack.md",
     "Tipos de Payloads.md",
     "OWASP TOP 10/XML External Entity Injection (XXE).md",
     "OWASP TOP 10/SQLi.md",
