@@ -68,6 +68,30 @@
             }
           },
           {
+            "id": "f3d9fb2a9ac52f80",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OWASP TOP 10/File Upload Bypass.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "2c10159e7ec0c013",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Privilege escalation/Explotacion de tareas cron.md",
+                "mode": "preview",
+                "source": false
+              }
+            }
+          },
+          {
             "id": "4f3509f6c1be114d",
             "type": "leaf",
             "state": {
@@ -80,7 +104,7 @@
             }
           }
         ],
-        "currentTab": 4
+        "currentTab": 6
       }
     ],
     "direction": "vertical"
@@ -146,7 +170,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OWASP TOP 10/File Upload Bypass.md",
+                "file": "Privilege escalation/Explotacion de tareas cron.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -163,7 +187,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OWASP TOP 10/File Upload Bypass.md",
+                "file": "Privilege escalation/Explotacion de tareas cron.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -186,7 +210,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OWASP TOP 10/File Upload Bypass.md"
+                "file": "Privilege escalation/Explotacion de tareas cron.md"
               }
             }
           }
@@ -208,17 +232,19 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "200f511204d2091e",
+  "active": "2c10159e7ec0c013",
   "lastOpenFiles": [
-    "OWASP TOP 10/Deserialization Attack.md",
     "OWASP TOP 10/File Upload Bypass.md",
+    "Privilege escalation/Explotacion de tareas cron.md",
+    "Privilege escalation",
+    "OWASP TOP 10/XML External Entity Injection (XXE).md",
+    "Tipos de Payloads.md",
     "OWASP TOP 10/Prototype Pollution.md",
     "OWASP TOP 10/SSTI (Server Side Template Injection).md",
+    "OWASP TOP 10/SQLi.md",
     "OWASP TOP 10/Local FIle Inclusion (LFI).md",
     "OWASP TOP 10/LDAPi.md",
-    "Tipos de Payloads.md",
-    "OWASP TOP 10/XML External Entity Injection (XXE).md",
-    "OWASP TOP 10/SQLi.md",
+    "OWASP TOP 10/Deserialization Attack.md",
     "OWASP TOP 10",
     "Gestores de contenido/Drupal.md",
     "Gestores de contenido/Joomla.md",
