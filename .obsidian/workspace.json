@@ -4,107 +4,22 @@
     "type": "split",
     "children": [
       {
-        "id": "275e5c17142b92bc",
+        "id": "f3820ed76b4f393d",
         "type": "tabs",
         "children": [
           {
-            "id": "fe6be0f5e0e326c9",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Gestores de contenido/Drupal.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "c301cae95fb72f8e",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tipos de Payloads.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "81ced03aa5108238",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Tipos de Payloads.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "8c4500e6fb7098d0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OWASP TOP 10/XML External Entity Injection (XXE).md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "200f511204d2091e",
+            "id": "bb7b89c25346661d",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
                 "file": "OWASP TOP 10/File Upload Bypass.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "f3d9fb2a9ac52f80",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OWASP TOP 10/File Upload Bypass.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "2c10159e7ec0c013",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Privilege escalation/Explotacion de tareas cron.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "4f3509f6c1be114d",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Gestores de contenido/Wordpress.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 6
+        ]
       }
     ],
     "direction": "vertical"
@@ -170,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Privilege escalation/Explotacion de tareas cron.md",
+                "file": "OWASP TOP 10/File Upload Bypass.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -187,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Privilege escalation/Explotacion de tareas cron.md",
+                "file": "OWASP TOP 10/File Upload Bypass.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -210,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Privilege escalation/Explotacion de tareas cron.md"
+                "file": "OWASP TOP 10/File Upload Bypass.md"
               }
             }
           }
@@ -223,32 +138,33 @@
   },
   "left-ribbon": {
     "hiddenItems": {
-      "switcher:Abrir selector rápido": false,
-      "graph:Abrir vista gráfica": false,
-      "canvas:Crear nuevo lienzo": false,
-      "daily-notes:Abrir la nota de hoy": false,
-      "templates:Insertar plantilla": false,
-      "command-palette:Abrir paleta de comandos": false,
+      "github-sync:Sync with Remote": false,
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false,
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "2c10159e7ec0c013",
+  "active": "bb7b89c25346661d",
   "lastOpenFiles": [
-    "OWASP TOP 10/File Upload Bypass.md",
-    "Privilege escalation/Explotacion de tareas cron.md",
-    "Privilege escalation",
-    "OWASP TOP 10/XML External Entity Injection (XXE).md",
-    "Tipos de Payloads.md",
+    "OWASP TOP 10/Local FIle Inclusion (LFI).md",
     "OWASP TOP 10/Prototype Pollution.md",
+    "OWASP TOP 10/LDAPi.md",
+    "Gestores de contenido/Wordpress.md",
+    "Privilege escalation/Explotacion de tareas cron.md",
+    "OWASP TOP 10/File Upload Bypass.md",
+    "OWASP TOP 10/XML External Entity Injection (XXE).md",
+    "Privilege escalation",
+    "Tipos de Payloads.md",
     "OWASP TOP 10/SSTI (Server Side Template Injection).md",
     "OWASP TOP 10/SQLi.md",
-    "OWASP TOP 10/Local FIle Inclusion (LFI).md",
-    "OWASP TOP 10/LDAPi.md",
     "OWASP TOP 10/Deserialization Attack.md",
     "OWASP TOP 10",
     "Gestores de contenido/Drupal.md",
     "Gestores de contenido/Joomla.md",
-    "Gestores de contenido/Wordpress.md",
     "Gestores de contenido/Magento.md",
     "Gestores de contenido",
     "prueba/Tareas.md",

