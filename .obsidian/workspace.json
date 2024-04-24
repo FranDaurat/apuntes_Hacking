@@ -13,13 +13,26 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OWASP TOP 10/File Upload Bypass.md",
+                "file": "Tipos de Payloads.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "fb5214b1e9537d08",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Tratamiento tty.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -85,7 +98,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OWASP TOP 10/File Upload Bypass.md",
+                "file": "Tratamiento tty.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +115,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OWASP TOP 10/File Upload Bypass.md",
+                "file": "Tratamiento tty.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +138,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OWASP TOP 10/File Upload Bypass.md"
+                "file": "Tratamiento tty.md"
               }
             }
           }
@@ -148,18 +161,19 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "bb7b89c25346661d",
+  "active": "fb5214b1e9537d08",
   "lastOpenFiles": [
+    "Tipos de Payloads.md",
+    "Tratamiento tty.md",
+    "OWASP TOP 10/File Upload Bypass.md",
+    "OWASP TOP 10/SSTI (Server Side Template Injection).md",
     "OWASP TOP 10/Local FIle Inclusion (LFI).md",
     "OWASP TOP 10/Prototype Pollution.md",
     "OWASP TOP 10/LDAPi.md",
     "Gestores de contenido/Wordpress.md",
     "Privilege escalation/Explotacion de tareas cron.md",
-    "OWASP TOP 10/File Upload Bypass.md",
     "OWASP TOP 10/XML External Entity Injection (XXE).md",
     "Privilege escalation",
-    "Tipos de Payloads.md",
-    "OWASP TOP 10/SSTI (Server Side Template Injection).md",
     "OWASP TOP 10/SQLi.md",
     "OWASP TOP 10/Deserialization Attack.md",
     "OWASP TOP 10",
