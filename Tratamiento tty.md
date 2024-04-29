@@ -4,6 +4,6 @@
 	stty raw -echo; fg
 	reset xterm
 	export TERM=xterm
-	export SHELL=bash a
+	export SHELL=bash 
 	ssty rows 44 columns 184
 ```
