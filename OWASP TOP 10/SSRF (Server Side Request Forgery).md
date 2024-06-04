@@ -134,3 +134,79 @@ Identificar simplemente una vulnerabilidad de Blind SSRF que puede desencadenar 
    - Otro camino para explotar vulnerabilidades de Blind SSRF es inducir a la aplicación a conectarse a un sistema bajo el control del atacante y devolver respuestas maliciosas al cliente HTTP que hace la conexión.
    - Si puedes explotar una vulnerabilidad grave del lado del cliente en la implementación HTTP del servidor, podrías lograr la ejecución remota de código dentro de la infraestructura de la aplicación.
 
+-- -  
+## Encontrar Superficie de Ataque Oculta para Vulnerabilidades de SSRF
+
+### Descripción
+
+Muchas vulnerabilidades de Server-Side Request Forgery (SSRF) son fáciles de encontrar, ya que el tráfico normal de la aplicación involucra parámetros de solicitud que contienen URLs completas. Sin embargo, otros ejemplos de SSRF son más difíciles de localizar.
+
+### Superficies de Ataque Evidentes
+
+En algunos casos, las aplicaciones tienen parámetros de solicitud que explícitamente incluyen URLs completas. Por ejemplo:
+
+- Parámeteros como `callback_url`, `target_url`, `redirect_url`, etc.
+- Formularios o endpoints que permiten a los usuarios proporcionar URLs para obtener contenido externo.
+
+Estos son puntos claros donde podrías inyectar URLs maliciosas para explotar SSRF.
+
+### Superficies de Ataque Ocultas
+
+Existen otros escenarios donde las vulnerabilidades de SSRF no son tan evidentes y requieren una búsqueda más exhaustiva. Estas superficies de ataque ocultas pueden incluir:
+
+- **Cabeceras HTTP:**
+  - Algunos servidores pueden procesar cabeceras HTTP como `Referer`, `X-Forwarded-For` o `Host` que podrían ser manipuladas para desencadenar solicitudes SSRF.
+- **Cargas Útiles Incrustadas en el Cuerpo de la Solicitud:**
+  - Datos en el cuerpo de las solicitudes POST que pueden contener URLs, especialmente en formatos como JSON o XML.
+- **Parámetros No Documentados:**
+  - Parámetros que no están bien documentados o visibles en el tráfico normal de la aplicación pero que aún aceptan URLs.
+- **Interacciones de Servicios Internos:**
+  - Servicios internos de la aplicación que toman URLs como entradas para funcionalidades como carga de datos, integraciones de APIs, o notificaciones web.
+
+### Estrategias para Encontrar Blind SSRF
+
+Para descubrir estas superficies de ataque más difíciles de encontrar, puedes usar las siguientes estrategias:
+
+1. **Revisar la Documentación y el Código:**
+   - Inspeccionar la documentación y, si es posible, el código fuente para descubrir parámetros y funcionalidades que acepten URLs.
+
+2. **Interceptar y Modificar Tráfico:**
+   - Utilizar herramientas como Burp Suite para interceptar y modificar el tráfico de la aplicación, probando diferentes parámetros y cabeceras para ver cómo responde el servidor.
+
+3. **Explorar Funcionalidades Secundarias:**
+   - Investigar funcionalidades secundarias de la aplicación que podrían no ser tan obvias pero que podrían procesar URLs, como funciones de importación/exportación de datos, integraciones con otros servicios, o mecanismos de redirección.
+
+4. **Pruebas de Fuzzing:**
+   - Realizar fuzzing en diferentes partes de las solicitudes para identificar parámetros que podrían procesar URLs.
+-- - 
+### Todo tipo de cabeceras
+```http
+GET /some/resource HTTP/1.1
+Host: vulnerable-website.com
+X-Forwarded-For: 127.0.0.1
+X-Forwarded-Host: attacker.com
+X-Forwarded-Server: attacker.com
+X-Forwarded-Port: 80
+Forwarded: for=127.0.0.1;host=attacker.com;proto=http
+Client-IP: 127.0.0.1
+True-Client-IP: 127.0.0.1
+Cluster-Client-IP: 127.0.0.1
+X-Client-IP: 127.0.0.1
+X-Real-IP: 127.0.0.1
+X-Remote-IP: 127.0.0.1
+X-Remote-Addr: 127.0.0.1
+X-ProxyUser-Ip: 127.0.0.1
+Referer: http://attacker.com
+Origin: http://attacker.com
+X-Forwarded-By: 127.0.0.1
+X-Forwarded-Proto: https
+Via: 1.1 attacker.com
+X-Api-Version: 1.0
+Max-Forwards: 10
+X-Wap-Profile: http://attacker.com
+Proxy-Authorization: Basic Zm9vOmJhcg==
+Surrogate-Capability: attacker="Surrogate/1.0"
+```
+
+
+
