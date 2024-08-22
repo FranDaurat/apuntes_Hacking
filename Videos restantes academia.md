@@ -1,4 +1,5 @@
 -- -
+## Owasp Top 10
 - [ ] Inyecciones NoSQL
 - [x] Open redirect
 - [x] Shell Shock attack
@@ -6,6 +7,19 @@
 - [x] JWT
 - [x] RFI
 - [ ] SSRF
-- [ ] Log posioning
-- [ ] CSRF
+- [x] Log posioning
+- [x] CSRF
 - [ ] Protoype Pollution
+-- - 
+## Privilege Escalation
+- [ ] 1
+- [ ] 2
+- [ ] 3
+- [ ] 4
+- [ ] 5
+- [ ] 6
+- [ ] 7
+- [ ] 8
+- [ ] 9
+- [ ] 10
+- [ ] 12
