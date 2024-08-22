@@ -49,6 +49,18 @@
             "state": {
               "type": "markdown",
               "state": {
+                "file": "Privilege escalation/Explotacion de tareas cron.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b4d6c55dc091ef1e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
                 "file": "Videos restantes academia.md",
                 "mode": "source",
                 "source": false
@@ -56,7 +68,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -184,23 +196,24 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "7f3dca51ce7225df",
+  "active": "b4d6c55dc091ef1e",
   "lastOpenFiles": [
+    "OWASP TOP 10/Prototype Pollution.md",
+    "OWASP TOP 10/JWT (JSON Web Token).md",
+    "Privilege escalation/Explotacion de tareas cron.md",
+    "Tipos de Payloads.md",
     "Tratamiento tty.md",
     "Videos restantes academia.md",
     "OWASP TOP 10/Shell Shock Attack.md",
-    "Privilege escalation/Explotacion de tareas cron.md",
     "OWASP TOP 10/XML External Entity Injection (XXE).md",
     "OWASP TOP 10/SQLi.md",
     "OWASP TOP 10/SSTI (Server Side Template Injection).md",
     "OWASP TOP 10/LDAPi.md",
     "OWASP TOP 10/SSRF (Server Side Request Forgery).md",
     "OWASP TOP 10/CORS (Cross Origin Resource Sharing).md",
-    "OWASP TOP 10/Prototype Pollution.md",
     "OWASP TOP 10/Local FIle Inclusion (LFI).md",
     "OWASP TOP 10/Deserialization Attack.md",
     "OWASP TOP 10/File Upload Bypass.md",
-    "Tipos de Payloads.md",
     "Gestores de contenido/Wordpress.md",
     "Privilege escalation",
     "OWASP TOP 10",
