@@ -3,7 +3,9 @@
 - [x] Open redirect
 - [x] Shell Shock attack
 - [ ] CORS
-- [ ] JWT
+- [x] JWT
 - [x] RFI
 - [ ] SSRF
 - [ ] Log posioning
+- [ ] CSRF
+- [ ] Protoype Pollution
