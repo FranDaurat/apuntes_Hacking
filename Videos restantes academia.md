@@ -3,17 +3,17 @@
 - [ ] Inyecciones NoSQL
 - [x] Open redirect
 - [x] Shell Shock attack
-- [ ] CORS
+- [x] CORS
 - [x] JWT
 - [x] RFI
 - [ ] SSRF
 - [x] Log posioning
 - [x] CSRF
-- [ ] Protoype Pollution
+- [x] Protoype Pollution
 -- - 
 ## Privilege Escalation
-- [ ] 1
-- [ ] 2
+- [x] 1
+- [x] 2
 - [ ] 3
 - [ ] 4
 - [ ] 5
