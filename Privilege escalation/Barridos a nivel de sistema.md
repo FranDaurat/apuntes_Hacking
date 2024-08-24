@@ -9,6 +9,11 @@ Comando utilizado para aplicar un barrido en el sistema y ver que archivos tiene
 find / -writable 2>/dev/null
 ```
 
+Comando utiliado para aplicar un barrido a nivel de sistema con el fin de detectar archivos .py para intentar realizar un Python Library Hijacking.
+```bash
+find / -type f -name "*.py" 2>/dev/null
+```
+
 Comando utilizado para realizar una buscada en el sistema de capabilities asociadas a binarios.
 ```bash
 getcap -r / 2>/dev/null
@@ -55,5 +60,7 @@ md5sum pspy
 # Si los 2 hashes son iguales es que el script fue transferido de forma exitosa.
 ```
 -- - 
-
-
+## Scripts que automatizan la enumeracion del sistema
+- **lse.sh** (./lse.sh -l 1)---> https://github.com/diego-treitos/linux-smart-enumeration/blob/master/lse.sh
+- **linepeas.sh** ---> https://github.com/peass-ng/PEASS-ng/releases/tag/20240818-ea81ae32
+-- - 
