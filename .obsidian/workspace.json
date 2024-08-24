@@ -30,9 +30,45 @@
                 "source": false
               }
             }
+          },
+          {
+            "id": "531babbb8addf5c6",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Videos restantes academia.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "b72a365627ba6892",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Privilege escalation/Python Library Hijacking.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "48794e3e9da38415",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Privilege escalation/Deteccion y explotacion de capabilities.md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
         ],
-        "currentTab": 1
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -98,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Privilege escalation/PATH Hijacking.md",
+                "file": "Privilege escalation/Deteccion y explotacion de capabilities.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -115,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Privilege escalation/PATH Hijacking.md",
+                "file": "Privilege escalation/Deteccion y explotacion de capabilities.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -138,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Privilege escalation/PATH Hijacking.md"
+                "file": "Privilege escalation/Deteccion y explotacion de capabilities.md"
               }
             }
           }
@@ -160,38 +196,38 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "d0c10e398efcbe2b",
+  "active": "48794e3e9da38415",
   "lastOpenFiles": [
-    "Videos restantes academia.md",
-    "Privilege escalation/PATH Hijacking.md",
     "Privilege escalation/Deteccion y explotacion de tareas Cron.md",
+    "Privilege escalation/Malas Configuraciones.md",
     "Privilege escalation/Barridos a nivel de sistema.md",
-    "Tratamiento tty.md",
-    "OWASP TOP 10/File Upload Bypass.md",
-    "OWASP TOP 10/SSRF (Server Side Request Forgery).md",
-    "OWASP TOP 10/XML External Entity Injection (XXE).md",
-    "OWASP TOP 10/SSTI (Server Side Template Injection).md",
-    "OWASP TOP 10/SQLi.md",
-    "OWASP TOP 10/Shell Shock Attack.md",
-    "OWASP TOP 10/NoSQLi.md",
-    "Untitled",
-    "OWASP TOP 10/Log Poisoning (LFI -> RCE).md",
-    "OWASP TOP 10/CORS (Cross Origin Resource Sharing).md",
-    "OWASP TOP 10/Prototype Pollution.md",
+    "Privilege escalation/Python Library Hijacking.md",
+    "Privilege escalation/PATH Hijacking.md",
+    "Privilege escalation/Deteccion y explotacion de capabilities.md",
+    "Privilege escalation/Untitled",
     "OWASP TOP 10/Local FIle Inclusion (LFI).md",
-    "OWASP TOP 10/LDAPi.md",
-    "OWASP TOP 10/JWT (JSON Web Token).md",
+    "OWASP TOP 10/File Upload Bypass.md",
+    "Videos restantes academia.md",
+    "OWASP TOP 10/Log Poisoning (LFI -> RCE).md",
+    "OWASP TOP 10/NoSQLi.md",
+    "OWASP TOP 10/SQLi.md",
+    "OWASP TOP 10/SSRF (Server Side Request Forgery).md",
+    "OWASP TOP 10/Prototype Pollution.md",
+    "OWASP TOP 10/Shell Shock Attack.md",
+    "OWASP TOP 10/SSTI (Server Side Template Injection).md",
+    "OWASP TOP 10/XML External Entity Injection (XXE).md",
     "OWASP TOP 10/Tipos de Payloads.md",
+    "OWASP TOP 10/JWT (JSON Web Token).md",
+    "OWASP TOP 10/CORS (Cross Origin Resource Sharing).md",
     "OWASP TOP 10/Deserialization Attack.md",
+    "Tratamiento tty.md",
+    "OWASP TOP 10/LDAPi.md",
     "Gestores de contenido/Wordpress.md",
     "Privilege escalation",
     "OWASP TOP 10",
     "Gestores de contenido/Drupal.md",
     "Gestores de contenido/Joomla.md",
-    "Gestores de contenido/Magento.md",
     "Gestores de contenido",
-    "prueba/Tareas.md",
-    "2024-03-06.md",
     "apuntes_hacking",
     "Gestores de contenido/Drupal",
     "Gestores de contenido/Magento",
