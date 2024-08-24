@@ -28,9 +28,10 @@ Las entidades son una forma de representar un elemento de datos sin referenciar 
 	- &gt (Grater Than); 
 - Entidades Parametricas ---> %nombre_entidad;
 ### Ejemplo de una estructura XML
+```xml
 <?xml version="1.0" encoding="UTF-8"?> ---> Declaración XML
 <!DOCTYPE foo [<!ENTITY xxe SYSTEM "mi entidad">]> ---> DTD (Document Type Definition)
-```xml
+
 <root>
 	<name>fran</name>
 	<tel>5454545as</tel>
