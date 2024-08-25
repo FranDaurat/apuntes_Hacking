@@ -16,4 +16,5 @@ getpcaps $PID # ---> Eso ya nos muestra directamente las capabilities asociadas 
 getcap -r / 2>/dev/null
 ```
 
+Luego de encontrar los binarios con las capabilities, nos basamos en la pagina https://gtfobins.github.io para su explotacion.
 - --
