@@ -8,67 +8,18 @@
         "type": "tabs",
         "children": [
           {
-            "id": "47d88b2a7d7b899c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Videos restantes academia.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "d0c10e398efcbe2b",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Privilege escalation/PATH Hijacking.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "531babbb8addf5c6",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Videos restantes academia.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "b72a365627ba6892",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Privilege escalation/Python Library Hijacking.md",
-                "mode": "source",
-                "source": false
-              }
-            }
-          },
-          {
             "id": "48794e3e9da38415",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Privilege escalation/Deteccion y explotacion de capabilities.md",
+                "file": "Privilege escalation/Barridos a nivel de sistema.md",
                 "mode": "source",
                 "source": false
               }
             }
           }
-        ],
-        "currentTab": 4
+        ]
       }
     ],
     "direction": "vertical"
@@ -134,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Privilege escalation/Deteccion y explotacion de capabilities.md",
+                "file": "Privilege escalation/Barridos a nivel de sistema.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Privilege escalation/Deteccion y explotacion de capabilities.md",
+                "file": "Privilege escalation/Barridos a nivel de sistema.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Privilege escalation/Deteccion y explotacion de capabilities.md"
+                "file": "Privilege escalation/Barridos a nivel de sistema.md"
               }
             }
           }
@@ -198,16 +149,16 @@
   },
   "active": "48794e3e9da38415",
   "lastOpenFiles": [
+    "Videos restantes academia.md",
+    "Privilege escalation/Deteccion y explotacion de capabilities.md",
     "Privilege escalation/Deteccion y explotacion de tareas Cron.md",
     "Privilege escalation/Malas Configuraciones.md",
     "Privilege escalation/Barridos a nivel de sistema.md",
     "Privilege escalation/Python Library Hijacking.md",
     "Privilege escalation/PATH Hijacking.md",
-    "Privilege escalation/Deteccion y explotacion de capabilities.md",
     "Privilege escalation/Untitled",
     "OWASP TOP 10/Local FIle Inclusion (LFI).md",
     "OWASP TOP 10/File Upload Bypass.md",
-    "Videos restantes academia.md",
     "OWASP TOP 10/Log Poisoning (LFI -> RCE).md",
     "OWASP TOP 10/NoSQLi.md",
     "OWASP TOP 10/SQLi.md",
