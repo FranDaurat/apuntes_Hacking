@@ -10,6 +10,7 @@
 - [x] Log posioning
 - [x] CSRF
 - [x] Protoype Pollution
+- [x] LFI
 -- - 
 ## Privilege Escalation
 - [x] 1
@@ -18,7 +19,7 @@
 - [x] 4
 - [x] 5
 - [x] 6
-- [ ] 7
+- [x] 7
 - [ ] 8
 - [ ] 9
 - [ ] 10
