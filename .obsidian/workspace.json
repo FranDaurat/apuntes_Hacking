@@ -13,8 +13,8 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Privilege escalation/Barridos a nivel de sistema.md",
-                "mode": "source",
+                "file": "OWASP TOP 10/SQLi.md",
+                "mode": "preview",
                 "source": false
               }
             }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Privilege escalation/Barridos a nivel de sistema.md",
+                "file": "OWASP TOP 10/SQLi.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Privilege escalation/Barridos a nivel de sistema.md",
+                "file": "OWASP TOP 10/SQLi.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Privilege escalation/Barridos a nivel de sistema.md"
+                "file": "OWASP TOP 10/SQLi.md"
               }
             }
           }
@@ -149,13 +149,13 @@
   },
   "active": "48794e3e9da38415",
   "lastOpenFiles": [
+    "Privilege escalation/PATH Hijacking.md",
+    "Privilege escalation/Malas Configuraciones.md",
+    "Privilege escalation/Python Library Hijacking.md",
+    "Privilege escalation/Barridos a nivel de sistema.md",
     "Videos restantes academia.md",
     "Privilege escalation/Deteccion y explotacion de capabilities.md",
     "Privilege escalation/Deteccion y explotacion de tareas Cron.md",
-    "Privilege escalation/Malas Configuraciones.md",
-    "Privilege escalation/Barridos a nivel de sistema.md",
-    "Privilege escalation/Python Library Hijacking.md",
-    "Privilege escalation/PATH Hijacking.md",
     "Privilege escalation/Untitled",
     "OWASP TOP 10/Local FIle Inclusion (LFI).md",
     "OWASP TOP 10/File Upload Bypass.md",
