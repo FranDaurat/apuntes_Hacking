@@ -63,5 +63,5 @@ md5sum pspy
 ## Scripts que automatizan la enumeracion del sistema
 - **lse.sh** (./lse.sh -l 1)---> https://github.com/diego-treitos/linux-smart-enumeration/blob/master/lse.sh
 - **linepeas.sh** ---> https://github.com/peass-ng/PEASS-ng/releases/tag/20240818-ea81ae32
-- **linux-exploit-suggester** ---> https://raw.githubusercontent.com/mzet-/linux-exploit-suggester
+- **linux-exploit-suggester** ---> https://github.com/The-Z-Labs/linux-exploit-suggester.git (Esta mas enfocado al kernel)
 -- - 
