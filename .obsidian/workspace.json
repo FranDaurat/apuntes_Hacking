@@ -13,13 +13,38 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OWASP TOP 10/SQLi.md",
+                "file": "Gestores de contenido/Wordpress.md",
                 "mode": "preview",
                 "source": false
               }
             }
+          },
+          {
+            "id": "187fdbcf0a573e45",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Automated Recon/Useful Commands.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          },
+          {
+            "id": "45af69ceb37f09b0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "OWASP TOP 10/Log Poisoning (LFI -> RCE).md",
+                "mode": "source",
+                "source": false
+              }
+            }
           }
-        ]
+        ],
+        "currentTab": 2
       }
     ],
     "direction": "vertical"
@@ -85,7 +110,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OWASP TOP 10/SQLi.md",
+                "file": "OWASP TOP 10/Log Poisoning (LFI -> RCE).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +127,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OWASP TOP 10/SQLi.md",
+                "file": "OWASP TOP 10/Log Poisoning (LFI -> RCE).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +150,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OWASP TOP 10/SQLi.md"
+                "file": "OWASP TOP 10/Log Poisoning (LFI -> RCE).md"
               }
             }
           }
@@ -147,8 +172,21 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "48794e3e9da38415",
+  "active": "45af69ceb37f09b0",
   "lastOpenFiles": [
+    "Automated Recon/Coffin Methodology.md",
+    "Automated Recon/Useful Commands.md",
+    "Gestores de contenido/Wordpress.md",
+    "Automated Recon",
+    "Gestores de contenido/Magento.md",
+    "Gestores de contenido/Joomla.md",
+    "Gestores de contenido/Drupal.md",
+    "OWASP TOP 10/SQLi.md",
+    "OWASP TOP 10/Log Poisoning (LFI -> RCE).md",
+    "OWASP TOP 10/File Upload Bypass.md",
+    "OWASP TOP 10/JWT (JSON Web Token).md",
+    "OWASP TOP 10/Shell Shock Attack.md",
+    "OWASP TOP 10/LDAPi.md",
     "Privilege escalation/PATH Hijacking.md",
     "Privilege escalation/Malas Configuraciones.md",
     "Privilege escalation/Python Library Hijacking.md",
@@ -158,32 +196,19 @@
     "Privilege escalation/Deteccion y explotacion de tareas Cron.md",
     "Privilege escalation/Untitled",
     "OWASP TOP 10/Local FIle Inclusion (LFI).md",
-    "OWASP TOP 10/File Upload Bypass.md",
-    "OWASP TOP 10/Log Poisoning (LFI -> RCE).md",
     "OWASP TOP 10/NoSQLi.md",
-    "OWASP TOP 10/SQLi.md",
     "OWASP TOP 10/SSRF (Server Side Request Forgery).md",
     "OWASP TOP 10/Prototype Pollution.md",
-    "OWASP TOP 10/Shell Shock Attack.md",
     "OWASP TOP 10/SSTI (Server Side Template Injection).md",
     "OWASP TOP 10/XML External Entity Injection (XXE).md",
     "OWASP TOP 10/Tipos de Payloads.md",
-    "OWASP TOP 10/JWT (JSON Web Token).md",
-    "OWASP TOP 10/CORS (Cross Origin Resource Sharing).md",
-    "OWASP TOP 10/Deserialization Attack.md",
-    "Tratamiento tty.md",
-    "OWASP TOP 10/LDAPi.md",
-    "Gestores de contenido/Wordpress.md",
     "Privilege escalation",
     "OWASP TOP 10",
-    "Gestores de contenido/Drupal.md",
-    "Gestores de contenido/Joomla.md",
     "Gestores de contenido",
     "apuntes_hacking",
     "Gestores de contenido/Drupal",
     "Gestores de contenido/Magento",
     "Gestores de contenido/Jooomla",
-    "Gestores de contenido/Wordpress",
-    "Gestores de contenido"
+    "Gestores de contenido/Wordpress"
   ]
 }
