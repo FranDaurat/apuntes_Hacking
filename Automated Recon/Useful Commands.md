@@ -1,6 +1,0 @@
--- - 
-### Delfox (XSS)
-```bash
-cat wayback_cleanParams | dalfox pipe --worker 20 --timeout 10 --delay 100
-```
-
