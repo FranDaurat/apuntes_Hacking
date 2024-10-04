@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Automated Recon/Dorks.md",
+                "file": "OWASP TOP 10/Local FIle Inclusion (LFI).md",
                 "mode": "source",
                 "source": false
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "Automated Recon/Dorks.md",
+                "file": "OWASP TOP 10/Local FIle Inclusion (LFI).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "Automated Recon/Dorks.md",
+                "file": "OWASP TOP 10/Local FIle Inclusion (LFI).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "Automated Recon/Dorks.md"
+                "file": "OWASP TOP 10/Local FIle Inclusion (LFI).md"
               }
             }
           }
@@ -199,9 +199,8 @@
   "active": "3ba59cfdae27a377",
   "lastOpenFiles": [
     "Automated Recon/Useful Commands (Coffin).md",
-    "Automated Recon/Dorks.md",
-    "Automated Recon/Dorks.md",
     "Automated Recon/Coffin Methodology.md",
+    "Automated Recon/Dorks.md",
     "OWASP TOP 10/File Upload Bypass.md",
     "OWASP TOP 10/Shell Shock Attack.md",
     "OWASP TOP 10/SQLi.md",
