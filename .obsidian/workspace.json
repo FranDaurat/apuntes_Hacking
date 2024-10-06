@@ -61,7 +61,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "OWASP TOP 10/Local FIle Inclusion (LFI).md",
+                "file": "Automated Recon/Useful Commands (Coffin).md",
                 "mode": "source",
                 "source": false
               }
@@ -134,7 +134,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OWASP TOP 10/Local FIle Inclusion (LFI).md",
+                "file": "Automated Recon/Useful Commands (Coffin).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +151,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OWASP TOP 10/Local FIle Inclusion (LFI).md",
+                "file": "Automated Recon/Useful Commands (Coffin).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -174,7 +174,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OWASP TOP 10/Local FIle Inclusion (LFI).md"
+                "file": "Automated Recon/Useful Commands (Coffin).md"
               }
             }
           }
@@ -198,6 +198,7 @@
   },
   "active": "3ba59cfdae27a377",
   "lastOpenFiles": [
+    "OWASP TOP 10/Local FIle Inclusion (LFI).md",
     "Automated Recon/Useful Commands (Coffin).md",
     "Automated Recon/Coffin Methodology.md",
     "Automated Recon/Dorks.md",
@@ -214,7 +215,6 @@
     "OWASP TOP 10/CORS (Cross Origin Resource Sharing).md",
     "Tratamiento tty.md",
     "Malandra/Untitled.md",
-    "OWASP TOP 10/Local FIle Inclusion (LFI).md",
     "Malandra",
     "OWASP TOP 10/Log Poisoning (LFI -> RCE).md",
     "Gestores de contenido/Wordpress.md",
