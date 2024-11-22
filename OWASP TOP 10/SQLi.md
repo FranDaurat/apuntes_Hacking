@@ -69,7 +69,7 @@ sqlmap -u 'http://localhost/searchUsers.php?id=1' --cookie "PHPSESSID=812312" --
 ```
 
 ```python
---dbs --> Enumera los posibles DBMS que hay de fondo.
+--dbs --> Enumera las bases de datoso.
 --dbms --> solamente prueba payloads para el dbms que le indiquemos. Ej: mysql, oracle, etc.
 --batch --> Hace que tome las opciones por defecto.
 -D --> Especificamos la base de datos a enumerar.
