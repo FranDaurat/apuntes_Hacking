@@ -20,3 +20,17 @@ go-dork -e google -q "QUERY" -p 50
 echo "admin.example.com" | waybackurls | grep -P ".*\.js" | wget
 grep -RoP "(\/[a-zA-Z0-9_\-]+)+"
 ```
+---
+## SSL Certificate Parsers (Recon)
+
+```bash
+echo $CIDR | httpx -t 100 | nucei -t ${USER_HOME}/nuclei-templates/ssl/ssl-dns-names.yaml | cut -d " " -f7|cut -d "]" - f1 | sed 's/[//' | sed 's/,/\n/g'| sort -u 
+```
+
+```bash
+echo $CIDR | httpx -t 100 -silent -json -tls-grab | jq -r .'"tls-grab".dns_names[]' | sort -u 
+```
+
+```bash
+cero $CIDR | sort -u 
+```
