@@ -20,6 +20,7 @@ go-dork -e google -q "QUERY" -p 50
 echo "admin.example.com" | waybackurls | grep -P ".*\.js" | wget
 grep -RoP "(\/[a-zA-Z0-9_\-]+)+"
 ```
+
 ---
 ## SSL Certificate Parsers (CIDR Recon)
 
@@ -47,6 +48,8 @@ http://kaeferjaeger.gay/sni-ip-ranges
 https://www.youtube.com/watch?v=7hKEfF-yR1w
 https://github.com/lord-alfred/ipranges.git
 
+### Installation: 
+
 ```bash
 #!/bin/bash
 
@@ -60,4 +63,5 @@ cat *.txt | grep "$domain" | cut -d "[" -f2 | cut -d "]" -f1 | sort -u | grep "$
 ```
 
 ---
+
 
