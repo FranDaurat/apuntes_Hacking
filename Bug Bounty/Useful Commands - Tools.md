@@ -2,6 +2,7 @@
 ### Dalfox (XSS)
 ```bash
 cat wayback_cleanParams | dalfox pipe --worker 20 --timeout 10 --delay 100
+dalfox file endpoints/filteredParameters.txt --worker 20 --delay 100 >> testing/xss_results.txt 2> testing/dalfox_errors.log
 ```
 
 ### XSStrike
@@ -19,6 +20,16 @@ go-dork -e google -q "QUERY" -p 50
 ``` bash
 echo "admin.example.com" | waybackurls | grep -P ".*\.js" | wget
 grep -RoP "(\/[a-zA-Z0-9_\-]+)+"
+```
+
+### Sqlmap
+```bash
+sqlmap -m endpoints/filteredParameters.txt --batch --dbs --level 2 --risk 2 --timeout 10 --tamper="space2comment,between,randomcase" > testing/sqli_results.txt
+```
+
+### Openredirex
+```bash
+cat endpoints/parameters.txt | openredirex | grep -vE "ERROR" >> testing/openRedirect_results.txt
 ```
 
 ---
