@@ -20,3 +20,7 @@ Ataque por diccionario:
 wpscan --url http://localhost:31337 -U fran -P /usr/share/wordlists/rockyou.txt
 ``` 
 
+Wordpress agrressive scanning from lostsec
+```bash
+wpscan --url https://site.com --disable-tls-checks --api-token <here> -e at -e ap -e u --enumerate ap --plugins-detection aggressive --force
+```
