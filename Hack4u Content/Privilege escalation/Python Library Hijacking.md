@@ -11,7 +11,7 @@ os.system("bash -p")
 ```
 
 ### Aclaracion
-- Si no tenemos permisos de escirtura en ese mismo directorio podemos ver si en los otros directorios llegamos a tener para luego modificar el archivo vinculado a la libreria y asi elevar privilegios.
+- Si no tenemos permisos de escritura en ese mismo directorio podemos ver si en los otros directorios llegamos a tener para luego modificar el archivo vinculado a la libreria y asi elevar privilegios.
 ```bash
 ['', '/usr/lib/python311.zip', '/usr/lib/python3.11', '/usr/lib/python3.11/lib-dynload', '/home/elgordoponcio/.local/lib/python3.11/site-packages', '/usr/local/lib/python3.11/dist-packages', '/usr/lib/python3/dist-packages']
 ```
