@@ -20,7 +20,7 @@ Si el usuario root tiene definida una tarea Cron que ejecuta un script en nuestr
 
 chmod u+s /bin/bash
 
-# Con este comando podemos quedarnos viendo y ejecutando a la vez de manera secuencial un comanod y su output
+# Con este comando podemos quedarnos viendo y ejecutando a la vez de manera secuencial un comando y su output
 watch -n 1 ls -l /bin/bash
 ```
 
