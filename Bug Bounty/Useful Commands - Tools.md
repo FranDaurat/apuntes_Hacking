@@ -74,5 +74,49 @@ cat *.txt | grep "$domain" | cut -d "[" -f2 | cut -d "]" -f1 | sort -u | grep "$
 ```
 
 ---
+## ASN Recon 
 
+### bgp.sh
+```bash
+#!/bin/bash
 
+expand $1 | cut -d " " -f1 | sed 's/AS//g'
+echo ""
+echo ""
+lined=$(expand $1 | cut -d " " -f1 | sed 's/AS//g' | tr '\n' ',')
+echo "amass intel -asn $lined"
+```
+
+--- 
+## Extensions Used
+
+- [ ] Wapalyzer
+- [ ] PwnFox
+- [ ] Shodan
+- [ ] Dark Reader
+- [ ] Cookie-Editor
+- [ ] Hack-Tools
+- [ ] Temp-Mail
+- [ ] Link-Extractor
+- [ ] Open Multiple URLs
+- [ ] Retire.js
+- [ ] Hunter.io
+- [ ] XNL-Reveal
+
+---
+## Bookmarks Used
+
+### OSINT
+- [ ] www.dateas.com/es/consulta_cuit_cuil
+- [ ] start.me/p/0Pqbdg/osint-500-tools
+### Pentesting
+- [ ] gtfobins.github.io
+- [ ] book.hacktricks.xyz
+### Bug bounty
+- [ ] chaos.projectdiscovery.io
+- [ ] bbradar.io
+- [ ] xss.report
+- [ ] wordlists.assetnote.io
+- [ ] lostsec.xyz
+### Etc
+- [ ] whatismyipaddress.com
