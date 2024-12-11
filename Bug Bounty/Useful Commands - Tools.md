@@ -118,5 +118,9 @@ echo "amass intel -asn $lined"
 - [ ] xss.report
 - [ ] wordlists.assetnote.io
 - [ ] lostsec.xyz
+### ASNS
+- [ ] bgp.he.net
+- [ ] ipinfo.io
+- [ ] asnlookup.com
 ### Etc
 - [ ] whatismyipaddress.com
