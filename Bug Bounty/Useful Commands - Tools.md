@@ -72,21 +72,6 @@ done
 
 cat *.txt | grep "$domain" | cut -d "[" -f2 | cut -d "]" -f1 | sort -u | grep "$domain"
 ```
-
----
-## ASN Recon 
-
-### bgp.sh
-```bash
-#!/bin/bash
-
-expand $1 | cut -d " " -f1 | sed 's/AS//g'
-echo ""
-echo ""
-lined=$(expand $1 | cut -d " " -f1 | sed 's/AS//g' | tr '\n' ',')
-echo "amass intel -asn $lined"
-```
-
 --- 
 ## Extensions Used
 
@@ -118,9 +103,15 @@ echo "amass intel -asn $lined"
 - [ ] xss.report
 - [ ] wordlists.assetnote.io
 - [ ] lostsec.xyz
+- [ ] github.com/swisskyrepo/PayloadsAllTheThings/tree/master
+- [ ] github.com/danielmiessler/SecLists/
+- [ ] www.vccgenerator.org
+- [ ] www.akto.io/tools/credit-card-generator
 ### ASNS
 - [ ] bgp.he.net
 - [ ] ipinfo.io
 - [ ] asnlookup.com
 ### Etc
 - [ ] whatismyipaddress.com
+
+----
