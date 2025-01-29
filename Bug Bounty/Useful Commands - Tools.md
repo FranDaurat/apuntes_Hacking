@@ -107,6 +107,7 @@ cat *.txt | grep "$domain" | cut -d "[" -f2 | cut -d "]" -f1 | sort -u | grep "$
 - [ ] github.com/danielmiessler/SecLists/
 - [ ] www.vccgenerator.org
 - [ ] www.akto.io/tools/credit-card-generator
+- [ ] web.archive.org
 ### ASNS
 - [ ] bgp.he.net
 - [ ] ipinfo.io
