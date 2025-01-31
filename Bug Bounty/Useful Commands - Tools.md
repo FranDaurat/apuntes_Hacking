@@ -72,6 +72,19 @@ done
 
 cat *.txt | grep "$domain" | cut -d "[" -f2 | cut -d "]" -f1 | sort -u | grep "$domain"
 ```
+
+## Cloud Recon Tool
+https://github.com/g0ldencybersec/CloudRecon
+
+```bash 
+CloudRecon scrape -i CIDR 
+
+grep -F ".$domain" "$file" | awk -F '[][]' '{print $2}' | sed 's# #\n#g' | grep ".$domain" | sort -fu | cut -d ',' -f1 | sort -u
+cat test.txt | awk -F'[][]' '{print $2}' | tr ',' '\n' | sed 's/^ //g' | sort -u ----> encuentra todos los dominios
+grep -F ".$domain" "$file" | awk -F '[][]' '{print $2}' | sed 's# #\n#g' | sort -fu | cut -d ',' -f1 | sort -u
+
+```
+
 --- 
 ## Extensions Used
 
