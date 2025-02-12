@@ -36,7 +36,7 @@ cat endpoints/parameters.txt | openredirex | grep -vE "ERROR" >> testing/openRed
 ## SSL Certificate Parsers (CIDR Recon)
 
 ```bash
-echo $CIDR | httpx -t 100 | nucei -t ${USER_HOME}/nuclei-templates/ssl/ssl-dns-names.yaml | cut -d " " -f7|cut -d "]" - f1 | sed 's/[//' | sed 's/,/\n/g'| sort -u 
+echo $CIDR | httpx -t 100 | nuclei -t ${USER_HOME}/nuclei-templates/ssl/ssl-dns-names.yaml | cut -d " " -f7|cut -d "]" - f1 | sed 's/[//' | sed 's/,/\n/g'| sort -u 
 ```
 
 ```bash
@@ -71,6 +71,7 @@ for companie in "${companies[@]}"; do
 done
 
 cat *.txt | grep "$domain" | cut -d "[" -f2 | cut -d "]" -f1 | sort -u | grep "$domain"
+cat *.txt | grep -F ".$domain" | awk -F '--' '{print $2}' | tr ' ' '\n' | tr '[' ' ' | sed 's/ //' | sed 's/\]//' | grep -F ".$domain" | sort -u
 ```
 
 ## Cloud Recon Tool
@@ -121,6 +122,7 @@ grep -F ".$domain" "$file" | awk -F '[][]' '{print $2}' | sed 's# #\n#g' | sort 
 - [ ] www.vccgenerator.org
 - [ ] www.akto.io/tools/credit-card-generator
 - [ ] web.archive.org
+- [ ] whois.arin.net/ui/query.do
 ### ASNS
 - [ ] bgp.he.net
 - [ ] ipinfo.io
