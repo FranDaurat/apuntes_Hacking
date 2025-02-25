@@ -85,49 +85,15 @@ cat test.txt | awk -F'[][]' '{print $2}' | tr ',' '\n' | sed 's/^ //g' | sort -u
 grep -F ".$domain" "$file" | awk -F '[][]' '{print $2}' | sed 's# #\n#g' | sort -fu | cut -d ',' -f1 | sort -u
 
 ```
-
---- 
-## Extensions Used
-
-- [ ] Wapalyzer
-- [ ] PwnFox
-- [ ] Shodan
-- [ ] Dark Reader
-- [ ] Cookie-Editor
-- [ ] Hack-Tools
-- [ ] Temp-Mail
-- [ ] Link-Extractor
-- [ ] Open Multiple URLs
-- [ ] Retire.js
-- [ ] Hunter.io
-- [ ] XNL-Reveal
-
----
-## Bookmarks Used
-
-### OSINT
-- [ ] www.dateas.com/es/consulta_cuit_cuil
-- [ ] start.me/p/0Pqbdg/osint-500-tools
-### Pentesting
-- [ ] gtfobins.github.io
-- [ ] book.hacktricks.xyz
-### Bug bounty
-- [ ] chaos.projectdiscovery.io
-- [ ] bbradar.io
-- [ ] xss.report
-- [ ] wordlists.assetnote.io
-- [ ] lostsec.xyz
-- [ ] github.com/swisskyrepo/PayloadsAllTheThings/tree/master
-- [ ] github.com/danielmiessler/SecLists/
-- [ ] www.vccgenerator.org
-- [ ] www.akto.io/tools/credit-card-generator
-- [ ] web.archive.org
-- [ ] whois.arin.net/ui/query.do
-### ASNS
-- [ ] bgp.he.net
-- [ ] ipinfo.io
-- [ ] asnlookup.com
-### Etc
-- [ ] whatismyipaddress.com
-
 ----
+## WAF Bypass
+
+```bash 
+	dnsrecon -d "$domain"
+	Ssl.cert.subject.CN:'example.com' 200 ----> buscar en shodan
+	nmap --script ssl-cert -p 443,80 "$ip" ----> Confirmamos que la ip apunta al nombre de dominio correspondiente sin el waf de por medio
+	http://favicons.teamtailor-cdn.com/icons?url=${domain}#result ----> sacamos la url con el favicon
+	http://favicon-hash.kmsec.uk/ ----> pegamos la url de favicon aca y obtenemos el hash para luego buscarlo en shodan o censys con el dork correspondiente
+	https://viewdns.info/iphistory/?domain=${domain}
+	
+```
