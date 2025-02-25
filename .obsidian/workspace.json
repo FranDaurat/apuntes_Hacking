@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hack4u Content/OWASP TOP 10/NoSQLi.md",
+                "file": "Bug Bounty/Useful Commands - Tools.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "NoSQLi"
+              "title": "Useful Commands - Tools"
             }
           }
         ]
@@ -166,9 +166,10 @@
   },
   "active": "19432ab46b3eabd7",
   "lastOpenFiles": [
-    "Bug Bounty/Useful Commands - Tools.md",
-    "Bug Bounty/Coffin Base Methodology.md",
     "Bug Bounty/Google Dorks.md",
+    "Bug Bounty/Coffin Base Methodology.md",
+    "Hack4u Content/OWASP TOP 10/NoSQLi.md",
+    "Bug Bounty/Useful Commands - Tools.md",
     "Hack4u Content/Gestores de contenido/Magento.md",
     "Hack4u Content/Gestores de contenido/Wordpress.md",
     "Hack4u Content/Gestores de contenido/Joomla.md",
@@ -194,7 +195,6 @@
     "Malandra",
     "Bug Bounty",
     "Hack4u Content/Gestores de contenido/Drupal.md",
-    "Hack4u Content/OWASP TOP 10/JWT (JSON Web Token).md",
     "Privilege escalation/Untitled",
     "Hack4u Content/Privilege escalation",
     "Hack4u Content/OWASP TOP 10",
