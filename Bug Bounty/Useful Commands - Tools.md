@@ -97,3 +97,6 @@ grep -F ".$domain" "$file" | awk -F '[][]' '{print $2}' | sed 's# #\n#g' | sort 
 	https://viewdns.info/iphistory/?domain=${domain}
 	
 ```
+---
+### Google Extension (Host)
+![[Pasted image 20250225160456.png]]
