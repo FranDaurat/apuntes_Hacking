@@ -9,8 +9,21 @@ site:.gob inurl:redir | inurl:redirect | inurl:return | inurl:src=http | inurl:r
 site:.us intitle:"IIS Windows Server" 
 ```
 
-### All
+### S3 Buckets
+``` http
+site:s3.amazonaws.com "target.com"
+site:*.s3.amazonaws.com "target.com"
+site:s3-external-1.amazonaws.com "target.com"
+site:s3.dualstack.us-east-1.amazonaws.com "target.com"
+site:amazonaws.com inurl:s3.amazonaws.com 
+site:s3.amazonaws.com intitle:"index of"  
+site:s3.amazonaws.com inurl:".s3.amazonaws.com/"  
+site:s3.amazonaws.com intitle:"index of" "bucket"
 
+(site:*.s3.amazonaws.com OR site:*.s3-external-1.amazonaws.com OR site:*.s3.dualstack.us-east-1.amazonaws.com OR site:*.s3.ap-south-1.amazonaws.com) "target.com"
+```
+
+### All
 ```http 
 filetype:ini "password" site:orgfiletype:txt "credentials" site:gov
 filetype:yaml "secret_key" -examples
