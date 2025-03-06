@@ -35,7 +35,6 @@ in JSON:
 	"password":{
 	"$regex":".{29}" --> Consulto si la longitud de la contraseña es = 29
 	"$regex": "^.{29}$" 
-
 	}				   
 }
 
