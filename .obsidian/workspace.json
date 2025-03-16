@@ -4,47 +4,24 @@
     "type": "split",
     "children": [
       {
-        "id": "f3820ed76b4f393d",
+        "id": "ef747134a1b273d1",
         "type": "tabs",
         "children": [
           {
-            "id": "48794e3e9da38415",
+            "id": "df1a0d29f48ca76f",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Gestores de contenido/Wordpress.md",
-                "mode": "preview",
-                "source": false
-              }
-            }
-          },
-          {
-            "id": "187fdbcf0a573e45",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Automated Recon/Useful Commands (Coffin).md",
+                "file": "Bug Bounty/Manual Testing Methodology.md",
                 "mode": "source",
                 "source": false
-              }
-            }
-          },
-          {
-            "id": "45af69ceb37f09b0",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "OWASP TOP 10/File Upload Bypass.md",
-                "mode": "source",
-                "source": false
-              }
+              },
+              "icon": "lucide-file",
+              "title": "Manual Testing Methodology"
             }
           }
-        ],
-        "currentTab": 2
+        ]
       }
     ],
     "direction": "vertical"
@@ -63,8 +40,11 @@
             "state": {
               "type": "file-explorer",
               "state": {
-                "sortOrder": "alphabetical"
-              }
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "Files"
             }
           },
           {
@@ -79,7 +59,9 @@
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical"
-              }
+              },
+              "icon": "lucide-search",
+              "title": "Search"
             }
           },
           {
@@ -87,7 +69,9 @@
             "type": "leaf",
             "state": {
               "type": "bookmarks",
-              "state": {}
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "Bookmarks"
             }
           }
         ]
@@ -110,7 +94,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "OWASP TOP 10/File Upload Bypass.md",
+                "file": "Coffin Things/Useful Commands (Coffin).md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -118,7 +102,9 @@
                 "searchQuery": "",
                 "backlinkCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-coming-in",
+              "title": "Backlinks for Useful Commands (Coffin)"
             }
           },
           {
@@ -127,10 +113,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "OWASP TOP 10/File Upload Bypass.md",
+                "file": "Coffin Things/Useful Commands (Coffin).md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
-              }
+              },
+              "icon": "links-going-out",
+              "title": "Outgoing links from Useful Commands (Coffin)"
             }
           },
           {
@@ -141,7 +129,9 @@
               "state": {
                 "sortOrder": "frequency",
                 "useHierarchy": true
-              }
+              },
+              "icon": "lucide-tags",
+              "title": "Tags"
             }
           },
           {
@@ -150,8 +140,10 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "OWASP TOP 10/File Upload Bypass.md"
-              }
+                "file": "Coffin Things/Useful Commands (Coffin).md"
+              },
+              "icon": "lucide-list",
+              "title": "Outline of Useful Commands (Coffin)"
             }
           }
         ]
@@ -163,6 +155,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "github-sync:Sync with Remote": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
       "canvas:Create new canvas": false,
@@ -172,43 +165,44 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "45af69ceb37f09b0",
+  "active": "df1a0d29f48ca76f",
   "lastOpenFiles": [
-    "OWASP TOP 10/CORS (Cross Origin Resource Sharing).md",
-    "OWASP TOP 10/Shell Shock Attack.md",
-    "OWASP TOP 10/File Upload Bypass.md",
-    "Tratamiento tty.md",
-    "Malandra/Untitled.md",
-    "OWASP TOP 10/Local FIle Inclusion (LFI).md",
+    "Hack4u Content/OWASP TOP 10/Server Side Request Forgery (SSRF).md",
+    "Hack4u Content/OWASP TOP 10/Server Side Template Injection (SSTI).md",
+    "Hack4u Content/OWASP TOP 10/Shell Shock Attack.md",
+    "Hack4u Content/OWASP TOP 10/XML External Entity Injection (XXE).md",
+    "Hack4u Content/Tipos de Payloads.md",
+    "Hack4u Content/OWASP TOP 10/SQLi.md",
+    "Hack4u Content/OWASP TOP 10/JSON Web Token (JWT).md",
+    "Hack4u Content/OWASP TOP 10/GraphQL.md",
+    "Hack4u Content/OWASP TOP 10/Cross Origin Resource Sharing (CORS).md",
+    "Bug Bounty/⚙️ Useful Commands - Tools.md",
+    "Bug Bounty/🕵️‍♂️ Google Dorks.md",
+    "Bug Bounty/Manual Testing Methodology.md",
+    "Bug Bounty/Programs.md",
+    "Bug Bounty/Coffin Base Methodology.md",
+    "Hack4u Content/Gestores de contenido/Drupal.md",
+    "Hack4u Content/Gestores de contenido/Wordpress.md",
+    "Hack4u Content/Gestores de contenido/Magento.md",
+    "Hack4u Content/Gestores de contenido/Joomla.md",
+    "Hack4u Content/OWASP TOP 10/NoSQLi.md",
+    "Hack4u Content/OWASP TOP 10/OS Command Injection.md",
+    "Hack4u Content/OWASP TOP 10/File Upload Bypass.md",
+    "images/Pasted image 20250225160456.png",
+    "images",
+    "Hack4u Content/Tratamiento tty.md",
+    "Hack4u Content/Privilege escalation/Python Library Hijacking.md",
+    "Hack4u Content/Privilege escalation/PATH Hijacking.md",
+    "Hack4u Content/Privilege escalation/Malas Configuraciones.md",
+    "Hack4u Content/Privilege escalation/Deteccion y explotacion de tareas Cron.md",
+    "Hack4u Content",
     "Malandra",
-    "OWASP TOP 10/Log Poisoning (LFI -> RCE).md",
-    "Automated Recon/Coffin Methodology.md",
-    "Automated Recon/Useful Commands (Coffin).md",
-    "Gestores de contenido/Wordpress.md",
-    "Automated Recon",
-    "Gestores de contenido/Magento.md",
-    "Gestores de contenido/Joomla.md",
-    "Gestores de contenido/Drupal.md",
-    "OWASP TOP 10/SQLi.md",
-    "OWASP TOP 10/JWT (JSON Web Token).md",
-    "OWASP TOP 10/LDAPi.md",
-    "Privilege escalation/PATH Hijacking.md",
-    "Privilege escalation/Malas Configuraciones.md",
-    "Privilege escalation/Python Library Hijacking.md",
-    "Privilege escalation/Barridos a nivel de sistema.md",
-    "Videos restantes academia.md",
-    "Privilege escalation/Deteccion y explotacion de capabilities.md",
-    "Privilege escalation/Deteccion y explotacion de tareas Cron.md",
+    "Bug Bounty",
     "Privilege escalation/Untitled",
-    "OWASP TOP 10/NoSQLi.md",
-    "OWASP TOP 10/SSRF (Server Side Request Forgery).md",
-    "OWASP TOP 10/Prototype Pollution.md",
-    "Privilege escalation",
-    "OWASP TOP 10",
-    "Gestores de contenido",
+    "Hack4u Content/Privilege escalation",
+    "Hack4u Content/OWASP TOP 10",
+    "Hack4u Content/Gestores de contenido",
     "apuntes_hacking",
-    "Gestores de contenido/Drupal",
-    "Gestores de contenido/Magento",
-    "Gestores de contenido/Jooomla"
+    "Gestores de contenido/Drupal"
   ]
 }

@@ -1,6 +1,4 @@
 -- -
-La vulnerabilidad CORS (Cross-Origin Resource Sharing) se relaciona con una política de seguridad web que permite o restringe cómo los recursos en una página web pueden ser solicitados desde otro dominio. CORS está diseñado para evitar ataques de tipo Cross-Site Scripting (XSS) y Cross-Site Request Forgery (CSRF), pero si no se configura adecuadamente, puede introducir vulnerabilidades.
-
 ### ¿Qué es CORS?
 CORS es un mecanismo que usa cabeceras HTTP adicionales para dar a un servidor la capacidad de indicar cualquier origen (dominio, esquema o puerto) que tiene permiso para acceder a sus recursos. Por defecto, los navegadores web imponen una política de mismo origen (Same-Origin Policy), que restringe cómo los recursos en una página web se pueden solicitar desde otro origen.
 

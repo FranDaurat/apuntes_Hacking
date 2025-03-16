@@ -93,6 +93,8 @@ Vamos a ver cómo podrían usarse estos métodos en un escenario de SSRF:
 1. **Embedding Credentials:**
    - **Input controlado por el usuario:** `https://example.com?url=https://internal-service:fakepassword@malicious.com`
    - **Resultado esperado:** El servidor intenta acceder a `https://internal-service`, pero en realidad va a `https://malicious.com`.
+   - `http://username@domain.com/`
+   -  `http://localhost:80%2523@stock.weliketoshop.net/admin/
 
 2. **Using URL Fragment:**
    - **Input controlado por el usuario:** `https://example.com?url=https://malicious.com#internal-service`
@@ -102,82 +104,11 @@ Vamos a ver cómo podrían usarse estos métodos en un escenario de SSRF:
    - **Input controlado por el usuario:** `https://example.com?url=https://internal-service.malicious.com`
    - **Resultado esperado:** El servidor accede a `https://internal-service.malicious.com`.
 
+
 ### Cómo Funciona en el Contexto de SSRF
 
 - **SSRF Básico:** Si una aplicación permite que el usuario controle la URL a la que se hace una solicitud, un atacante podría proporcionar una URL maliciosa.
 - **Evasión de Filtros:** Las técnicas mencionadas pueden ser usadas para evadir filtros o validaciones que intentan restringir las URLs a destinos específicos (por ejemplo, validaciones que sólo permiten solicitudes a `internal-service`).
-
--- -
-## Blind SSRF
-
-### ¿Qué son las vulnerabilidades de Blind SSRF?
-
-Las vulnerabilidades de Blind SSRF ocurren si puedes hacer que una aplicación emita una solicitud HTTP de back-end a una URL proporcionada, pero la respuesta de la solicitud de back-end no se devuelve en la respuesta del front-end de la aplicación.
-
-El Blind SSRF es más difícil de explotar, pero a veces puede llevar a la ejecución remota de código completa en el servidor u otros componentes de back-end.
-
-### ¿Cuál es el impacto de las vulnerabilidades de Blind SSRF?
-
-El impacto de las vulnerabilidades de Blind SSRF suele ser menor que el de las vulnerabilidades de SSRF completamente informadas debido a su naturaleza unidireccional. No se pueden explotar fácilmente para recuperar datos sensibles de los sistemas de back-end, aunque en algunas situaciones se pueden explotar para lograr la ejecución remota de código completa.
-
-### Cómo encontrar y explotar vulnerabilidades de Blind SSRF
-
-Identificar simplemente una vulnerabilidad de Blind SSRF que puede desencadenar solicitudes HTTP fuera de banda no proporciona en sí misma una ruta hacia la explotabilidad. Dado que no puedes ver la respuesta de la solicitud de back-end, el comportamiento no se puede usar para explorar contenido en sistemas a los que el servidor de aplicaciones puede acceder. Sin embargo, todavía se puede aprovechar para sondear otras vulnerabilidades en el propio servidor o en otros sistemas de back-end.
-
-#### Pasos para Explorar Blind SSRF:
-
-1. **Sondeo de Direcciones IP Internas:**
-   - Puedes explorar ciegamente el espacio de direcciones IP internas, enviando cargas útiles diseñadas para detectar vulnerabilidades conocidas. 
-   - Si esas cargas útiles también emplean técnicas fuera de banda, podrías descubrir una vulnerabilidad crítica en un servidor interno no parcheado.
-
-2. **Conexión a Sistemas Controlados por el Atacante:**
-   - Otro camino para explotar vulnerabilidades de Blind SSRF es inducir a la aplicación a conectarse a un sistema bajo el control del atacante y devolver respuestas maliciosas al cliente HTTP que hace la conexión.
-   - Si puedes explotar una vulnerabilidad grave del lado del cliente en la implementación HTTP del servidor, podrías lograr la ejecución remota de código dentro de la infraestructura de la aplicación.
-
--- -  
-## Encontrar Superficie de Ataque Oculta para Vulnerabilidades de SSRF
-
-### Descripción
-
-Muchas vulnerabilidades de Server-Side Request Forgery (SSRF) son fáciles de encontrar, ya que el tráfico normal de la aplicación involucra parámetros de solicitud que contienen URLs completas. Sin embargo, otros ejemplos de SSRF son más difíciles de localizar.
-
-### Superficies de Ataque Evidentes
-
-En algunos casos, las aplicaciones tienen parámetros de solicitud que explícitamente incluyen URLs completas. Por ejemplo:
-
-- Parámeteros como `callback_url`, `target_url`, `redirect_url`, etc.
-- Formularios o endpoints que permiten a los usuarios proporcionar URLs para obtener contenido externo.
-
-Estos son puntos claros donde podrías inyectar URLs maliciosas para explotar SSRF.
-
-### Superficies de Ataque Ocultas
-
-Existen otros escenarios donde las vulnerabilidades de SSRF no son tan evidentes y requieren una búsqueda más exhaustiva. Estas superficies de ataque ocultas pueden incluir:
-
-- **Cabeceras HTTP:**
-  - Algunos servidores pueden procesar cabeceras HTTP como `Referer`, `X-Forwarded-For` o `Host` que podrían ser manipuladas para desencadenar solicitudes SSRF.
-- **Cargas Útiles Incrustadas en el Cuerpo de la Solicitud:**
-  - Datos en el cuerpo de las solicitudes POST que pueden contener URLs, especialmente en formatos como JSON o XML.
-- **Parámetros No Documentados:**
-  - Parámetros que no están bien documentados o visibles en el tráfico normal de la aplicación pero que aún aceptan URLs.
-- **Interacciones de Servicios Internos:**
-  - Servicios internos de la aplicación que toman URLs como entradas para funcionalidades como carga de datos, integraciones de APIs, o notificaciones web.
-
-### Estrategias para Encontrar Blind SSRF
-
-Para descubrir estas superficies de ataque más difíciles de encontrar, puedes usar las siguientes estrategias:
-
-1. **Revisar la Documentación y el Código:**
-   - Inspeccionar la documentación y, si es posible, el código fuente para descubrir parámetros y funcionalidades que acepten URLs.
-
-2. **Interceptar y Modificar Tráfico:**
-   - Utilizar herramientas como Burp Suite para interceptar y modificar el tráfico de la aplicación, probando diferentes parámetros y cabeceras para ver cómo responde el servidor.
-
-3. **Explorar Funcionalidades Secundarias:**
-   - Investigar funcionalidades secundarias de la aplicación que podrían no ser tan obvias pero que podrían procesar URLs, como funciones de importación/exportación de datos, integraciones con otros servicios, o mecanismos de redirección.
-
-4. **Pruebas de Fuzzing:**
-   - Realizar fuzzing en diferentes partes de las solicitudes para identificar parámetros que podrían procesar URLs.
 -- - 
 ### Todo tipo de cabeceras
 ```http
