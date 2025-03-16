@@ -6,7 +6,7 @@ Step 2: If found, left-click on the "Issue" -> left-click on the "Request 1" tab
     (If the vuln is found on multiple directories, expand and click on the correct path)
 Step 3: Edit prefix to meet payload requirements
 Step 4: Attack
-
+a
 # De-serialization
 
 ## Black-Box
