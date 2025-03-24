@@ -1,11 +1,11 @@
 -- - 
-### 🧨 Dalfox (XSS)
+### Dalfox (XSS)
 ```bash
 cat wayback_cleanParams | dalfox pipe --worker 20 --timeout 10 --delay 100
 dalfox file endpoints/filteredParameters.txt --worker 20 --delay 100 >> testing/xss_results.txt 2> testing/dalfox_errors.log
 ```
 
-### 🧬  XSStrike
+### XSStrike
 ```bash
 python3 xsstrike.py -u "URL" -l 4 -t 10
 ```
@@ -30,6 +30,11 @@ sqlmap -m endpoints/filteredParameters.txt --batch --dbs --level 2 --risk 2 --ti
 ### Openredirex
 ```bash
 cat endpoints/parameters.txt | openredirex | grep -vE "ERROR" >> testing/openRedirect_results.txt
+```
+
+### trufflehog
+```bash
+trufflehog git https://github.com/doit/repo --since_commit HEAD~100
 ```
 
 ---
