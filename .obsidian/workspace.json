@@ -41,12 +41,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bug Bounty/📝 Programs.md",
+                "file": "Hack4u Content/Vulns/🌐 (HTMLi) HTML Injecion.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "📝 Programs"
+              "title": "🌐 (HTMLi) HTML Injecion"
             }
           }
         ],
@@ -194,11 +194,12 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "34fe68ec51ea6c31",
+  "active": "e887c353e10a5fc3",
   "lastOpenFiles": [
+    "Bug Bounty/📝 Programs.md",
+    "Hack4u Content/Vulns/🌐 (HTMLi) HTML Injecion.md",
     "Bug Bounty/⚙️ Useful Commands - Tools.md",
     "Bug Bounty/Useful Commands - Tools.md",
-    "Bug Bounty/📝 Programs.md",
     "Bug Bounty/🕵️‍♂️ Google Dorks.md",
     "Bug Bounty/Google Dorks.md",
     "Hack4u Content/Privilege escalation/📝 Escalada de Privilegios con etc passwd.md",
@@ -214,14 +215,13 @@
     "Hack4u Content/Gestores de contenido/📁 Joomla Security Cheat Sheet con JoomScan 📁.md",
     "Hack4u Content/Gestores de contenido/🧰 Drupal Cheat Sheet 🧰.md",
     "Hack4u Content/🎯 Staged vs Non-Staged Payloads 🎯.md",
-    "Hack4u Content/OWASP TOP 10/🔐 JSON Web Token (JWT) Cheat Sheet.md",
+    "Hack4u Content/Vulns/🔐 JSON Web Token (JWT) Cheat Sheet.md",
     "Hack4u Content/Tipos de Payloads.md",
-    "Hack4u Content/OWASP TOP 10/🧨 XXE (XML External Entity) Attack Cheat Sheet 🧨.md",
-    "Hack4u Content/OWASP TOP 10/💥 SQL Injection Cheat Sheet 💥.md",
-    "Hack4u Content/OWASP TOP 10/🛡️ Cross Origin Resource Sharing (CORS).md",
-    "Hack4u Content/OWASP TOP 10/💣 Shellshock Attack Cheat Sheet 💣.md",
-    "Hack4u Content/OWASP TOP 10/🚀 Server-Side Request Forgery (SSRF) Cheat Sheet.md",
-    "Hack4u Content/OWASP TOP 10/🛠️ Local FIle Inclusion (LFI).md",
+    "Hack4u Content/Vulns/🧨 XXE (XML External Entity) Attack Cheat Sheet 🧨.md",
+    "Hack4u Content/Vulns/💥 SQL Injection Cheat Sheet 💥.md",
+    "Hack4u Content/Vulns/🛡️ Cross Origin Resource Sharing (CORS).md",
+    "Hack4u Content/Vulns/💣 Shellshock Attack Cheat Sheet 💣.md",
+    "Hack4u Content/Vulns/🚀 Server-Side Request Forgery (SSRF) Cheat Sheet.md",
     "images/Pasted image 20250225160456.png",
     "images",
     "Hack4u Content",
@@ -229,7 +229,7 @@
     "Bug Bounty",
     "Privilege escalation/Untitled",
     "Hack4u Content/Privilege escalation",
-    "Hack4u Content/OWASP TOP 10",
+    "Hack4u Content/Vulns",
     "Hack4u Content/Gestores de contenido",
     "apuntes_hacking",
     "Gestores de contenido/Drupal"
