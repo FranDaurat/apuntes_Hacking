@@ -37,6 +37,8 @@ cat endpoints/parameters.txt | openredirex | grep -vE "ERROR" >> testing/openRed
 trufflehog git https://github.com/doit/repo --since_commit HEAD~100
 ```
 
+### ChatGPT nuclei template generator
+https://chatgpt.com/g/g-REMZCNZvB
 ---
 ## SSL Certificate Parsers (CIDR Recon)
 
