@@ -1,6 +1,4 @@
 -- - 
----
-
 ### **PHP Wrappers Cheat Sheet**
 
 #### **Wrappers para Manejo de Archivos**
