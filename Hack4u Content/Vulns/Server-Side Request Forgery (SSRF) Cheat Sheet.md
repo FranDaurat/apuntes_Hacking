@@ -4,24 +4,15 @@
 
 ---
 ---
-#### 📝 **¿Qué es SSRF?**  
-El **Server-Side Request Forgery (SSRF)** es una vulnerabilidad que permite que un atacante manipule a un servidor para que realice solicitudes HTTP hacia dominios arbitrarios, incluidos servicios internos.  
-Los atacantes pueden usar SSRF para:  
-- 🌐 **Exfiltrar información interna.**  
-- 🕵️ **Escanear puertos internos.**  
-- 🔑 **Acceder a servicios privados.**  
-
----
-
-## 🔍 **Técnicas para Circunventar Filtros SSRF**
+## **Técnicas para Circunventar Filtros SSRF**
 
 Algunas aplicaciones bloquean entradas comunes como `127.0.0.1` o `localhost`. Aquí hay técnicas para eludir estos filtros:
 
 ---
 
-### 💡 **1. Usar Representación Alternativa de IP**
+### **1. Usar Representación Alternativa de IP**
 Representaciones de la IP `127.0.0.1`:
-- 🌐 **Decimal:** `2130706433`
+- **Decimal:** `2130706433`
 - 🔢 **Octal:** `017700000001`
 - 📝 **Forma abreviada:** `127.1`
 

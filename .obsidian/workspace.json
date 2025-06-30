@@ -83,12 +83,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hack4u Content/Vulns/Shellshock Attack Cheat Sheet.md",
+                "file": "Hack4u Content/Vulns/Local FIle Inclusion (LFI).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Shellshock Attack Cheat Sheet"
+              "title": "Local FIle Inclusion (LFI)"
             }
           }
         ],
@@ -236,16 +236,26 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "32c7be60049c5b21",
+  "active": "e887c353e10a5fc3",
   "lastOpenFiles": [
-    "Hack4u Content/Vulns/💣 XSS (Cross Site Scripting).md",
+    "Hack4u Content/Vulns/OS Command Injection.md",
+    "Hack4u Content/Vulns/File Upload Bypass Cheat Sheet.md",
+    "Hack4u Content/Vulns/Server-Side Template Injection (SSTI) Cheat Sheet.md",
+    "Hack4u Content/Vulns/(HTMLi) HTML Injecion.md",
+    "Hack4u Content/Vulns/XSS (Cross Site Scripting).md",
+    "Hack4u Content/Vulns/NoSQL Injection Cheat Sheet.md",
+    "Hack4u Content/Vulns/Prototype Pollution Cheat Sheet.md",
+    "Hack4u Content/Vulns/Log Poisoning Cheat Sheet.md",
+    "Hack4u Content/Vulns/GraphQL Recon Cheat Sheet.md",
+    "Hack4u Content/Vulns/JSON Web Token (JWT) Cheat Sheet.md",
+    "Hack4u Content/Vulns/XXE (XML External Entity) Attack Cheat Sheet.md",
+    "Hack4u Content/Vulns/Server-Side Request Forgery (SSRF) Cheat Sheet.md",
+    "Hack4u Content/Vulns/Local FIle Inclusion (LFI).md",
+    "Hack4u Content/Vulns/Cross Origin Resource Sharing (CORS).md",
+    "Hack4u Content/Vulns/Shellshock Attack Cheat Sheet.md",
     "Hack4u Content/Vulns/SQL Injection Cheat Sheet.md",
     "Hack4u Content/Vulns/LDAP Injection Cheat Sheet.md",
-    "Hack4u Content/Vulns/🌐 (HTMLi) HTML Injecion.md",
     "Bug Bounty/Roadmap IA.md",
-    "Hack4u Content/Vulns/💥 NoSQL Injection Cheat Sheet.md",
-    "Hack4u Content/Vulns/Shellshock Attack Cheat Sheet.md",
-    "Hack4u Content/Vulns/🌐 OS Command Injection.md",
     "Hack4u Content/Gestores de contenido/Drupal Cheat Sheet.md",
     "Hack4u Content/Gestores de contenido/WordPress Security Cheat Sheet con WPScan.md",
     "Hack4u Content/Gestores de contenido/Magento Security Cheat Sheet con MageScan.md",
@@ -254,16 +264,6 @@
     "Hack4u Content/Privilege escalation/Escaneos Básicos en el Sistema.md",
     "Hack4u Content/Privilege escalation/Escalada de Privilegios con etc passwd.md",
     "Hack4u Content/Privilege escalation/Capabilities en Linux.md",
-    "Hack4u Content/Privilege escalation/PATH Hijacking.md",
-    "Hack4u Content/Staged vs Non-Staged Payloads.md",
-    "Bug Bounty/Useful Commands - Tools.md",
-    "Bug Bounty/Coffin Base Methodology.md",
-    "Bug Bounty/Programs.md",
-    "Bug Bounty/Google Dorks.md",
-    "Hack4u Content/Vulns/🛠️ Local FIle Inclusion (LFI).md",
-    "Hack4u Content/Vulns/📝 SSTI (Server-Side Template Injection).md",
-    "Hack4u Content/Vulns/🧨 XXE (XML External Entity) Attack Cheat Sheet 🧨.md",
-    "Hack4u Content/Vulns/💣 File Upload Bypass Cheat Sheet.md",
     "images/Pasted image 20250225160456.png",
     "images",
     "Hack4u Content",

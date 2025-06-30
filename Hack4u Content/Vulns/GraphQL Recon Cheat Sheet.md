@@ -4,7 +4,7 @@
 
 ---
 
-#### 📝 **1. Basic Recon**
+#### **1. Basic Recon**
 
 - **Obtener el nombre del tipo de objeto en la raíz de la API:**
   ```json
@@ -15,7 +15,7 @@
 
 ---
 
-#### 🔑 **2. Comprobación de introspección habilitada**
+#### **2. Comprobación de introspección habilitada**
 
 - **Testear introspección habilitada:**
   ```json
@@ -26,7 +26,7 @@
 
 ---
 
-#### 🗺️ **3. Introspección completa**
+#### **3. Introspección completa**
 
 - **Ejecutar una consulta de introspección completa:**
   ```json
@@ -120,7 +120,7 @@
 
 ---
 
-#### 🚧 **4. Bypass de introspección**
+#### **4. Bypass de introspección**
 
 - **Usar una consulta alternativa para evadir restricciones:**
   ```json
@@ -225,6 +225,6 @@
 
 ---
 
-💡 **Consejo:** Si el servicio tiene medidas de protección robustas, considera usar técnicas de evasión como encabezados falsos o intervalos de tiempo para evitar la detección.
+**Consejo:** Si el servicio tiene medidas de protección robustas, considera usar técnicas de evasión como encabezados falsos o intervalos de tiempo para evitar la detección.
 
 ---
