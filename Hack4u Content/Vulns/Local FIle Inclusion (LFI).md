@@ -14,7 +14,7 @@ Aquí tienes algunos de los más útiles:
 
 ---
 
-#### 💥 Wrappers para RCE (Remote Command Execution)**
+#### Wrappers para RCE (Remote Command Execution)**
 
 ##### **1. `expect://` (para ejecutar comandos):**
 ```http

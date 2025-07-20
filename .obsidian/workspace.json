@@ -8,91 +8,20 @@
         "type": "tabs",
         "children": [
           {
-            "id": "df1a0d29f48ca76f",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bug Bounty/Manual Testing Methodology.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Manual Testing Methodology"
-            }
-          },
-          {
-            "id": "958c4f8511af29a4",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bug Bounty/Manual Testing Methodology.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Manual Testing Methodology"
-            }
-          },
-          {
-            "id": "34fe68ec51ea6c31",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Hack4u Content/Vulns/🌐 (HTMLi) HTML Injecion.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "🌐 (HTMLi) HTML Injecion"
-            }
-          },
-          {
-            "id": "943742953ab8abff",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bug Bounty/⚙️ Useful Commands - Tools.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "⚙️ Useful Commands - Tools"
-            }
-          },
-          {
-            "id": "2347f246bd50ee0c",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Hack4u Content/Vulns/🛠️ Local FIle Inclusion (LFI).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "🛠️ Local FIle Inclusion (LFI)"
-            }
-          },
-          {
             "id": "32c7be60049c5b21",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hack4u Content/Vulns/Local FIle Inclusion (LFI).md",
+                "file": "Hack4u Content/Vulns/SQL Injection Cheat Sheet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Local FIle Inclusion (LFI)"
+              "title": "SQL Injection Cheat Sheet"
             }
           }
-        ],
-        "currentTab": 5
+        ]
       }
     ],
     "direction": "vertical"
@@ -236,12 +165,15 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "e887c353e10a5fc3",
+  "active": "32c7be60049c5b21",
   "lastOpenFiles": [
+    "Bug Bounty/Useful Commands - Tools.md",
+    "Hack4u Content/Vulns/SQL Injection Cheat Sheet.md",
+    "Hack4u Content/Vulns/HTML Injecion (HTMLi).md",
+    "Hack4u Content/Vulns/Local FIle Inclusion (LFI).md",
     "Hack4u Content/Vulns/OS Command Injection.md",
     "Hack4u Content/Vulns/File Upload Bypass Cheat Sheet.md",
     "Hack4u Content/Vulns/Server-Side Template Injection (SSTI) Cheat Sheet.md",
-    "Hack4u Content/Vulns/(HTMLi) HTML Injecion.md",
     "Hack4u Content/Vulns/XSS (Cross Site Scripting).md",
     "Hack4u Content/Vulns/NoSQL Injection Cheat Sheet.md",
     "Hack4u Content/Vulns/Prototype Pollution Cheat Sheet.md",
@@ -250,10 +182,8 @@
     "Hack4u Content/Vulns/JSON Web Token (JWT) Cheat Sheet.md",
     "Hack4u Content/Vulns/XXE (XML External Entity) Attack Cheat Sheet.md",
     "Hack4u Content/Vulns/Server-Side Request Forgery (SSRF) Cheat Sheet.md",
-    "Hack4u Content/Vulns/Local FIle Inclusion (LFI).md",
     "Hack4u Content/Vulns/Cross Origin Resource Sharing (CORS).md",
     "Hack4u Content/Vulns/Shellshock Attack Cheat Sheet.md",
-    "Hack4u Content/Vulns/SQL Injection Cheat Sheet.md",
     "Hack4u Content/Vulns/LDAP Injection Cheat Sheet.md",
     "Bug Bounty/Roadmap IA.md",
     "Hack4u Content/Gestores de contenido/Drupal Cheat Sheet.md",
@@ -263,7 +193,6 @@
     "Hack4u Content/Privilege escalation/Python Library Hijacking.md",
     "Hack4u Content/Privilege escalation/Escaneos Básicos en el Sistema.md",
     "Hack4u Content/Privilege escalation/Escalada de Privilegios con etc passwd.md",
-    "Hack4u Content/Privilege escalation/Capabilities en Linux.md",
     "images/Pasted image 20250225160456.png",
     "images",
     "Hack4u Content",

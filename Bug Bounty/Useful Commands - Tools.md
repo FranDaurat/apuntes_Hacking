@@ -16,7 +16,6 @@ go-dork -e google -q "QUERY" -p 50
 ```
 
 ### Hidden endpoints on JS files
-
 ``` bash
 echo "admin.example.com" | waybackurls | grep -P ".*\.js" | wget
 grep -RoP "(\/[a-zA-Z0-9_\-]+)+"
@@ -35,6 +34,17 @@ cat endpoints/parameters.txt | openredirex | grep -vE "ERROR" >> testing/openRed
 ### trufflehog
 ```bash
 trufflehog git https://github.com/doit/repo --since_commit HEAD~100
+```
+
+### Arjun
+**Passive parameter discovery**
+```bash
+arjun -u https://site.com/endpoint.php -oT arjun_output.txt -t 10 --rate-limit 10 --passive -m GET,POST --headers "User-Agent: Mozilla/5.0"
+```
+
+**Active parameter discovery with wordlist**
+```bash
+arjun -u https://site.com/endpoint.php -oT arjun_output.txt -m GET,POST -w /usr/share/wordlists/seclists/Discovery/Web-Content/burp-parameter-names.txt -t 10 --rate-limit 10 --headers "User-Agent: Mozilla/5.0"
 ```
 
 ### ChatGPT nuclei template generator
@@ -105,5 +115,3 @@ grep -F ".$domain" "$file" | awk -F '[][]' '{print $2}' | sed 's# #\n#g' | sort 
 	
 ```
 ---
-### Google Extension (Host)
-![[Pasted image 20250225160456.png]]
