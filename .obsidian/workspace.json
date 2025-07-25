@@ -13,12 +13,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hack4u Content/Vulns/SQL Injection Cheat Sheet.md",
+                "file": "Hack4u Content/Vulns/XSS (Cross Site Scripting).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "SQL Injection Cheat Sheet"
+              "title": "XSS (Cross Site Scripting)"
             }
           }
         ]
@@ -167,8 +167,9 @@
   },
   "active": "32c7be60049c5b21",
   "lastOpenFiles": [
-    "Bug Bounty/Useful Commands - Tools.md",
     "Hack4u Content/Vulns/SQL Injection Cheat Sheet.md",
+    "Bug Bounty/Programs.md",
+    "Bug Bounty/Useful Commands - Tools.md",
     "Hack4u Content/Vulns/HTML Injecion (HTMLi).md",
     "Hack4u Content/Vulns/Local FIle Inclusion (LFI).md",
     "Hack4u Content/Vulns/OS Command Injection.md",
@@ -192,7 +193,6 @@
     "Hack4u Content/Gestores de contenido/Joomla Security Cheat Sheet con JoomScan.md",
     "Hack4u Content/Privilege escalation/Python Library Hijacking.md",
     "Hack4u Content/Privilege escalation/Escaneos Básicos en el Sistema.md",
-    "Hack4u Content/Privilege escalation/Escalada de Privilegios con etc passwd.md",
     "images/Pasted image 20250225160456.png",
     "images",
     "Hack4u Content",
