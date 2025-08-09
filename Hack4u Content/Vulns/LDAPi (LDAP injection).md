@@ -9,9 +9,9 @@
 Las inyecciones LDAP (Lightweight Directory Access Protocol) son un tipo de ataque en el que un atacante **inyecta comandos LDAP maliciosos** en campos de entrada web que interactúan con un servidor LDAP.  
 Si la aplicación no valida adecuadamente la entrada, el atacante puede manipular las consultas LDAP para:  
 
-- 🕵️ **Acceder a información confidencial** de usuarios o recursos.  
-- ✏️ **Modificar datos**: agregar, eliminar o modificar usuarios y recursos.  
-- 🚩 **Realizar operaciones maliciosas** en la red, como phishing o instalación de malware.  
+- **Acceder a información confidencial** de usuarios o recursos.  
+- **Modificar datos**: agregar, eliminar o modificar usuarios y recursos.  
+- **Realizar operaciones maliciosas** en la red, como phishing o instalación de malware.  
 
 ---
 

