@@ -167,6 +167,8 @@
   },
   "active": "22e54cec9cf42363",
   "lastOpenFiles": [
+    "Hack4u Content/Vulns/Shellshock Attack Cheat Sheet.md",
+    "Hack4u Content/Vulns/SSRF (Server-Side Request Forgery).md",
     "Hack4u Content/Vulns/XXE (XML External Entity Injection) Attack Cheat Sheet.md",
     "Hack4u Content/Vulns/XSS (Cross Site Scripting).md",
     "Hack4u Content/Vulns/CORS (Cross Origin Resource Sharing).md",
@@ -186,8 +188,6 @@
     "Hack4u Content/Vulns/NoSQL Injection Cheat Sheet.md",
     "Hack4u Content/Vulns/Prototype Pollution Cheat Sheet.md",
     "Hack4u Content/Vulns/Log Poisoning Cheat Sheet.md",
-    "Hack4u Content/Vulns/SSRF (Server-Side Request Forgery).md",
-    "Hack4u Content/Vulns/Shellshock Attack Cheat Sheet.md",
     "Bug Bounty/Roadmap IA.md",
     "Hack4u Content/Gestores de contenido/Drupal Cheat Sheet.md",
     "Hack4u Content/Gestores de contenido/WordPress Security Cheat Sheet con WPScan.md",

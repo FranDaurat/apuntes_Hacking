@@ -36,66 +36,25 @@ Configura una redirección en un dominio controlado para apuntar a la URL objeti
   http://malicious-site.com/redirect?url=http://target-site.com/admin
   ```
 - **Cambio de Protocolo:**  
-  ```
+```
   http://malicious-site.com/redirect?url=https://target-site.com/admin
-  ```
----
-
-## **Técnicas de Evasión Adicionales**
-
-### **Embedding Credentials en la URL**
-Se pueden incrustar credenciales dentro de la URL usando `@`:  
-```http
-https://expected-host:fakepassword@evil-host
 ```
-- El servidor ignora las credenciales y hace la solicitud a `evil-host`.
 
----
+### **5. Modificar el Referer**
+- Cambiarlo para engañar validaciones, acceder a recursos internos o inyectar datos en logs/paneles si se usa sin filtrar.
 
-### **Uso del Carácter `#` para Fragmentos**
-El carácter `#` indica el inicio de un fragmento, que **no es enviado al servidor**:  
-```http
-https://evil-host#expected-host
+### **6. Bypass mediante el uso de autentitcacion y `#`**
 ```
-- El servidor accede a `evil-host` ignorando el fragmento.
-
----
-
-### **Jerarquía de Nombres de Dominio**
-El atacante puede usar el nombre de host como subdominio de un dominio controlado:  
-```http
-https://expected-host.evil-host
+api=https://localhost:80#@domain.com
 ```
-- El servidor hace la solicitud a `evil-host`.
-
+- Esto funciona porque en una URL la parte antes de @ se interpreta como credenciales de autenticación (usuario:contraseña@host).
+- El # marca el inicio de un fragmento en la URL.
+	- Todo lo que está después del # normalmente no se envía en la petición HTTP (es solo para el navegador).
+	- El parser de URLs en algunos filtros interpreta https://localhost:80#@domain.com como si el host fuera localhost, pero el filtro puede equivocarse y ver domain.com.
+- Esto puede permitir:
+	- Bypass SSRF filters que bloquean localhost o direcciones internas pero no procesan correctamente el fragmento/usuario.
+	- Engañar la validación del dominio, ya que @ en realidad cambia el host real a lo que está después.
 ---
-
-## **Ejemplos Prácticos**
-
-### **1. Embedding Credentials:**
-```http
-https://example.com?url=https://internal-service:fakepassword@malicious.com
-```
-- El servidor intenta acceder a `https://malicious.com`.
-
----
-
-### **2. Uso de Fragmento en la URL:**
-```http
-https://example.com?url=https://malicious.com#internal-service
-```
-- El servidor ignora el fragmento y accede a `https://malicious.com`.
-
----
-
-### **3. Jerarquía de Dominio (DNS Naming Hierarchy):**
-```http
-https://example.com?url=https://internal-service.malicious.com
-```
-- El servidor hace la solicitud al dominio controlado por el atacante.
-
----
-
 ## **Cabeceras HTTP para Evasión de SSRF**
 Algunas cabeceras útiles para intentar redirigir o manipular la solicitud:
 
