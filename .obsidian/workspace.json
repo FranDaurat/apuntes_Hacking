@@ -27,12 +27,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hack4u Content/Vulns/HTTP Request Smuggling.md",
+                "file": "Hack4u Content/Vulns/HRS (HTTP Request Smuggling).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "HTTP Request Smuggling"
+              "title": "HRS (HTTP Request Smuggling)"
             }
           }
         ],
@@ -170,6 +170,7 @@
   },
   "left-ribbon": {
     "hiddenItems": {
+      "bases:Create new base": false,
       "github-sync:Sync with Remote": false,
       "switcher:Open quick switcher": false,
       "graph:Open graph view": false,
@@ -180,12 +181,17 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "e887c353e10a5fc3",
+  "active": "69a240ebc7d30339",
   "lastOpenFiles": [
+    "images/Pasted image 20250822181959.png",
+    "images/Pasted image 20250822181851.png",
+    "images/Pasted image 20250822181550.png",
+    "Hack4u Content/Vulns/HRS (HTTP Request Smuggling).md",
+    "images/Pasted image 20250822181546.png",
+    "Hack4u Content/Vulns/GraphQL Recon Cheat Sheet.md",
     "images/Pasted image 20250819170002.png",
     "images/Pasted image 20250819163452.png",
     "().md",
-    "Hack4u Content/Vulns/HTTP Request Smuggling.md",
     "images/Pasted image 20250814174821.png",
     "images/Pasted image 20250814174607.png",
     "Hack4u Content/Vulns/SSRF (Server-Side Request Forgery).md",
@@ -196,7 +202,6 @@
     "Hack4u Content/Vulns/CSRF (Cross-Site Request Forgery).md",
     "Hack4u Content/Vulns/LDAPi (LDAP injection).md",
     "Hack4u Content/Vulns/Local FIle Inclusion (LFI).md",
-    "Hack4u Content/Vulns/GraphQL Recon Cheat Sheet.md",
     "Hack4u Content/Vulns/SQL Injection Cheat Sheet.md",
     "Hack4u Content/Vulns/HTML Injecion (HTMLi).md",
     "Hack4u Content/Vulns/ClickJacking.md",
