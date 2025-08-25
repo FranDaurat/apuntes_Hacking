@@ -53,12 +53,13 @@
   
 ---
 
-| Template Engine | Test Payload        | Success Indicator |
-| --------------- | ------------------- | ----------------- |
-| Jinja2          | {{7*7}}             | 49 in response    |
-| Freemarker      | <#assign x=7*7>${x} | 49 in response    |
-| Twig            | {{7*7}}             | 49 in response    |
-| Velocity        | #set($x=7*7)$x      | 49 in response    |
+| Template Engine | Test Payload        | Success Indicator  |
+| --------------- | ------------------- | ------------------ |
+| Jinja2          | {{7*7}}             | 49 in response     |
+| Freemarker      | <#assign x=7*7>${x} | 49 in response     |
+| Twig            | {{7*7}}             | 49 in response     |
+| Velocity        | #set($x=7*7)$x      | 49 in response     |
+| ERB             | <%= 7*7 %>          | 49 in response<br> |
 
 ### Resources
 https://github.com/swisskyrepo/PayloadsAllTheThings

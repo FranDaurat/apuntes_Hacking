@@ -211,7 +211,8 @@ Test: A
 ```
 *Aclaracion:*
 - Probar con la cabecer **`Host`** antes de la cabecera Test.
-**Explicacion:**
+**
+Explicacion:**
 Realizamos un ataque de **request smuggling tipo CL.0**, donde el servidor *back-end* ignora el encabezado `Content-Length` en ciertas rutas, permitiendo **inyectar una segunda petición** dentro del cuerpo de una `POST` aparentemente legítima.
 -- -
 ## **Smuggling ocultando el header TE**
@@ -266,3 +267,11 @@ Host: 0a740013030f53638047214c0098007f.web-security-academy.net
 *Aclaración:* 
 - Con las cabeceras internas filtradas gracias a la primer imagen, logramos agregarlas a la nueva request embebida la cual se inyecta en la parte del nombre del header.
 - Tambien vale la pena cambiar los valores de esos headers para buscar respuestas distintas por parte del servidor.
+-- -
+## CSD (Client Side Desync)
+
+- Involucra 2 o más solicitudes en la misma conexión.
+- La desincronización ocurre entre el cliente y el backend (no entre front y back).
+- Se aprovecha de que el cliente reutiliza la conexión TCP/HTTP.
+- El atacante logra que la víctima herede la request inyectada en esa conexión.
+- Ignora completamente el  **`Content-Length`**

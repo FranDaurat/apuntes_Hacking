@@ -1,4 +1,9 @@
 -- - 
+## **Recomendaciones**
+- Empezar de a 1 con el `../` o con el `....//` ya que segund s4vitar en mas de un servidor le paso que si te pasas de la raiz no te lo toma.
+- Usar tambien nullbyte y nullbyte con extension al final. `../../../../etc/passwd%00.png`
+
+-- -
 ### **PHP Wrappers Cheat Sheet**
 
 #### **Wrappers para Manejo de Archivos**
