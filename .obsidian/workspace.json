@@ -55,16 +55,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hack4u Content/Vulns/IDOR (Insecure Direct Object Reference).md",
+                "file": "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "IDOR (Insecure Direct Object Reference)"
+              "title": "XSS (Cross Site Scripting)"
+            }
+          },
+          {
+            "id": "d124f5584f676568",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hack4u Content/Vulns/Server Side/Web Cache Poisoning.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Web Cache Poisoning"
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -209,42 +223,44 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "e89cd7c555bec084",
+  "active": "d124f5584f676568",
   "lastOpenFiles": [
-    "Hack4u Content/Vulns/NoSQL Injection Cheat Sheet.md",
-    "Hack4u Content/Vulns/SQLi (SQL Injection).md",
-    "Bug Bounty/Programs.md",
-    "Bug Bounty/Google Dorks.md",
     "Bug Bounty/Metodologia (fullRecon).md",
-    "Hack4u Content/Vulns/IDOR (Insecure Direct Object Reference).md",
-    "Hack4u Content/Vulns/Server-Side Template Injection (SSTI) Cheat Sheet.md",
+    "Hack4u Content/Vulns/Server Side/Web Cache Poisoning.md",
+    "Hack4u Content/Vulns/Client Side/Authentication.md",
+    "Hack4u Content/Vulns/Server Side/File Upload Bypass Cheat Sheet.md",
+    "Hack4u Content/Vulns/Server Side/HRS (HTTP Request Smuggling).md",
+    "Hack4u Content/Vulns/Server Side/JSON Web Token (JWT) Cheat Sheet.md",
+    "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
+    "Hack4u Content/Vulns/Client Side/HTML Injecion (HTMLi).md",
+    "Hack4u Content/Vulns/Client Side",
+    "Hack4u Content/Vulns/Server Side",
     "Bug Bounty/Useful Commands - Tools.md",
+    "Bug Bounty/Programs.md",
+    "Hack4u Content/Vulns/Server Side/GraphQL Recon Cheat Sheet.md",
+    "Hack4u Content/Vulns/Server Side/IDOR (Insecure Direct Object Reference).md",
+    "Hack4u Content/Vulns/Server Side/NoSQL Injection Cheat Sheet.md",
+    "Hack4u Content/Vulns/Server Side/SQLi (SQL Injection).md",
+    "Bug Bounty/Google Dorks.md",
+    "Hack4u Content/Vulns/Server Side/Server-Side Template Injection (SSTI) Cheat Sheet.md",
     "Bug Bounty/Coffin Base Methodology.md",
-    "Hack4u Content/Vulns/Local FIle Inclusion (LFI).md",
-    "Hack4u Content/Vulns/OS Command Injection.md",
-    "Hack4u Content/Vulns/HRS (HTTP Request Smuggling).md",
+    "Hack4u Content/Vulns/Server Side/Local FIle Inclusion (LFI).md",
+    "Hack4u Content/Vulns/Server Side/OS Command Injection.md",
     "images/Pasted image 20250822181959.png",
     "images/Pasted image 20250822181851.png",
     "images/Pasted image 20250822181550.png",
     "images/Pasted image 20250822181546.png",
-    "Hack4u Content/Vulns/GraphQL Recon Cheat Sheet.md",
     "images/Pasted image 20250819170002.png",
     "images/Pasted image 20250819163452.png",
     "().md",
     "images/Pasted image 20250814174821.png",
     "images/Pasted image 20250814174607.png",
-    "Hack4u Content/Vulns/SSRF (Server-Side Request Forgery).md",
-    "Hack4u Content/Vulns/Shellshock Attack Cheat Sheet.md",
-    "Hack4u Content/Vulns/XXE (XML External Entity Injection) Attack Cheat Sheet.md",
-    "Hack4u Content/Vulns/XSS (Cross Site Scripting).md",
-    "Hack4u Content/Vulns/CORS (Cross Origin Resource Sharing).md",
-    "Hack4u Content/Vulns/CSRF (Cross-Site Request Forgery).md",
-    "Hack4u Content/Vulns/LDAPi (LDAP injection).md",
-    "Hack4u Content/Vulns/HTML Injecion (HTMLi).md",
-    "Hack4u Content/Vulns/ClickJacking.md",
-    "Hack4u Content/Vulns/File Upload Bypass Cheat Sheet.md",
-    "Hack4u Content/Vulns/JSON Web Token (JWT) Cheat Sheet.md",
-    "Hack4u Content/Vulns/Prototype Pollution Cheat Sheet.md",
+    "Hack4u Content/Vulns/Server Side/SSRF (Server-Side Request Forgery).md",
+    "Hack4u Content/Vulns/Server Side/Shellshock Attack Cheat Sheet.md",
+    "Hack4u Content/Vulns/Server Side/XXE (XML External Entity Injection) Attack Cheat Sheet.md",
+    "Hack4u Content/Vulns/Client Side/CORS (Cross Origin Resource Sharing).md",
+    "Hack4u Content/Vulns/Client Side/CSRF (Cross-Site Request Forgery).md",
+    "Hack4u Content/Vulns/Server Side/LDAPi (LDAP injection).md",
     "images/Pasted image 20250225160456.png",
     "images",
     "Hack4u Content",
@@ -253,8 +269,6 @@
     "Privilege escalation/Untitled",
     "Hack4u Content/Privilege escalation",
     "Hack4u Content/Vulns",
-    "Hack4u Content/Gestores de contenido",
-    "apuntes_hacking",
-    "Gestores de contenido/Drupal"
+    "Hack4u Content/Gestores de contenido"
   ]
 }
