@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hack4u Content/Tratamiento tty.md",
+                "file": "Hack4u Content/Vulns/Server Side/Web Cache Poisoning.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Tratamiento tty"
+              "title": "Web Cache Poisoning"
             }
           }
         ],
@@ -135,7 +135,7 @@
       }
     ],
     "direction": "horizontal",
-    "width": 300
+    "width": 302.5
   },
   "right": {
     "id": "437ed6666acc0f4f",
@@ -225,13 +225,14 @@
   },
   "active": "d124f5584f676568",
   "lastOpenFiles": [
-    "Hack4u Content/Vulns/Server Side/Web Cache Poisoning.md",
     "Bug Bounty/Metodologia (fullRecon).md",
+    "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
+    "Hack4u Content/Vulns/Server Side/Web Cache Poisoning.md",
+    "Hack4u Content/Tratamiento tty.md",
     "Hack4u Content/Vulns/Client Side/Authentication.md",
     "Hack4u Content/Vulns/Server Side/File Upload Bypass Cheat Sheet.md",
     "Hack4u Content/Vulns/Server Side/HRS (HTTP Request Smuggling).md",
     "Hack4u Content/Vulns/Server Side/JSON Web Token (JWT) Cheat Sheet.md",
-    "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
     "Hack4u Content/Vulns/Client Side/HTML Injecion (HTMLi).md",
     "Hack4u Content/Vulns/Client Side",
     "Hack4u Content/Vulns/Server Side",
@@ -260,7 +261,6 @@
     "Hack4u Content/Vulns/Server Side/XXE (XML External Entity Injection) Attack Cheat Sheet.md",
     "Hack4u Content/Vulns/Client Side/CORS (Cross Origin Resource Sharing).md",
     "Hack4u Content/Vulns/Client Side/CSRF (Cross-Site Request Forgery).md",
-    "Hack4u Content/Vulns/Server Side/LDAPi (LDAP injection).md",
     "images/Pasted image 20250225160456.png",
     "images",
     "Hack4u Content",
