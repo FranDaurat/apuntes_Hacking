@@ -47,6 +47,14 @@ arjun -u https://site.com/endpoint.php -oT arjun_output.txt -t 10 --rate-limit 1
 arjun -u https://site.com/endpoint.php -oT arjun_output.txt -m GET,POST -w /usr/share/wordlists/seclists/Discovery/Web-Content/burp-parameter-names.txt -t 10 --rate-limit 10 --headers "User-Agent: Mozilla/5.0"
 ```
 
+### .git recon
+```bash
+git log --oneline
+gitleaks detect --source .  -v 
+find . -name index.html | while read -r file; do rm $file; done
+```
+
+
 ### ChatGPT nuclei template generator
 https://chatgpt.com/g/g-REMZCNZvB
 ---
