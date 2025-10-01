@@ -19,8 +19,8 @@
 
 ## **Ejemplo de Estructura XML**
 ```xml
-<?xml version="1.0" encoding="UTF-8"?> <!-- Declaración XML -->
-<!DOCTYPE foo [<!ENTITY xxe SYSTEM "mi entidad">]> <!-- DTD (Document Type Definition) -->
+<?xml version="1.0" encoding="UTF-8"?> 
+<!DOCTYPE foo [<!ENTITY xxe SYSTEM "mi entidad">]> 
 
 <root>
     <name>fran</name>
@@ -54,6 +54,20 @@
 ```
 
 ---
+
+### **Estrctura base**
+
+```xml
+Content-Type: application/xml;charset=UTF-8
+
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<root>
+	<product>
+		1
+	</product>
+</root>
+
+```
 
 ## **Malicious DTD Files**
 

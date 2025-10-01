@@ -211,8 +211,8 @@ Test: A
 ```
 *Aclaracion:*
 - Probar con la cabecer **`Host`** antes de la cabecera Test.
-**
-Explicacion:**
+
+**Explicacion:**
 Realizamos un ataque de **request smuggling tipo CL.0**, donde el servidor *back-end* ignora el encabezado `Content-Length` en ciertas rutas, permitiendo **inyectar una segunda petición** dentro del cuerpo de una `POST` aparentemente legítima.
 -- -
 ## **Smuggling ocultando el header TE**

@@ -55,12 +55,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
+                "file": "Hack4u Content/Vulns/Server Side/XXE (XML External Entity Injection) Attack Cheat Sheet.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "XSS (Cross Site Scripting)"
+              "title": "XXE (XML External Entity Injection) Attack Cheat Sheet"
             }
           },
           {
@@ -90,9 +90,23 @@
               "icon": "lucide-file",
               "title": "Insecure Deserialization"
             }
+          },
+          {
+            "id": "2bd381f8e49e5650",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hack4u Content/Vulns/Server Side/HHI (Host header Injection).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "HHI (Host header Injection)"
+            }
           }
         ],
-        "currentTab": 5
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -237,18 +251,21 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "ba663f8bb6fd2cf5",
+  "active": "e89cd7c555bec084",
   "lastOpenFiles": [
+    "Hack4u Content/Vulns/Server Side/Web Cache Poisoning.md",
+    "Hack4u Content/Vulns/Server Side/SSRF (Server-Side Request Forgery).md",
+    "Hack4u Content/Vulns/Server Side/HRS (HTTP Request Smuggling).md",
+    "Hack4u Content/Vulns/Server Side/XXE (XML External Entity Injection) Attack Cheat Sheet.md",
+    "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
+    "Hack4u Content/Vulns/Server Side/HHI (Host header Injection).md",
+    "Hack4u Content/Vulns/Server Side/Insecure Deserialization.md",
     "Bug Bounty/Useful Commands - Tools.md",
     "Bug Bounty/Programs.md",
-    "Hack4u Content/Vulns/Server Side/Insecure Deserialization.md",
     "Bug Bounty/Metodologia (fullRecon).md",
-    "Hack4u Content/Vulns/Server Side/Web Cache Poisoning.md",
-    "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
     "Hack4u Content/Tratamiento tty.md",
     "Hack4u Content/Vulns/Client Side/Authentication.md",
     "Hack4u Content/Vulns/Server Side/File Upload Bypass Cheat Sheet.md",
-    "Hack4u Content/Vulns/Server Side/HRS (HTTP Request Smuggling).md",
     "Hack4u Content/Vulns/Server Side/JSON Web Token (JWT) Cheat Sheet.md",
     "Hack4u Content/Vulns/Client Side/HTML Injecion (HTMLi).md",
     "Hack4u Content/Vulns/Client Side",
@@ -271,10 +288,7 @@
     "().md",
     "images/Pasted image 20250814174821.png",
     "images/Pasted image 20250814174607.png",
-    "Hack4u Content/Vulns/Server Side/SSRF (Server-Side Request Forgery).md",
     "Hack4u Content/Vulns/Server Side/Shellshock Attack Cheat Sheet.md",
-    "Hack4u Content/Vulns/Server Side/XXE (XML External Entity Injection) Attack Cheat Sheet.md",
-    "Hack4u Content/Vulns/Client Side/CORS (Cross Origin Resource Sharing).md",
     "images/Pasted image 20250225160456.png",
     "images",
     "Hack4u Content",
