@@ -4,16 +4,16 @@
     "type": "split",
     "children": [
       {
-        "id": "ef747134a1b273d1",
+        "id": "1f633dab30f74c27",
         "type": "tabs",
         "children": [
           {
-            "id": "22e54cec9cf42363",
+            "id": "cc52e2eaaaf4d0c1",
             "type": "leaf",
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hack4u Content/Vulns/SSRF (Server-Side Request Forgery).md",
+                "file": "Hack4u Content/Vulns/Server Side/SSRF (Server-Side Request Forgery).md",
                 "mode": "source",
                 "source": false
               },
@@ -22,35 +22,7 @@
             }
           },
           {
-            "id": "69a240ebc7d30339",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bug Bounty/Useful Commands - Tools.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Useful Commands - Tools"
-            }
-          },
-          {
-            "id": "3eb03adfd72bfac5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bug Bounty/Metodologia (fullRecon).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Metodologia (fullRecon)"
-            }
-          },
-          {
-            "id": "e89cd7c555bec084",
+            "id": "739b4f84e23a7dbf",
             "type": "leaf",
             "state": {
               "type": "markdown",
@@ -62,51 +34,9 @@
               "icon": "lucide-file",
               "title": "XXE (XML External Entity Injection) Attack Cheat Sheet"
             }
-          },
-          {
-            "id": "d124f5584f676568",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Bug Bounty/Metodologia (fullRecon).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Metodologia (fullRecon)"
-            }
-          },
-          {
-            "id": "ba663f8bb6fd2cf5",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Hack4u Content/Vulns/Server Side/Insecure Deserialization.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "Insecure Deserialization"
-            }
-          },
-          {
-            "id": "2bd381f8e49e5650",
-            "type": "leaf",
-            "state": {
-              "type": "markdown",
-              "state": {
-                "file": "Hack4u Content/Vulns/Server Side/HHI (Host header Injection).md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "HHI (Host header Injection)"
-            }
           }
         ],
-        "currentTab": 3
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -251,28 +181,31 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "e89cd7c555bec084",
+  "active": "739b4f84e23a7dbf",
   "lastOpenFiles": [
-    "Hack4u Content/Vulns/Server Side/Web Cache Poisoning.md",
+    "Hack4u Content/Vulns/Server Side/OAuth.md",
     "Hack4u Content/Vulns/Server Side/SSRF (Server-Side Request Forgery).md",
-    "Hack4u Content/Vulns/Server Side/HRS (HTTP Request Smuggling).md",
-    "Hack4u Content/Vulns/Server Side/XXE (XML External Entity Injection) Attack Cheat Sheet.md",
-    "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
+    "Hack4u Content/Vulns/Server Side/NoSQL Injection Cheat Sheet.md",
     "Hack4u Content/Vulns/Server Side/HHI (Host header Injection).md",
+    "images/Pasted image 20251001183650.png",
+    "Hack4u Content/Vulns/Server Side/IDOR (Insecure Direct Object Reference).md",
+    "Hack4u Content/Vulns/Server Side/HRS (HTTP Request Smuggling).md",
+    "Hack4u Content/Vulns/Server Side/File Upload Bypass Cheat Sheet.md",
+    "Hack4u Content/Vulns/Server Side/Log Poisoning Cheat Sheet.md",
+    "Bug Bounty/Metodologia (fullRecon).md",
     "Hack4u Content/Vulns/Server Side/Insecure Deserialization.md",
     "Bug Bounty/Useful Commands - Tools.md",
+    "Hack4u Content/Vulns/Server Side/XXE (XML External Entity Injection) Attack Cheat Sheet.md",
+    "Hack4u Content/Vulns/Server Side/Web Cache Poisoning.md",
+    "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
     "Bug Bounty/Programs.md",
-    "Bug Bounty/Metodologia (fullRecon).md",
     "Hack4u Content/Tratamiento tty.md",
     "Hack4u Content/Vulns/Client Side/Authentication.md",
-    "Hack4u Content/Vulns/Server Side/File Upload Bypass Cheat Sheet.md",
     "Hack4u Content/Vulns/Server Side/JSON Web Token (JWT) Cheat Sheet.md",
     "Hack4u Content/Vulns/Client Side/HTML Injecion (HTMLi).md",
     "Hack4u Content/Vulns/Client Side",
     "Hack4u Content/Vulns/Server Side",
     "Hack4u Content/Vulns/Server Side/GraphQL Recon Cheat Sheet.md",
-    "Hack4u Content/Vulns/Server Side/IDOR (Insecure Direct Object Reference).md",
-    "Hack4u Content/Vulns/Server Side/NoSQL Injection Cheat Sheet.md",
     "Hack4u Content/Vulns/Server Side/SQLi (SQL Injection).md",
     "Bug Bounty/Google Dorks.md",
     "Hack4u Content/Vulns/Server Side/Server-Side Template Injection (SSTI) Cheat Sheet.md",
@@ -285,10 +218,8 @@
     "images/Pasted image 20250822181546.png",
     "images/Pasted image 20250819170002.png",
     "images/Pasted image 20250819163452.png",
-    "().md",
     "images/Pasted image 20250814174821.png",
     "images/Pasted image 20250814174607.png",
-    "Hack4u Content/Vulns/Server Side/Shellshock Attack Cheat Sheet.md",
     "images/Pasted image 20250225160456.png",
     "images",
     "Hack4u Content",

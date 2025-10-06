@@ -4,6 +4,7 @@
 
 ---
 ---
+**`http://169.254.169.254/latest/meta-data/iam/security-credentials/admin/`**
 ### **1. Usar Representación Alternativa de IP**
 Representaciones de la IP `127.0.0.1`:
 - **Decimal:** `2130706433`
