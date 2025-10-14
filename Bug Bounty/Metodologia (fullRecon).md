@@ -10,7 +10,7 @@
 7. Mirar el burpsuite una vez se abrieron todos los endpoints.
 8. Correr la extension **Smuggler** y **Param miner**.
 9. Buscar por la palabras claves (JS):
-   ```\b(main|app|runtime|bundle|polyfills|auth|config|settings|local|dev|data|pass|password|api|apikey|session|user|core|client|server|utils|base|bearer|Bearer|token|Token|secret|access|key)\b```
+```(?i)(\b(main|app|runtime|bundle|polyfills|auth|config|settings|local|dev|data|pass|password|api|apikey|session|user|core|client|server|utils|base|bearer|token|secret|access|key)\b)```
 
 --- --
 ## Extras

