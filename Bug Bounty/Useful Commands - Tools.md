@@ -128,3 +128,4 @@ grep -F ".$domain" "$file" | awk -F '[][]' '{print $2}' | sed 's# #\n#g' | sort 
 ```bash
 grep -oE "[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-z]{2,6}" $file | sort -u
 ```
+

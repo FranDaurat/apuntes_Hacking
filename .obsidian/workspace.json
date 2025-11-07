@@ -13,15 +13,30 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Hack4u Content/Vulns/Server Side/Prototype Pollution.md",
+                "file": "Bug Bounty/Coffin Base Methodology.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Prototype Pollution"
+              "title": "Coffin Base Methodology"
+            }
+          },
+          {
+            "id": "2b51f16b5278ee79",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bug Bounty/Metodologia (fullRecon).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Metodologia (fullRecon)"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "vertical"
@@ -166,11 +181,17 @@
       "obsidian42-brat:BRAT": false
     }
   },
-  "active": "e2a69b3a0babfb18",
+  "active": "2b51f16b5278ee79",
   "lastOpenFiles": [
+    "Bug Bounty/Useful Commands - Tools.md",
+    "Bug Bounty/Metodologia (fullRecon).md",
+    "images/Pasted image 20251107190834.png",
+    "Bug Bounty/Google Dorks.md",
+    "Bug Bounty/Coffin Base Methodology.md",
+    "Bug Bounty/Prompt.md",
+    "Hack4u Content/Vulns/Server Side/Prototype Pollution.md",
     "Hack4u Content/Vulns/Server Side/Server-Side Template Injection (SSTI) Cheat Sheet.md",
     "Hack4u Content/Vulns/Server Side/Shellshock Attack Cheat Sheet.md",
-    "Hack4u Content/Vulns/Server Side/Prototype Pollution.md",
     "Hack4u Content/Vulns/Server Side/Insecure Deserialization.md",
     "Hack4u Content/Vulns/Server Side/HRS (HTTP Request Smuggling).md",
     "Hack4u Content/Vulns/Server Side/File Upload Bypass Cheat Sheet.md",
@@ -191,21 +212,14 @@
     "Hack4u Content/Vulns/Server Side/OAuth.md",
     "Hack4u Content/Vulns/Server Side/Local FIle Inclusion (LFI).md",
     "Hack4u Content/Vulns/Server Side/NoSQL Injection Cheat Sheet.md",
-    "Bug Bounty/Useful Commands - Tools.md",
     "Bug Bounty/Programs.md",
-    "Bug Bounty/Metodologia (fullRecon).md",
     "Hack4u Content/Vulns/Server Side/HHI (Host header Injection).md",
-    "images/Pasted image 20251001183650.png",
     "Hack4u Content/Vulns/Server Side/IDOR (Insecure Direct Object Reference).md",
     "Hack4u Content/Vulns/Server Side/Log Poisoning Cheat Sheet.md",
     "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
     "Hack4u Content/Tratamiento tty.md",
-    "Hack4u Content/Vulns/Client Side/Authentication.md",
-    "Hack4u Content/Vulns/Client Side/HTML Injecion (HTMLi).md",
     "Hack4u Content/Vulns/Client Side",
     "Hack4u Content/Vulns/Server Side",
-    "Hack4u Content/Vulns/Server Side/SQLi (SQL Injection).md",
-    "Bug Bounty/Google Dorks.md",
     "images",
     "Hack4u Content",
     "Malandra",
