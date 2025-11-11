@@ -10,11 +10,16 @@
 7. Mirar el burpsuite una vez se abrieron todos los endpoints.
 
 --- --
-## Extras
+## Code filter
 
-- Probar siempre en cada script expuesto agregar `~` y/o `.swp` para ver si en una de esas hay un backup.
+```bash
+~
+.swp
+;.jar
+```
 
 
+-- -
 ## APIs 
 
 **RCE via python code injection**
@@ -28,6 +33,8 @@
 
 ```
 
+
+ --- -
 ## 403 bypass payloads
 
 **Path:**
