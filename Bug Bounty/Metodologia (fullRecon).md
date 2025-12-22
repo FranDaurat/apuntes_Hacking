@@ -33,6 +33,14 @@
 
 ```
 
+**Keys filter via debug parameter**
+
+```json
+{
+	"debug":true
+}
+```
+
 
  --- -
 ## 403 bypass payloads

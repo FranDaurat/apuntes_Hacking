@@ -1,5 +1,5 @@
 -- -
-### 🔄 Open Redirect Mass Hunting
+### Open Redirect Mass Hunting
 ```http
 site:.gob inurl:redir | inurl:redirect | inurl:return | inurl:src=http | inurl:r=http | inurl:goto
 ```
@@ -9,7 +9,7 @@ site:.gob inurl:redir | inurl:redirect | inurl:return | inurl:src=http | inurl:r
 site:.us intitle:"IIS Windows Server" 
 ```
 
-### ☁️ S3 Buckets
+### S3 Buckets
 ``` http
 site:s3.amazonaws.com "target.com"
 site:*.s3.amazonaws.com "target.com"
@@ -23,7 +23,7 @@ site:s3.amazonaws.com intitle:"index of" "bucket"
 (site:*.s3.amazonaws.com OR site:*.s3-external-1.amazonaws.com OR site:*.s3.dualstack.us-east-1.amazonaws.com OR site:*.s3.ap-south-1.amazonaws.com) "target.com"
 ```
 
-### 📦 All Purpose Dorks
+### All Purpose Dorks
 ```http 
 filetype:ini "password" site:orgfiletype:txt "credentials" site:gov
 filetype:yaml "secret_key" -examples
@@ -67,4 +67,17 @@ site:pastebin.com "password"
 site:github.com "SECRET_KEY"
 site:gitlab.com "PRIVATE_KEY"
 site:bitbucket.org "db_password"
+```
+
+### Github
+```http
+/(?i)(password|passwd|pwd|secret|token|apikey|api_key|access_key|secret_key|access_token|api_secret|apiSecret|app_secret|application_key|app_key|appkey|auth_token|authsecret)\s*=\s*["'][^"']{4,}["']/ AND org:adobe AND NOT language:Markdown NOT is:archived
+
+/(?i)(password|passwd|pwd|secret|token|apikey|api_key|access_key|secret_key|access_token|api_secret|apiSecret|app_secret|application_key|app_key|appkey|auth_token|authsecret)\s*=\s*["'][^"']{4,}["']/ "@org" AND NOT language:Markdown NOT is:archived 
+
+org:${org} "sk_live"
+org:${org} "pk_live"
+org:${org} path:*.json
+org:${org} AWS_ACCESS_SECRET_KEY
+
 ```

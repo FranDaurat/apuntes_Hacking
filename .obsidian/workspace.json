@@ -27,16 +27,72 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Bug Bounty/Metodologia (fullRecon).md",
+                "file": "Bug Bounty/Google Dorks.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Metodologia (fullRecon)"
+              "title": "Google Dorks"
+            }
+          },
+          {
+            "id": "1279371df5ded60e",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "XSS (Cross Site Scripting)"
+            }
+          },
+          {
+            "id": "9e142ece975cf0ec",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Pasantias.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Pasantias"
+            }
+          },
+          {
+            "id": "6ad9980b9ea6c771",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Bug Bounty/Google Dorks.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Google Dorks"
+            }
+          },
+          {
+            "id": "8a25855de7e187a5",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "XSS (Cross Site Scripting)"
             }
           }
         ],
-        "currentTab": 1
+        "currentTab": 3
       }
     ],
     "direction": "vertical"
@@ -181,24 +237,31 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "2b51f16b5278ee79",
+  "active": "9e142ece975cf0ec",
   "lastOpenFiles": [
-    "Bug Bounty/Useful Commands - Tools.md",
+    "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
+    "Pasantias.md",
+    "Hack4u Content/Vulns/Client Side/HTML Injecion (HTMLi).md",
+    "Bug Bounty/Bug Bounty.md",
+    "Hack4u Content/Vulns/Server Side/XXE (XML External Entity Injection) Attack Cheat Sheet.md",
+    "Hack4u Content/Vulns/Server Side/HRS (HTTP Request Smuggling).md",
     "Bug Bounty/Metodologia (fullRecon).md",
-    "images/Pasted image 20251107190834.png",
     "Bug Bounty/Google Dorks.md",
-    "Bug Bounty/Coffin Base Methodology.md",
+    "Bug Bounty/Programs.md",
+    "Bug Bounty/Config jxscout.md",
+    "Bug Bounty/Useful Commands - Tools.md",
+    "Hack4u Content/Vulns/Server Side/OAuth.md",
     "Bug Bounty/Prompt.md",
     "Hack4u Content/Vulns/Server Side/Prototype Pollution.md",
     "Hack4u Content/Vulns/Server Side/Server-Side Template Injection (SSTI) Cheat Sheet.md",
+    "images/Pasted image 20251107190834.png",
+    "Bug Bounty/Coffin Base Methodology.md",
     "Hack4u Content/Vulns/Server Side/Shellshock Attack Cheat Sheet.md",
     "Hack4u Content/Vulns/Server Side/Insecure Deserialization.md",
-    "Hack4u Content/Vulns/Server Side/HRS (HTTP Request Smuggling).md",
     "Hack4u Content/Vulns/Server Side/File Upload Bypass Cheat Sheet.md",
     "Hack4u Content/Vulns/Server Side/GraphQL Recon Cheat Sheet.md",
     "Hack4u Content/Vulns/Server Side/Web Cache Poisoning.md",
     "images/Pasted image 20251009162046.png",
-    "Hack4u Content/Vulns/Server Side/XXE (XML External Entity Injection) Attack Cheat Sheet.md",
     "Hack4u Content/Vulns/Server Side/JWT (JSON Web Token).md",
     "images/Pasted image 20251014140552.png",
     "Hack4u Content/Vulns/Server Side/SSRF (Server-Side Request Forgery).md",
@@ -209,15 +272,9 @@
     "images/Pasted image 20251013173402.png",
     "images/Pasted image 20251009162108.png",
     "images/Pasted image 20251008183257.png",
-    "Hack4u Content/Vulns/Server Side/OAuth.md",
     "Hack4u Content/Vulns/Server Side/Local FIle Inclusion (LFI).md",
     "Hack4u Content/Vulns/Server Side/NoSQL Injection Cheat Sheet.md",
-    "Bug Bounty/Programs.md",
     "Hack4u Content/Vulns/Server Side/HHI (Host header Injection).md",
-    "Hack4u Content/Vulns/Server Side/IDOR (Insecure Direct Object Reference).md",
-    "Hack4u Content/Vulns/Server Side/Log Poisoning Cheat Sheet.md",
-    "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
-    "Hack4u Content/Tratamiento tty.md",
     "Hack4u Content/Vulns/Client Side",
     "Hack4u Content/Vulns/Server Side",
     "images",
