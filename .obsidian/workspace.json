@@ -64,6 +64,20 @@
             }
           },
           {
+            "id": "c6f972fb76db124a",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "Leank.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "Leank"
+            }
+          },
+          {
             "id": "6ad9980b9ea6c771",
             "type": "leaf",
             "state": {
@@ -92,7 +106,7 @@
             }
           }
         ],
-        "currentTab": 3
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -237,10 +251,11 @@
       "github-sync:Sync with Remote": false
     }
   },
-  "active": "9e142ece975cf0ec",
+  "active": "c6f972fb76db124a",
   "lastOpenFiles": [
-    "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
     "Pasantias.md",
+    "Leank.md",
+    "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
     "Hack4u Content/Vulns/Client Side/HTML Injecion (HTMLi).md",
     "Bug Bounty/Bug Bounty.md",
     "Hack4u Content/Vulns/Server Side/XXE (XML External Entity Injection) Attack Cheat Sheet.md",
@@ -274,7 +289,6 @@
     "images/Pasted image 20251008183257.png",
     "Hack4u Content/Vulns/Server Side/Local FIle Inclusion (LFI).md",
     "Hack4u Content/Vulns/Server Side/NoSQL Injection Cheat Sheet.md",
-    "Hack4u Content/Vulns/Server Side/HHI (Host header Injection).md",
     "Hack4u Content/Vulns/Client Side",
     "Hack4u Content/Vulns/Server Side",
     "images",
