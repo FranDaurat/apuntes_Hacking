@@ -69,12 +69,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Leank.md",
+                "file": "Leak.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Leank"
+              "title": "Leak"
             }
           },
           {
@@ -254,7 +254,7 @@
   "active": "c6f972fb76db124a",
   "lastOpenFiles": [
     "Pasantias.md",
-    "Leank.md",
+    "Leak.md",
     "Hack4u Content/Vulns/Client Side/XSS (Cross Site Scripting).md",
     "Hack4u Content/Vulns/Client Side/HTML Injecion (HTMLi).md",
     "Bug Bounty/Bug Bounty.md",
