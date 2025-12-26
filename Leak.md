@@ -50,15 +50,55 @@ http://173.249.9.91:49581
 
 ### Comando para descargar
 ```bash
-aria2c --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -x 1 -s 10 -j 5 --input-file=resources.txt --save-session=descarga.session --continue && notify.sh "✅ Descarga OK: ANSES" || notify.sh "❌ Error descarga: ANSES"
+aria2c --user-agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36" -x 10 -s 10 --save-session=descarga.session --continue https://161.129.67.66/sudamericadata.tar.gz && notify.sh "✅ Descarga OK" || notify.sh "❌ Error descarga"
 ```
 
 ### Arreglar conectividad
 ```bash
-sudo ip route del default
-sudo ip route add default via 192.168.0.1 dev enp5s0 metric 200
+#!/bin/bash
+
+  
+
+echo "🚑 Restaurando red..."
+
+  
+
+# 1. Borrar rutas basura
+
+echo "🧹 Limpiando rutas..."
+
+sudo ip route flush table main
+
+sudo ip route flush cache
+
+  
+
+# 2. Pedir IP correcta al router (esto arregla el gateway 192.168.0.1)
+
+echo "🔄 Renovando IP (DHCP)..."
+
+sudo dhclient -r enp5s0
+
+sudo dhclient -v enp5s0
+
+  
+
+# 3. Reiniciar Mullvad para que se acomode
+
+echo "🔒 Reiniciando VPN..."
+
+mullvad disconnect
+
+sleep 2
+
+mullvad connect
+
+  
+
+echo "✅ Listo. Prueba con: curl ifconfig.me"
 ```
 
+mega-get "https://mega.nz/file/zNEGnajB#yd3-KMxXsY1KXP7kHwt7LMMZ55Zqi-m_mYkT5Hz5GDc" && notify.sh "✅ Descarga OK" || notify.sh "❌ Error descarga"
 
 
 -- -
